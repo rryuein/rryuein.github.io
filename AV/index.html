@@ -1235,6 +1235,50 @@ $(function () {
 
     
 
+        <!-- 文字 -->
+        <script type="text/javascript">
+            var OriginTitile = document.title,
+                st;
+            document.addEventListener("visibilitychange", function () {
+                document.hidden ? (document.title = "若儿在这里哦~", clearTimeout(st)) : (document.title =
+                    "(๑•̀ㅂ•́) ✧哎嘿～", st = setTimeout(function () {
+                        document.title = OriginTitile
+                    }, 3e3))
+            })
+        </script>
+
+        <!-- 背景樱花飘落特效 -->
+        
+            <script type="text/javascript">
+            //只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+            }
+            </script>
+        
+
+     <!-- 天气接口控件 --> 
+    
+      <!-- 天气接口--> 
+<script type="text/javascript"> 
+  WIDGET = {FID: '1tFpFZ5Mtj'} 
+</script> 
+<!-- <script type="text/javascript" src="https://apip.weatherdt.com/float/static
+/js/r.js?v=1111"></script> --> 
+
+<script type="text/javascript"> 
+  //只在桌面版网页启用特效 
+  var windowWidth = $(window).width(); 
+  if (windowWidth > 768) {
+      document.write('<script type="text/javascript" src="https://apip.weatherdt.com
+/float/static/js/r.js?v=1111"><\/script>'); 
+  } 
+  </script>
+
+    
+
+
     
     <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
