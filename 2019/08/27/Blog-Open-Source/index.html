@@ -176,16 +176,7 @@
     </div>
   </figure>
   
-  <div id="video-container">
-    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
-    </video>
-    <div id="video-btn" class="loadvideo videolive">
-    </div>
-    <div id="video-add">
-    </div>
-    <div class="video-stu">
-    </div>
-  </div>
+  
   <div class="headertop-down faa-float animated" onclick="headertop_down()">
     <span>
       <i class="fa fa-chevron-down" aria-hidden="true">
@@ -278,6 +269,13 @@
                         </a>
                       </li>
                     
+                      <li>
+                        <a href="/categories/%E9%9A%8F%E6%83%B3/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
                   </ul>
                 
               </li>
@@ -310,13 +308,6 @@
                         <a href="/books/">
                           <i class="fa fa-book" aria-hidden="true"></i>
                           悦读
-                        </a>
-                      </li>
-                    
-                      <li>
-                        <a href="/movies/">
-                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                          追剧
                         </a>
                       </li>
                     
@@ -367,7 +358,7 @@
                       <li>
                         <a href="/about/">
                           <i class="fa fa-meetup" aria-hidden="true"></i>
-                          我？
+                          若儿
                         </a>
                       </li>
                     
@@ -379,16 +370,6 @@
                       </li>
                     
                   </ul>
-                
-              </li>
-            
-              <li>
-                <a href="/atom.xml">
-                  <span class="faa-parent animated-hover">
-                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
-                    RSS
-                  </span>
-                </a>
                 
               </li>
             
@@ -674,7 +655,7 @@ gitalk.render('gitalk-container')
                       mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
                       seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
                       snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-                      document.getElementById("time").innerHTML = "小破站在各种灾难中苟活了 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒";      
+                      document.getElementById("time").innerHTML = "若儿已经在这里 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒了哦";      
                   } 
                   setInterval("createtime()",250);
                 </script>
@@ -752,9 +733,9 @@ gitalk.render('gitalk-container')
 <script type="text/javascript">
   /* <![CDATA[ */
   if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    var Poi = {"pjax":"0","movies":{"url": "none","name":"none","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
   } else {
-    var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    var Poi = {"pjax":"0","movies":{"url": "none","name":"none","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
   }
   /* ]]> */
   
@@ -876,6 +857,13 @@ gitalk.render('gitalk-container')
                 </a>
               </li>
             
+              <li>
+                <a href="/categories/%E9%9A%8F%E6%83%B3/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
           </ul>
         
       </li>
@@ -908,13 +896,6 @@ gitalk.render('gitalk-container')
                 <a href="/books/">
                   <i class="fa fa-book" aria-hidden="true"></i>
                   悦读
-                </a>
-              </li>
-            
-              <li>
-                <a href="/movies/">
-                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
-                  追剧
                 </a>
               </li>
             
@@ -965,7 +946,7 @@ gitalk.render('gitalk-container')
               <li>
                 <a href="/about/">
                   <i class="fa fa-meetup" aria-hidden="true"></i>
-                  我？
+                  若儿
                 </a>
               </li>
             
@@ -977,16 +958,6 @@ gitalk.render('gitalk-container')
               </li>
             
           </ul>
-        
-      </li>
-    
-      <li>
-        <a href="/atom.xml">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
-            RSS
-          </span>
-        </a>
         
       </li>
     
