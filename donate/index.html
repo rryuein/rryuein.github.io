@@ -20,10 +20,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/font.css" media="all">
   <link rel="stylesheet" href="/css/insight.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/tags.css" media="all">
-  
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/logo.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/LOGO/logo.css">
-  
+  <!-- 自定义logo -->
+  <link rel="stylesheet" type="text/css" href="/css/logo.css">
+  <link rel="stylesheet" type="text/css" href="/fonts/LOGO/logo.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 
   <!-- 分析 -->
@@ -454,28 +453,39 @@
       </div>
     </div>
     <hr>
-    <!-- <p><i class="iconfont icon-write"></i>[object Object]</p> -->
-    <p id="showStr"></p>
-  </section>
-  <!-- 一言 -->
-  <script type="text/javascript" src="https://api.imjad.cn/hitokoto/?cat=&charset=utf-8&length=&encode=js&fun=sync&source="></script>
-  <div style="display:none" id="hitokoto"><script>hitokoto()</script>
-  </div>
-  <script>
-      var index = 0;
-      var str = document.getElementById("hitokoto").innerText;
-      str = str.substring(10, str.length)//裁剪hitokoto()字样
-      function type() {
-        if(index == str.length) {
-            index = 0;
-          }
-          document.getElementById("showStr").innerText = str.substring(0, index++);
-      }
-      setInterval(type, 200); //通过定时器来让文字逐步显示
-  </script>
-</div>
+
+     <p><i class="iconfont icon-write"></i>
+        <id="hitokoto" style="text-align:center"> <b id="hitokoto_text"> 若儿在努力摘抄... /b>
+        <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
+
+        <script>
+            var typed = new Typed("#hitokoto", {
+                strings: 摘抄:    ,
+                startDelay: 300,
+                typeSpeed: 100,
+                loop: 0,
+                backSpeed: 0,
+                showCursor: true
+            });
+        </script>
+
+     </p>
+
+     <script>
+        fetch('https://v1.hitokoto.cn/?c=i&encode=json')
+          .then(response => response.json())
+          .then(data => {
+          const hitokoto = document.getElementById('hitokoto_text')
+          hitokoto.innerText = data.hitokoto
+          })
+          .catch(console.error)
+     </script>
+
+    <!-- <p><i class="iconfont icon-write"></i>你好呀</p> -->
+
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script> -->
+
   <script>
     jQuery(document).ready(function() {
     var QRBox = $('#QRBox');
