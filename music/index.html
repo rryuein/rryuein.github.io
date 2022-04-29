@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   <!-- cungudafa百度收录验证编号 -->
   <!-- <meta name="baidu-site-verification" content="LukfTcyXmC" /> -->
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
@@ -51,8 +51,8 @@
     mashiro_option.site_name = "若儿的笔记";
     mashiro_option.author_name = "若儿的笔记";
     mashiro_option.site_url = "https://yuein.net/";
-    mashiro_option.v_appId = "";//
-    mashiro_option.v_appKey = "";//
+    mashiro_option.v_appId = "K8OdvbaXsQDeVkORuea6Xrjd-gzGzoHsz";//
+    mashiro_option.v_appKey = "BqRHsT8rhyuuT1xcbbcGaVyR";//
     mashiro_option.mathjax = "1";
     mashiro_option.copyright_enable = "false" ;
     mashiro_option.copyright_minCharNumber = parseInt("120") ;
@@ -96,10 +96,10 @@
   
     <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
   
-<meta name="generator" content="Hexo 6.1.0"></head> 
+<meta name="generator" content="Hexo 6.1.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head> 
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
-  <!-- Dynamic sliders -->
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Dynamic sliders -->
   <div class="scrollbar" id="bar">
   </div>
   <a href="#" class="cd-top faa-float animated"></a>
@@ -622,9 +622,9 @@
 <script type="text/javascript">
   /* <![CDATA[ */
   if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    var Poi = {"pjax":"0","movies":{"url": "none","name":"none","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    var Poi = {"pjax":"1","movies":{"url": "none","name":"none","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
   } else {
-    var Poi = {"pjax":"0","movies":{"url": "none","name":"none","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    var Poi = {"pjax":"1","movies":{"url": "none","name":"none","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
   }
   /* ]]> */
   
@@ -1227,23 +1227,41 @@
     .DarkMode strong,
     .DarkMode a,
     .DarkMode p,
+    .DarkMode .v *,
     .DarkMode .label {
         color: rgba(255, 255, 255, .6);
     }
 
-    .DarkMode #page,
-    .DarkMode body,
+    /* .DarkMode #page, */
     .DarkMode #colophon,
     .DarkMode #main-container,
-    .DarkMode #page .yya,
     .DarkMode #content,
     .DarkMode #contentss,
     .DarkMode #footer {
-        background-color: #12121c;
+        background-color: #0b0b10a3;
     }
     .DarkMode strong,
     .DarkMode img {
         filter: brightness(.7);
+    }
+    .DarkMode #page .yya {
+        background-color: #0d0d16cc;
+    }
+    .DarkMode .v .vbtn {
+        background-color: #0d0d16cc;
+    }
+    .DarkMode span.vsys {
+        background-color: #3c3c419e;
+    }
+
+    /* test */
+    .DarkMode button.vsubmit.vbtn {
+        box-shadow: inset 0px -1px 17px 6px rgb(0 0 0), 
+        inset 0px 0px 15px 15px rgb(255 255 255 / 36%), 
+        inset 0px 0px 0px 0px rgb(0 0 0 / 0%);
+    }
+    .DarkMode .v .vwrap .vheader .vinput {
+        color: #ffe2e2a3;
     }
 
     /* sun and noon */
@@ -1325,7 +1343,7 @@
     } */
 </style>
 
-<!-- left side bar.end -->
+<!-- left side bar.end --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
  </body>
 </html>

@@ -5,7 +5,7 @@
 	color: #fff;
 	cursor: pointer;
 	font-size: 12px;
-	left: 0;
+	left: 10px;
 	margin-left: -100px;
 	padding: 5px 2px 5px 5px;
 	position: fixed;
@@ -15,7 +15,7 @@
 }
 
 #waifu-toggle.waifu-toggle-active {
-	margin-left: -40px;
+	margin-left: -50px;
 }
 
 #waifu-toggle.waifu-toggle-active:hover {
@@ -30,7 +30,7 @@
 	position: fixed;
 	transform: translateY(3px);
 	transition: transform .3s ease-in-out, bottom 3s ease-in-out;
-	z-index: 1;
+	z-index: 50;
 }
 
 #waifu:hover {
@@ -92,7 +92,7 @@
 
 #waifu-tool .fa-lg {
 	color: #7b8c9d;
-	cursor: pointer;
+	cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 	display: block;
 	height: 30px;
 	text-align: center;
