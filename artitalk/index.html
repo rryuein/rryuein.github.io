@@ -51,8 +51,8 @@
     mashiro_option.site_name = "若儿的笔记";
     mashiro_option.author_name = "若儿的笔记";
     mashiro_option.site_url = "https://yuein.net/";
-    mashiro_option.v_appId = "ctjxv6JiMqrr5xRrJNbPopEt-MdYXbMMI";//
-    mashiro_option.v_appKey = "Y6AjJGi7tv2hNS1ccwscSpqr";//
+    mashiro_option.v_appId = "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI";//
+    mashiro_option.v_appKey = "TmHhsnH8nkud95mapACnGeNO";//
     mashiro_option.mathjax = "1";
     mashiro_option.copyright_enable = "false" ;
     mashiro_option.copyright_minCharNumber = parseInt("120") ;
@@ -325,7 +325,7 @@
                     
                       <li>
                         <a href="/categories/%E5%AD%A6%E4%B9%A0ing/">
-                          <i class="fa fa-code" aria-hidden="true"></i>
+                          <i class="fa fa-pencil" aria-hidden="true"></i>
                           学习ing
                         </a>
                       </li>
@@ -420,7 +420,7 @@
 <div class="pattern-center ">
   <div class="pattern-attachment-img">
     
-      <img src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/webp/｡･：＊：･✿-PID65231071-by-hakusai.webp" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+      <img src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/webp/pixiv57793944.webp" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
     
   </div>
   <header class="pattern-header ">
@@ -437,19 +437,22 @@
   <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
     <div >
       <!-- artitalk more: https://artitalk.js.org/doc.html -->
-      <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+      <script type="text/javascript" src="https://unpkg.com/artitalk">
+      </script>
       <div id="artitalk_main"></div>
+
       <script>
-      new Artitalk({
-          appId: "ctjxv6JiMqrr5xRrJNbPopEt-MdYXbMMI",
-          appKey: "Y6AjJGi7tv2hNS1ccwscSpqr",
-          motion: "0",
+      new Artitalk({   
+          appId: "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI",
+          appKey: "TmHhsnH8nkud95mapACnGeNO",
+          motion: "1",
           bgImg: "https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich16.gif",
           pageSize: "5",
-          serverURLs: 'https://ctjxv6Ji.api.lncldglobal.com'
+          serverURLs: '',
       })
       </script>
-      <style>
+      
+      <!-- <style>
         #shuoshuo_content {
             background-color: #fff;
             padding: 10px;
@@ -604,53 +607,59 @@
             -moz-transform: rotateZ(720deg);
         }
       </style>
-      <!-- artitalk.end -->
+ -->      <!-- artitalk.end -->
       <!-- 自定义样式 -->
-<!--       
-        <style>
-          .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
-            background: linear-gradient(60deg,rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35) 95%) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0% 0% / cover ;
-            
-            color: white;
-          }
-          .cbp_tmtimeline>li .cbp_tmlabel {
-            background: linear-gradient(60deg,rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35) 95%) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0% 0% / cover;
-            
-            color: white;
-          }
-          .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
-            border-right-color: #FFC0BE
-          }
-          .cbp_tmtimeline>li .cbp_tmlabel:after {
-            border-right-color: #FFC0BE
-          }
-          .button {
-            background: linear-gradient(60deg,rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35) 95%) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0% 0% / cover;  
-            
-            color: white;
-          }
-          @keyframes gradientBG {
-              0% {
-                  background-position: 0% 50%;
-              }
-              50% {
-                  background-position: 100% 50%;
-              }
-              100% {
-                  background-position: 0% 50%;
-              }
-          }
+    <style>
+      #artitalk_main .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
+        background: linear-gradient(-45deg, #f1ac9d, #f06966, #dee2d1, #6abe83) 0% 0% / 400% 400% ;
+        animation: 15s ease 0s infinite normal none running gradientBG;
+        color: white;
+      }
+      .cbp_tmtimeline>li .cbp_tmlabel {
+        background: linear-gradient(-45deg, #f1ac9d, #f06966, #dee2d1, #6abe83) 0% 0% / 400% 400% ;
+        animation: 15s ease 0s infinite normal none running gradientBG;
+        color: white;
+      }
+      #artitalk_main .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel:after {
+        border-right-color:  #f1ac9d
+      }
+      .cbp_tmtimeline>li .cbp_tmlabel:after {
+        border-right-color:  #dee2d1
+      }
+      .button {
+        background: linear-gradient(130deg, #f1ac9d, #f06966, #dee2d1, #6abe83) 0% 0% / 400% 400% ;
+        animation: 15s ease 0s infinite normal none running gradientBG;
+        color: white;
+      }
+      #artitalk_main .at_button {
+        background: linear-gradient(130deg, #f1ac9d, #f06966, #dee2d1, #6abe83) 0% 0% / 400% 400% ;
+        animation: 15s ease 0s infinite normal none running gradientBG;
+        color: white;
+        cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
+      }
 
-          .balck_white01 {
-            background: #333030;
-            color: #e3dede
+      .shuoshuo_author_img img {
+          border: 1px solid #ddd;
+          padding: 2px;
+          float: left;
+          border-radius: 64px;
+          transition: all 1.0s;
+      }
+      @keyframes gradientBG {
+          0% {
+              background-position: 0% 50%;
           }
-          .url02{
-            background: url("https://gitee.com/cungudafa/source/raw/master/img/bg/hyo/hyo01.jpg") 0% 0% / cover;
+          50% {
+              background-position: 100% 50%;
           }
-        </style>
-       -->
+          100% {
+              background-position: 0% 50%;
+          }
+      }
+    </style>
       <!-- 自定义样式.end -->
+
+
       <script>
         $('path').css('fill', '');
       </script>
@@ -941,7 +950,7 @@
             
               <li>
                 <a href="/categories/%E5%AD%A6%E4%B9%A0ing/">
-                  <i class="fa fa-code" aria-hidden="true"></i>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
                   学习ing
                 </a>
               </li>
