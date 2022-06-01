@@ -54,8 +54,8 @@
     mashiro_option.v_appId = "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI";//
     mashiro_option.v_appKey = "TmHhsnH8nkud95mapACnGeNO";//
     mashiro_option.mathjax = "1";
-    mashiro_option.copyright_enable = "false" ;
-    mashiro_option.copyright_minCharNumber = parseInt("120") ;
+    mashiro_option.copyright_enable = "true" ;
+    mashiro_option.copyright_minCharNumber = parseInt("400") ;
     mashiro_option.copyright_description = "本文章著作权归作者所有，任何形式的转载都请注明出处。" ;
     mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
     mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
@@ -185,6 +185,11 @@
     </span>
   </div>
 </div>
+<style>
+  .headertop-down {
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
+  }
+</style>
     <div id="page" class="site wrapper">
       <!-- banner -->
       <header class="site-header no-select gizle sabit" role="banner">
@@ -383,11 +388,10 @@
 
       
       <!-- body -->
-      
-<div class="pattern-center-blank"></div>
+      <div class="pattern-center-blank"></div>
 <div class="pattern-center ">
   <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="web.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+    <img src="https://tenapi.cn/acg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
   </div>
   <header class="pattern-header ">
     <h1 class="cat-title">web</h1>
@@ -395,7 +399,7 @@
     <span class="post-meta-item-icon">
       <i class="iconfont icon-attention"></i>
     </span>
-    <span class="post-meta-item-text"><span id="busuanzi_value_page_pv"> </span>
+      <span class="post-meta-item-text">本页共<span id="busuanzi_value_page_pv"> </span>次阅读
     </span>
   </header>
 </div>
@@ -418,9 +422,9 @@
         <div class="overlay">
           <i class="iconfont icon-text">
           </i>
+          <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/webp/307473.webp"
+            class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
         </div>
-        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/webp/307473.webp"
-          class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
       </a>
     </div>
 
@@ -482,9 +486,115 @@
       <div class="clearer">
       </div>
     </main>
-    <!--  -->
     
   </div>
+  <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
+  </div>
+  <footer class="post-footer">
+    <div class="post-lincenses" style="color: #ff9966;">
+      欢迎转载，转载时请注明来源哦！
+      <br>
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">
+        <i class="fa fa-creative-commons" aria-hidden="true"></i>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </div>
+    <div class="post-tags">
+    </div>
+    <div class="post-share">
+      <div class="social-share sharehidden share-component"></div>
+      <i class="iconfont show-share icon-forward"></i>
+    </div>
+  </footer>
+  <!-- .entry-footer -->
+  <section class="author-profile">
+    <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png" itemprop="image" alt="yuein" height="70" width="70"></a>
+      <div class="meta">
+        <span class="title">Author</span>
+        <h3 itemprop="name">
+        <a target="_blank" href="https://yuein.net/" itemprop="url" rel="author noopener">yuein</a>
+        </h3>
+      </div>
+    </div>
+    <p><i class="iconfont icon-write"></i>
+        <id="hitokoto" style="text-align:center"><b id="hitokoto_text"> 你好呀</b>
+    </p>
+  </section>
+  <style>
+    .post-meta {
+      float: right;
+      padding-left: 0px;
+      padding-right: 20px;
+      max-width: 200px;
+      padding-top: 55px;
+      text-align: right;
+      margin: 0 0 0 0
+    }
+    .post-list {
+      float: left;
+      width: 100%;
+      height: 160px;
+      position: relative;
+      margin: 20px 0 20px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.484);
+      box-shadow: 0 1px 20px -6px rgba(0, 0, 0, .5);
+      transition: box-shadow .3s ease;
+    }
+    .post-list::after {
+      content: "";
+      border-radius: 10px;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: -1px 6px 8px 4px rgb(0 0 0 / 81%);
+      opacity: 0;
+      -webkit-transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .post-list:hover::after {
+        opacity: 1;
+    } 
+    .p-time {
+      right: 20px;
+    }
+    .post-more {
+      padding-right: 20px;
+    }
+    .feature {
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+    .post-list h1.entry-title{
+      margin: 15px 0 0 17%;
+      width: 50%;
+    }
+    .entry-footer {
+      margin: -11px 0 0 17%;
+    }
+    .post-list p {
+      margin: 0 0 0 19%;
+      max-width: 430px;
+      width: 60%;
+    }
+    .feature i {
+      background: #ffd3d36e;
+    }
+    .overlay {
+      height: 120px;
+      width: 120px;
+      overflow: hidden;
+      margin-left: -5px;
+    }
+    .feature img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  </style>
+  
 </div>
       <!-- body.end -->
     </div>
@@ -1373,5 +1483,9 @@
   
  </body>
 </html>
-
+<style>
+  #waifu-toggle {
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
+  }
+</style>
 
