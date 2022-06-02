@@ -9,6 +9,8 @@
     url("logo.svg#logo") format("svg"); /* iOS 4.1- */
     font-style: normal;
     font-weight: normal;
+
+    font-display: auto;
 }
 
 
