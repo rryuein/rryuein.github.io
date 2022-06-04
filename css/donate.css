@@ -35,13 +35,14 @@
   height: 70px;
   line-height: 70px;
   color: #fff;
-  background: #ffd886 url(/images/donate/like.svg) no-repeat center 10px;
-  background-size: 20px;
+  background: url(/images/donate/like.svg) no-repeat center 10px;
+  background-size: 57px;
   border-radius: 35px;
   text-align: center;
-  left: calc(50% - 120px);
-  top: -80px;
+  left: calc(50% - 168px);
+  top: -38px;
   transform: rotatez(-15deg );
+  z-index: 2;
 }
 #donateBox {
   position: relative;
@@ -50,13 +51,13 @@
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
-  /*width: 299px;*/
-  /*height: 28px;*/
+  width: 270px;
+  height: 50px;
   float: left;
   z-index: 1;
 }
 #donateBox li {
-  width: 74px;
+  width: 134px;
   float: left;
   text-align: center;
   border-left: 1px solid #ddd;
@@ -67,7 +68,7 @@
   cursor: pointer;
   overflow: hidden;
   line-height: 600px;
-  height: 28px;
+  height: 50px;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   opacity: 0.5;

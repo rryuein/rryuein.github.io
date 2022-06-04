@@ -14,7 +14,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/style.css" type="text/css" media="all" id="saukra_css-css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" id="saukra_css-css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn//css/jquery.fancybox.min.css" media="all">  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/lib.min.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/font.css" media="all">
@@ -435,7 +435,7 @@
     <!-- <style>
     #vcomments textarea {
         box-sizing: border-box;
-        background: url("https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif") 100% 100% no-repeat;
+        background: url("/null") 100% 100% no-repeat;
     }
     </style> -->
 
@@ -531,13 +531,10 @@
 
 
       <div class="single-reward">
-        <div class="reward-open">赏
-          <div class="reward-main">
-            <ul class="reward-row">
-              <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/donate/AliPay.jpg"></li>
-              <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/donate/WeChatPay.png"></li>
-            </ul>
-          </div>
+        <div class="reward-open">
+          <a target="_blank" href="https://yuein.net/donate" rel="next noopener">
+            <img data-src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/jieyong.webp" class="lazyload" onerror="imgError(this,3)" style="box-shadow: 0px 0px 0px rgb(0 0 0 / 0%);"></img>
+          </a>
         </div>
       </div>
       <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent">
@@ -560,7 +557,6 @@
     <!-- #post-## -->
     
   </div><!-- #primary -->
-  </div>
 
 
 
@@ -674,8 +670,10 @@
 
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all"> 
 <!-- fancybox大图查看 需jq -->
 
+  <script src="/js/fancybox.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js"></script>
   <script>
     $('[data-fancybox="images"]').fancybox({
@@ -967,7 +965,7 @@
 
     enable="true"
 
-    id="2660651585"
+    id="7466799465"
 
     server="netease"
 
@@ -1449,11 +1447,17 @@
   
     <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/piao.js" type="text/javascript"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
+  
  </body>
 </html>
 <style>
   #waifu-toggle {
     cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
   }
+  .aplayer .aplayer-icon { 
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
+  }
+  .aplayer.aplayer-fixed .lrc-show{
+    background: rgb(255 255 255 / 0%);
+  }
 </style>
-

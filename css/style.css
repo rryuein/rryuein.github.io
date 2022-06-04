@@ -31,7 +31,7 @@
     -ms-user-select: none;
     user-select: none;
     line-height: normal;
-    position: relative
+    position: relative;
 }
 
 .aplayer * {
@@ -766,7 +766,6 @@
     z-index: 9999
 }
 
-@charset "utf-8";
 
 #content {
     animation: main 1s;
@@ -862,8 +861,8 @@ input:-webkit-autofill {
 }
 
 ::selection {
-    background: #444;
-    color: #fff
+    background: #f1e8e8db;
+    color: #000
 }
 
 ::-moz-selection {
@@ -905,11 +904,23 @@ template {
 }
 
 a {
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur), auto
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 a:link {
     text-decoration: none;
+}
+
+pre.highlight-wrap .copy-code {color: #ff9797;
+    position: absolute;
+    float: right;
+    right: 10px;
+    top: 0;
+    padding-top: 4px;
+    padding-right: 2px;
+    z-index: 2;
+    font-size: 16px;
+    outline: 0;
 }
 
 a:active,
@@ -1111,7 +1122,7 @@ h6 {
 p {
     margin-bottom: 1.5em;
     font-size: 15px;
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur), auto
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/texto.cur), auto;
 }
 
 dfn,
@@ -1249,13 +1260,14 @@ html {
 
 *:before,
 *:after {
-    box-sizing: inherit
+    box-sizing: inherit;
 }
 
 body {
-    background: #fff;
+    background: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
     background-attachment: fixed;
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/normal.cur), auto
+    background-size: cover;
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/normal.cur), auto;
 }
 
 blockquote:before,
@@ -1559,6 +1571,7 @@ a:active {
     position: relative;
     top: 0;
     left: 0;
+    height: 420px;
     width: 100%;
     overflow: hidden
 }
@@ -1570,12 +1583,12 @@ a:active {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, .3)
+    background-color: rgba(158, 158, 158, .3)
 }
 
 .pattern-center::after {
     content: '';
-    width: 150%;
+    /* width: 150%; */
     height: 4.375rem;
     background: #fff;
     left: -25%;
@@ -1584,18 +1597,9 @@ a:active {
     position: absolute
 }
 
-.pattern-attachment-img {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-origin: border-box;
-    width: 100%;
-    height: 400px
-}
-
 .pattern-center header.pattern-header {
     position: absolute;
-    top: 45%;
+    top: 35%;
     left: 0;
     right: 0;
     text-align: center;
@@ -1722,8 +1726,10 @@ a:active {
     background-size: cover;
     background-position: center center;
     background-origin: border-box;
-    width: 100%;
-    height: 400px
+    width: 85%;
+    -webkit-filter: blur(2px);
+    margin: auto;
+    height: 420px;
 }
 
 .pattern-center-sakura header.pattern-header {
@@ -1838,8 +1844,8 @@ a:active {
 .yya {
     position: fixed;
     left: 0;
-    background: rgba(255, 255, 255, .95);
-    box-shadow: 0 1px 40px -8px rgba(0, 0, 0, .5)
+    background: rgba(255,240,240, .95);
+    box-shadow: -16px 7px 40px -8px rgba(0, 0, 0, .5)
 }
 
 .gizle {
@@ -1891,9 +1897,9 @@ a:active {
     opacity: 1
 }
 
-.site-description {
-    float: right
-}
+//site-description {
+//    float: right
+//}
 
 .header-focus {
     height: 250px;
@@ -1910,9 +1916,13 @@ a:active {
 }
 
 .site-top .lower-cantiner {
-    position: absolute;
-    left: 50%;
-    min-width: 758.4px;
+    position: relative;
+    /* left: 0%; */
+    /* border: 1px dashed #ccc; */
+    /* display: table-cell; */
+    vertical-align: middle;
+    text-align: center;
+    min-width: 16px;
     pointer-events: none
 }
 
@@ -1921,7 +1931,7 @@ a:active {
     margin: 15px 0 0 10px;
     font-size: 16px;
     position: relative;
-    left: -50%;
+    /* left: -50%; */
     pointer-events: auto !important
 }
 
@@ -1933,13 +1943,13 @@ a:active {
 }
 
 @media(max-width:1200px) {
-    .site-top .lower {
-        left: 280px
+    /* .site-top .lower {
+        right: -26% 
     }
 
     .site-top .lower-cantiner {
-        left: 0
-    }
+         left: 0 
+    }*/
 
     .site-top .lower nav.hide {
         display: none !important
@@ -2033,7 +2043,7 @@ a:active {
     width: 30px;
     height: 33px;
     margin-top: 4.5px;
-    cursor: pointer;
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     z-index: 999
 }
 
@@ -2077,8 +2087,8 @@ a:active {
     background: #fff;
     padding: 10px;
     top: 46px;
-    right: -13px;
-    width: 80px;
+    right: -20px;
+    width: 100px;
     text-align: center;
     z-index: 9999;
     border-radius: 5px;
@@ -2164,13 +2174,13 @@ a:active {
 
 .feature i {
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: 0px;
+    left: -5px;
     font-size: 25px;
     color: white;
-    width: 94px;
-    height: 94px;
-    line-height: 94px;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
     text-align: center;
     background: #bbe2db;
     border-radius: 50%;
@@ -2773,7 +2783,7 @@ i.iconfont.hotpost {
 }
 
 .entry-content code {
-    background: rgba(254, 250, 199, 1);
+    /*background: rgba(254, 250, 199, 1);*/
     color: #e67474;
     word-break: break-word;
     font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
@@ -2782,14 +2792,33 @@ i.iconfont.hotpost {
     border-radius: 5px
 }
 
-.entry-content a {
-    color: #e67474;
-    text-decoration: underline dotted rgba(0, 0, 0, .1)
-}
-
 .entry-content a:hover {
-    color: orange;
     text-decoration: underline orange
+}
+@charset "UTF-8";
+.entry-content a{
+    color:#e67474;
+    position:relative;
+}
+.entry-content a:hover{
+    color:orange;
+    text-decoration:none
+}
+.entry-content a:after{
+    content:'';
+    position:absolute;
+    width: 97%;
+    transform:scaleX(0);
+    height:2px;
+    bottom:0;
+    left:0;
+    background-color:orange;
+    transform-origin:bottom right;
+    transition:transform .25s ease-out;
+}
+.entry-content a:hover:after{
+    transform:scaleX(1);
+    transform-origin:bottom left
 }
 
 h1.entry-title {
@@ -2821,11 +2850,8 @@ h1.entry-title {
 }
 
 .entry-content p {
-    color: #797979
-}
-
-.entry-content p {
-    line-height: 30px
+    color: #797979;
+    line-height: 30px;
 }
 
 .entry-content hr {
@@ -2900,11 +2926,11 @@ h1.page-title.mb- {
     z-index: 99;
     width: 70px;
     height: 900px;
-    background: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/scroll.png) no-repeat center;
+    background: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/scroll.png) no-repeat center;
     background-size: contain;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/No_Disponible.cur), auto;
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/No_Disponible.cur), auto;
     opacity: 1
 }
 
@@ -2968,7 +2994,7 @@ h1.page-title.mb- {
 }
 
 .post-footer {
-    padding: 20px 0;
+    padding: 8px 0;
     border-bottom: 1px dashed #ddd;
     border-top: 1px dashed #ddd;
     margin-top: 30px;
@@ -2977,7 +3003,7 @@ h1.page-title.mb- {
 
 .post-lincenses {
     text-align: center;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     font-size: 14px
 }
 
@@ -3287,7 +3313,7 @@ h1.page-title.mb- {
 }
 
 .author-profile {
-    padding: 30px 12.78%;
+    padding: 15px 12.78%;
     text-align: center
 }
 
@@ -3321,16 +3347,16 @@ h1.page-title.mb- {
 }
 
 .author-profile .meta h3 {
-    margin: 10px 0 0;
+    margin: 0px 0 0;
     text-transform: none
 }
 
 .author-profile .meta h3 a {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 1px;
-    color: #ababab
+    letter-spacing: 0px;
+    color: #ff9999c7
 }
 
 .author-profile .meta .title {
@@ -3339,8 +3365,8 @@ h1.page-title.mb- {
 
 .author-profile p {
     font-size: 13px;
-    line-height: 30px;
-    margin: 15px 0 0;
+    line-height: 15px;
+    margin: 6px 0 0;
     color: #7d8588;
     letter-spacing: 0;
     display: inline-block;
@@ -5211,13 +5237,13 @@ li.feature-2 {
     margin-right: 13px
 }
 
-.wechat {
+.qq {
     width: 35px;
     height: 35px;
     position: relative
 }
 
-.wechatInner img {
+.qqInner img {
     border-radius: 0;
     width: 121px;
     height: auto;
@@ -5225,7 +5251,7 @@ li.feature-2 {
     background: none
 }
 
-.wechatInner {
+.qqInner {
     width: 121px;
     height: 121px;
     padding: 10px;
@@ -5237,7 +5263,7 @@ li.feature-2 {
     opacity: 0
 }
 
-.wechatInner:before {
+.qqInner:before {
     content: "";
     position: absolute;
     top: -30px;
@@ -5248,7 +5274,7 @@ li.feature-2 {
     border-color: transparent transparent rgba(0, 0, 0, .4) transparent
 }
 
-.wechatInner {
+.qqInner {
     position: absolute;
     border-radius: 8px;
     transition: .7s all ease;
@@ -5258,7 +5284,7 @@ li.feature-2 {
     -ms-transition: .7s all ease
 }
 
-.wechat:hover .wechatInner {
+.qq:hover .qqInner {
     -webkit-transform: translate3d(0, 16px, 0);
     transform: translate3d(0, 16px, 0);
     opacity: 1;
@@ -5286,7 +5312,7 @@ li.feature-2 {
 
 i.iconfont.js-toggle-search.iconsearch {
     color: #666;
-    cursor: pointer;
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     font-size: 26px;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out
@@ -6841,16 +6867,16 @@ i.iconfont.down {
 
 .single-reward .reward-open {
     position: relative;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    /* font-size: 18px;
     padding: 7px;
-    color: #fff;
+    color: #fff; */
     text-align: center;
     display: inline-block;
-    border-radius: 100%;
+    /* border-radius: 100%;
     background: #d34836;
-    cursor: pointer
+    cursor: pointer */
 }
 
 .single-reward .reward-main {
@@ -7879,7 +7905,7 @@ input[type=radio]:checked:before {
     visibility: hidden;
     white-space: nowrap;
     padding: 10px 10px;
-    cursor: pointer;
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     border-radius: 10px 10px 0 0
 }
 
@@ -7915,15 +7941,6 @@ input[type=radio]:checked:before {
     .changeSkin-gear i {
         font-size: 20px
     }
-}
-
-position:relative;
-z-index:99;
-cursor:pointer
-}
-
-.changeSkin-gear span:before {
-    content: "切换主题 | Change Skin "
 }
 
 @media(max-width:800px) {
@@ -9110,9 +9127,9 @@ a.toc-link {
 
 .highlight-wrap {
     position: relative;
-    background: #21252b;
+    background: #ffffffa3;
     border-radius: 5px;
-    font: 15px/22px "Microsoft YaHei", "Arial", Sans-Serif;
+    font: 0px/22px "Microsoft YaHei", "Arial", Sans-Serif;
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
@@ -9120,7 +9137,7 @@ a.toc-link {
     text-shadow: none;
     color: #000;
     padding-top: 30px;
-    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .4)
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .4)
 }
 
 .highlight .line span::-moz-selection,
@@ -9143,19 +9160,19 @@ a.toc-link {
 
 .highlight-wrap code::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, .3) !important;
-    border-radius: 10px !important;
-    background-color: #21252b !important
+    /* border-radius: 10px !important;
+    background-color: #21252b !important */
 }
 
 .highlight-wrap code::-webkit-scrollbar-thumb {
     border-radius: 10px !important;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, .5) !important;
-    background-color: #21252b !important
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, .5) !important;
+    background-color: #21252b !important */
 }
 
 .highlight-wrap code {
-    background: #1d1f21;
-    color: #fff;
+    background: #fff8e769;
+    color: #797979;
     word-break: break-word;
     font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
     padding: 2px;
@@ -9165,11 +9182,11 @@ a.toc-link {
 }
 
 .highlight-wrap code[data-rel]:before {
-    color: #fff;
+    color: #494141;
     content: attr(data-rel);
-    height: 38px;
+    height: 33px;
     line-height: 38px;
-    background: #21252b;
+    background: #fededebd;
     font-size: 16px;
     position: absolute;
     margin-top: -35px;
@@ -9305,6 +9322,7 @@ a.toc-link {
     width: 100%;
     height: 100%;
     min-width: 100%;
+    background: #fff;
     z-index: 9999999;
     margin: 0;
     animation: elastic 1s
@@ -9414,7 +9432,7 @@ a.toc-link {
     width: 36px;
     background-color: #f5f5f5;
     border-radius: 50%;
-    cursor: pointer
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .menu-list li:hover {
@@ -9441,7 +9459,7 @@ a.toc-link {
     margin: 0 4px;
     box-shadow: none;
     background-color: #f5f5f5;
-    cursor: pointer
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .font-family-controls button.selected {
@@ -9744,8 +9762,8 @@ td.hljs-ln-numbers {
     -ms-user-select: none;
     user-select: none;
     text-align: center;
-    color: #888f96;
-    background: #1d1f21;
+    color: #000;
+    background: #fff4d5c2;
     font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
     vertical-align: top;
     left: 0;
@@ -9767,7 +9785,7 @@ td.hljs-ln-numbers {
 }
 
 .entry-content pre.highlight-wrap .copy-code {
-    color: #fff;
+    color: #ff9797;
     position: absolute;
     float: right;
     right: 10px;
