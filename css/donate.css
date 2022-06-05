@@ -31,22 +31,19 @@
 #DonateText {
   position: relative;
   font-size: 12px;
-  width: 70px;
-  height: 70px;
+  width: 140px;
+  height: 96px;
   line-height: 70px;
   color: #fff;
-  background: url(/images/donate/like.svg) no-repeat center 10px;
-  background-size: 57px;
-  border-radius: 35px;
+  background: url(/images/donate/donate.png) no-repeat center 10px;
+  background-size: 140px;
   text-align: center;
-  left: calc(50% - 168px);
-  top: -38px;
-  transform: rotatez(-15deg );
-  z-index: 2;
+  left: calc(50% - 121px);
+  top: -81px;
+  z-index: 1;
 }
 #donateBox {
   position: relative;
-  /*left: calc(50% - 150px);*/
   top: calc(50% - 15px);
   background-color: #fff;
   border: 1px solid #ddd;
@@ -55,6 +52,7 @@
   height: 50px;
   float: left;
   z-index: 1;
+  box-shadow: -3px 5px 8px 0px rgb(0 0 0 / 28%);
 }
 #donateBox li {
   width: 134px;
@@ -65,7 +63,7 @@
   background-color: rgba(204, 217, 220,0.1);
   background-size: 45px;
   transition: all .3s;
-  cursor: pointer;
+  cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
   overflow: hidden;
   line-height: 600px;
   height: 50px;
@@ -99,11 +97,11 @@
   opacity: 0;
   cursor: pointer;
 }
-#donateBox #AliPay {
-  background-image: url(/images/donate/alipay.svg);
+#donateBox #bilibili {
+  background-image: url(/images/donate/bilibili.svg);
 }
-#donateBox #WeChat {
-  background-image: url(/images/donate/wechat.svg);
+#donateBox #qq {
+  background-image: url(/images/donate/qq.svg);
 }
 #QRBox {
   position: relative;
@@ -115,7 +113,7 @@
     perspective: 400px;
 }
 #MainBox {
-  cursor: pointer;
+  cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
   position: absolute;
   text-align: center;
   width: 200px;

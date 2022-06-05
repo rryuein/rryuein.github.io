@@ -14,7 +14,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" id="saukra_css-css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/style.css" type="text/css" media="all" id="saukra_css-css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn//css/jquery.fancybox.min.css" media="all">  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/lib.min.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/font.css" media="all">
@@ -416,8 +416,8 @@
         <ul id="donateBox" class="list pos-f tr3">
           <!-- <li id="BTC" data-footnote="Copy addres and show QRCod"><button id="BTCBn"  data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li> -->
           <!-- <li id="PayPal"><a href="" target="_blank">PayPal</a></li> -->
-          <li id="AliPay">AliPay</li>
-          <li id="WeChat">WeChat</li>
+          <li id="bilibili">bilibili</li>
+          <li id="qq">qq</li>
         </ul>
         <div id="DonateText" class="tr3"></div>
         <div id="QRBox" class="pos-f left-100">
@@ -484,8 +484,8 @@
     var QRBox = $('#QRBox');
     var MainBox = $('#MainBox');
     var BTCQR = '/images/donate/BTCQR.png'; // 二维码路径
-    var AliPayQR  = 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/donate/AliPayQR.jpg';
-    var WeChanQR  = 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/donate/WeChanQR.jpg';
+    var bilibili  = 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/donate/bilibili.png';
+    var qq  = 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/donate/qq.png';
 
     function showQR(QR) {
       if (QR) {
@@ -503,10 +503,10 @@
         new ClipboardJS('#BTCBn');
         new ClipboardJS('.btnsss');
         showQR(BTCQR);
-      } else if (thisID === 'AliPay') {
-        showQR(AliPayQR);
-      } else if (thisID === 'WeChat') {
-        showQR(WeChanQR);
+      } else if (thisID === 'bilibili') {
+        showQR(bilibili);
+      } else if (thisID === 'qq') {
+        showQR(qq);
       }
     });
 
