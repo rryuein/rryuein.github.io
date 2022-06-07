@@ -1,6 +1,6 @@
 // 注意：live2d_path 参数应使用绝对路径
 //const live2d_path = "https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
-const live2d_path = "/themes/sakura/source/";
+const live2d_path = "/themes/hexo-theme-sakuraplus/source/live2d-widget/";
 
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {

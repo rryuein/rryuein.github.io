@@ -23,7 +23,6 @@ function loadWidget(config) {
 			<div id="waifu-tool">
 				<span class="fa fa-lg fa-comment"></span>
 				<span class="fa fa-lg fa-paper-plane"></span>
-				<span class="fa fa-lg fa-user-circle"></span>
 				<span class="fa fa-lg fa-street-view"></span>
 				<span class="fa fa-lg fa-camera-retro"></span>
 				<span class="fa fa-lg fa-info-circle"></span>
@@ -69,7 +68,7 @@ function loadWidget(config) {
 				document.head.appendChild(script);
 			}
 		});
-		document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
+		//document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
 		document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
 		document.querySelector("#waifu-tool .fa-camera-retro").addEventListener("click", () => {
 			showMessage("照好了嘛，是不是很可爱呢？", 6000, 9);
@@ -239,7 +238,7 @@ function loadWidget(config) {
 		}
 	}
 
-	async function loadOtherModel() {
+	/*async function loadOtherModel() {
 		let modelId = localStorage.getItem("modelId");
 		if (useCDN) {
 			if (!modelList) await loadModelList();
@@ -252,7 +251,7 @@ function loadWidget(config) {
 					loadModel(result.model.id, 0, result.model.message);
 				});
 		}
-	}
+	}*/
 }
 
 function initWidget(config, apiPath) {
