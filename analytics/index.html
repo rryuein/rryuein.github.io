@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/css/insight.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/tags.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <link rel="stylesheet" href="/css/tag-bubble.css">
   <!-- 自定义logo -->
   <link rel="stylesheet" type="text/css" href="/css/logo.css">
   <link rel="stylesheet" type="text/css" href="/fonts/LOGO/logo.css">
@@ -422,8 +423,8 @@
     #tags-chart {
         width: 100%;
         height: 300px;
-        margin: 0.5rem auto;
-        padding: 0.5rem;
+        /* margin: 0.5rem auto; */
+        padding: 2.5rem 0.5rem 0.5rem 0.5rem;
     }
 </style>
 
@@ -470,7 +471,7 @@
             type: 'value',
         },
         series: [{
-            name: 'postsNumberName',
+            name: '文章数',
             type: 'line',
             color: ['#6772e5'],
             data: [0,0,0,0,0,0,0,0,0,0,1,4,0] ,
@@ -522,7 +523,7 @@
             color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47',
                 '#26A69A'
             ],
-            data: [{"name":"学习ing","value":2},{"name":"软件安装与配置","value":1},{"name":"技术","value":1},{"name":"好吃的","value":2}] ,
+            data: [{"name":"学习ing","value":2},{"name":"软件安装与配置","value":1},{"name":"好吃的","value":2},{"name":"技术","value":1}] ,
             itemStyle: {
                 emphasis: {
                     shadowBlur: 10,

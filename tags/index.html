@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/css/insight.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/tags.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <link rel="stylesheet" href="/css/tag-bubble.css">
   <!-- 自定义logo -->
   <link rel="stylesheet" type="text/css" href="/css/logo.css">
   <link rel="stylesheet" type="text/css" href="/fonts/LOGO/logo.css">
@@ -388,263 +389,155 @@
 
       
       <!-- body -->
-      <div class="blank" style="padding-top: 75px;">
+      <script src="/js/bubble.js"></script>
+<div class="blank" style="padding-top: 75px;">
 </div>
 <div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-    
-  </div>    
-  <header class="pattern-header ">
-    <h1 class="entry-title">
-      标签云</h1>
-      <span class="post-meta-item-icon">
-        <i class="iconfont icon-attention"></i>
-      </span>
-      <span class="post-meta-item-text">本页共<span id="busuanzi_value_page_pv"> </span>次阅读
-      </span>
-  </header>
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      标签云</h1>
-      <span class="cat-des">
-        <p>
-          Tags 6</p>
-      </span>
+    <div class="pattern-attachment-img">
+      
+      <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+      
+    </div>    
+    <header class="pattern-header ">
+      <h1 class="entry-title">
+        标签云</h1>
+        <span class="post-meta-item-icon">
+          <i class="iconfont icon-attention"></i>
+        </span>
+        <span class="post-meta-item-text">本页共<span id="busuanzi_value_page_pv"> </span>次阅读
+        </span>
     </header>
-    <div id="main-part">
-   
-        <div class="tag-cloud">
-          <div class="tag-cloud-title">
-          </div>
-          <div class="tag-cloud-tags">
-          <a href="/tags/Github/" style="font-size: 15px; color: #f66">Github</a> <a href="/tags/Hexo/" style="font-size: 30px; color: #09c">Hexo</a> <a href="/tags/web/" style="font-size: 15px; color: #f66">web</a> <a href="/tags/%E5%86%8D%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%A0%87%E7%AD%BE%E8%AF%95%E8%AF%95/" style="font-size: 15px; color: #f66">再加一个标签试试</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 15px; color: #f66">博客</a> <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 15px; color: #f66">悦读</a>
-          </div>
-        </div>
-
-        
-
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fa fa-tags"></i>&nbsp;&nbsp; 标签
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Github/" title="Github: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Github" style="background-color: #F5EEF8;">Github
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="博客" style="background-color: #D5F5E3;">博客
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/web/" title="web: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="web" style="background-color: #E8F8F5;">web
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%82%A6%E8%AF%BB/" title="悦读: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="悦读" style="background-color: #FEF9E7;">悦读
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%86%8D%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%A0%87%E7%AD%BE%E8%AF%95%E8%AF%95/" title="再加一个标签试试: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="再加一个标签试试" style="background-color: #F8F9F9;">再加一个标签试试
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
-    </div>
-</div>
-<style>
-#tags{
-    margin-top: 60px;
-}
-.center-align{
-    text-align:center
-}
-.chip-container {
-    margin-top: -60px;
-}
-
-.chip-container .tag-title {
-    margin-bottom: 10px;
-    color: #3C4858;
-    font-size: 1.75rem;
-    font-weight: 400;
-}
-
-.chip-container .tag-chips {
-    margin: 1rem auto 0.5rem;
-    max-width: 850px;
-    text-align: center;
-}
-
-.chip-container .tags-posts {
-    margin-top: 20px;
-}
-
-.chip-container .chip-default {
-    color: #7F95D1;
-}
-
-.chip-container .chip-active {
-    color: #FFF !important;
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
-    box-shadow: 2px 5px 10px #aaa !important;
-}
-
-.chip-container .chip {
-    margin: 10px 10px;
-    padding: 19px 14px;
-    display: inline-flex;
-    line-height: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
-    z-index: 0;
-}
-
-.chip-container .chip:hover {
-    color: #fff;
-    background: linear-gradient(to right, #FFC0BE 0%, #FF82A9 100%) !important;
-}
-
-.chip .tag-length {
-    margin-left: 5px;
-    margin-right: -2px;
-    font-size: 0.5rem;
-}
-
-.chip-default .tag-length {
-    color: #e91e63;
-    margin-top: 1px;
-}
-
-.chip-active .tag-length {
-    color: #fff;
-}
-
-</style>
-
-        
-        <link rel="stylesheet" type="text/css" href="https://blinkfox.github.io/libs/jqcloud/jqcloud.css">
-<link rel="stylesheet" type="text/css" href="https://blinkfox.github.io/libs/aos/aos.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<script type="text/javascript" src="https://blinkfox.github.io/libs/aos/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div class="tag-title center-align">
-            <i class="fa fa-tags"></i>&nbsp;&nbsp; 标签云
-        </div>
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="https://blinkfox.github.io/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud( [{"text":"Hexo","weight":2,"link":"/tags/Hexo/"},{"text":"Github","weight":1,"link":"/tags/Github/"},{"text":"博客","weight":1,"link":"/tags/博客/"},{"text":"web","weight":1,"link":"/tags/web/"},{"text":"悦读","weight":1,"link":"/tags/悦读/"},{"text":"再加一个标签试试","weight":1,"link":"/tags/再加一个标签试试/"}], {
-        autoResize: true
-    });
-</script>
-        
-        <footer class="post-footer">
-          <div class="post-lincenses" style="color: #ff9966;">
-            欢迎转载，转载时请注明来源哦！
-            <br>
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">
-              <i class="fa fa-creative-commons" aria-hidden="true"></i>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-          </div>
-          <div class="post-tags">
-          </div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer>
-        <section class="author-profile">
-          <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-            <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png" itemprop="image" alt="hojun" height="70" width="70"></a>
-            <div class="meta">
-              <span class="title">Author</span>
-              <h3 itemprop="name">
-              <a target="_blank" href="https://yuein.net/" itemprop="url" rel="author noopener">yuein</a>
-              </h3>
-            </div>
-          </div>
-          <hr>
-          
-          <!-- 一言 -->
-            <p><i class="iconfont icon-write"></i>
-              <id="hitokoto" style="text-align:center"><b id="hitokoto_text"> 若儿在努力摘抄...</b>
-            </p>
-            <script>
-                setTimeout(() => {
-                fetch('https://v1.hitokoto.cn/?c=i&encode=json')
-                  .then(response => response.json())
-                  .then(data => {
-                  const hitokoto =  document.getElementById('hitokoto_text')
-                  hitokoto.innerText = data.hitokoto 
-                  })
-                  .catch(console.error)
-                }, 5000);
-            </script>
-          
-        </section>
-    </div>   
   </div>
+  
+<div id="content" class="site-content">
+    <div id="main">
+        <header class="page-header">
+            <h1 class="cat-title">
+                标签云</h1>
+            <span class="cat-des">
+                <p>
+                Tags 6</p>
+            </span>
+        </header>
+        <div id="main-part">
+
+            <div class="tag-cloud">
+                <div class="tag-cloud-tags" hidden>
+                    <a href="/tags/Github/" style="font-size: 15px; color: #f66">Github</a> <a href="/tags/Hexo/" style="font-size: 30px; color: #09c">Hexo</a> <a href="/tags/web/" style="font-size: 15px; color: #f66">web</a> <a href="/tags/%E5%86%8D%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%A0%87%E7%AD%BE%E8%AF%95%E8%AF%95/" style="font-size: 15px; color: #f66">再加一个标签试试</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 15px; color: #f66">博客</a> <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 15px; color: #f66">悦读</a>
+                </div>
+            </div>
+            <div class="tagwrapper">
+                <div class="tagbubble"></div>
+            </div>
+            <script type="text/javascript">
+                var alltags = document.getElementsByClassName('tag-cloud-tags');
+                var tags = alltags[0].getElementsByTagName('a');
+
+                var bo = new Array();
+                var co = new Array();
+                for (var i = 0; i < 4; i++) {
+                    bo.push("b" + i);
+                }
+                for (var i = 0; i < 7; i++) {
+                    co.push("c" + i);
+                }
+
+                var divDom = document.querySelector('.tagbubble')
+                    //var divDom = document.getElementsByClassName('tagbubble')[0];
+                for (var i = 0; i < tags.length; i++) {
+                    var atag = document.createElement('a');
+                    var boStyle = bo[Math.floor(Math.random() * 4)];
+                    var coStyle = co[Math.floor(Math.random() * 7)];
+                    if (tags[i].innerText.length > 10) {
+                        boStyle = "b0";
+                    } else if (tags[i].innerText.length > 5 && tags[i].innerText.length < 10) {
+                        boStyle = "b1";
+                    }
+                    atag.setAttribute("class", boStyle + " " + coStyle);
+                    atag.setAttribute("href", tags[i].href);
+                    atag.innerText = tags[i].innerText;
+                    divDom.appendChild(atag);
+                }
+
+                function browserRedirect() {
+                    var sUserAgent = navigator.userAgent.toLowerCase();
+                    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+                    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+                    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+                    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+                    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+                    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+                    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+                    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+                    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                        //移动端页面
+                        return 80;
+                    } else {
+                        //pc端页面
+                        return 150;
+                    }
+                }
+
+                var tagRadius = browserRedirect();
+
+                /*3D标签云*/
+                tagcloud({
+                    selector: ".tagbubble", //元素选择器
+                    fontsize: 14, //基本字体大小, 单位px
+                    radius: tagRadius, //滚动半径, 单位px 页面宽度和高度的五分之一
+                    mspeed: "slow", //滚动最大速度, 取值: slow, normal(默认), fast
+                    ispeed: "slow", //滚动初速度, 取值: slow, normal(默认), fast
+                    direction: 135, //初始滚动方向, 取值角度(顺时针360): 0对应top, 90对应left, 135对应right-bottom(默认)...
+                    keep: false //鼠标移出组件后是否继续随鼠标滚动, 取值: false, true(默认) 对应 减速至初速度滚动, 随鼠标滚动
+                });
+            </script>
+            <!-- hexo-tag-cloud -->
+        </div>
+        <footer class="post-footer">
+            <div class="post-lincenses" style="color: #ff9966;">
+                欢迎转载，转载时请注明来源哦！
+                <br>
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">
+                <i class="fa fa-creative-commons" aria-hidden="true"></i>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+            </div>
+            <div class="post-tags">
+            </div>
+            <div class="post-share">
+                <div class="social-share sharehidden share-component"></div>
+                <i class="iconfont show-share icon-forward"></i>
+            </div>
+            </footer>
+            <section class="author-profile">
+            <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png" itemprop="image" alt="hojun" height="70" width="70"></a>
+                <div class="meta">
+                <span class="title">Author</span>
+                <h3 itemprop="name">
+                <a target="_blank" href="https://yuein.net/" itemprop="url" rel="author noopener">yuein</a>
+                </h3>
+                </div>
+            </div>
+            <hr>
+            
+            <!-- 一言 -->
+                <p><i class="iconfont icon-write"></i>
+                <id="hitokoto" style="text-align:center"><b id="hitokoto_text"> 若儿在努力摘抄...</b>
+                </p>
+                <script>
+                    setTimeout(() => {
+                    fetch('https://v1.hitokoto.cn/?c=i&encode=json')
+                    .then(response => response.json())
+                    .then(data => {
+                    const hitokoto =  document.getElementById('hitokoto_text')
+                    hitokoto.innerText = data.hitokoto 
+                    })
+                    .catch(console.error)
+                    }, 5000);
+                </script>
+            
+            </section>
+
+    </div>
 </div>
 
       <!-- body.end -->
