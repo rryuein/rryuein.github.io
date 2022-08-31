@@ -506,37 +506,36 @@
                 <div class="social-share sharehidden share-component"></div>
                 <i class="iconfont show-share icon-forward"></i>
             </div>
-            </footer>
-            <section class="author-profile">
-            <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-                <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png" itemprop="image" alt="hojun" height="70" width="70"></a>
-                <div class="meta">
-                <span class="title">Author</span>
-                <h3 itemprop="name">
-                <a target="_blank" href="https://yuein.net/" itemprop="url" rel="author noopener">yuein</a>
-                </h3>
-                </div>
+        </footer>
+        <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png" itemprop="image" alt="hojun" height="70" width="70"></a>
+            <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a target="_blank" href="https://yuein.net/" itemprop="url" rel="author noopener">yuein</a>
+            </h3>
             </div>
-            <hr>
-            
-            <!-- 一言 -->
-                <p><i class="iconfont icon-write"></i>
-                <id="hitokoto" style="text-align:center"><b id="hitokoto_text"> 若儿在努力摘抄...</b>
-                </p>
-                <script>
-                    setTimeout(() => {
-                    fetch('https://v1.hitokoto.cn/?c=i&encode=json')
-                    .then(response => response.json())
-                    .then(data => {
-                    const hitokoto =  document.getElementById('hitokoto_text')
-                    hitokoto.innerText = data.hitokoto 
-                    })
-                    .catch(console.error)
-                    }, 5000);
-                </script>
-            
-            </section>
-
+        </div>
+        <hr>
+        
+        <!-- 一言 -->
+            <p><i class="iconfont icon-write"></i>
+            <id="hitokoto" style="text-align:center"><b id="hitokoto_text"> 若儿在努力摘抄...</b>
+            </p>
+            <script>
+                setTimeout(() => {
+                fetch('https://v1.hitokoto.cn/?c=i&encode=json')
+                .then(response => response.json())
+                .then(data => {
+                const hitokoto =  document.getElementById('hitokoto_text')
+                hitokoto.innerText = data.hitokoto 
+                })
+                .catch(console.error)
+                }, 5000);
+            </script>
+        
+        </section>
     </div>
 </div>
 
