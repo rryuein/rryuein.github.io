@@ -109,17 +109,43 @@
         <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
         <script>
             var typed = new Typed("#description", {
-                strings: ['从来没有真正的绝境, 只有心灵的迷途',
-                             'Never really desperate, only the lost of the soul'],
-                startDelay: 300,
-                typeSpeed: 100,
-                loop: true,
+                strings: ['你好，欢迎翻阅若儿的笔记，希望有可以帮到你的东西呀',
+                           '当然也可以先看看小站的阅览指南，就在下面不远处',
+                           '如果有什么问题的话也要记得留言哦',
+                           '祝你开心!'],
+                startDelay: 3000,
+                typeSpeed: 120,
+                loop: false,
                 backSpeed: 50,
-                showCursor: true
+                showCursor: true,
+                backDelay: 1500
             });
         </script>
         
+        <script>
+          setTimeout(function(){
+            $("#description").empty();
+            var typed = new Typed("#description", {
+                strings: ['咦，怎么还不走呀，是想和若儿再聊会天嘛',
+                           '呜~若儿好感动，很少有人会这样做呢',
+                           '那么，“如你所见”若儿是可爱的女孩子哦',
+                           '虽然这还只是停留在心中的小小愿望',
+                           '虽然有各种阻碍难以跨越',
+                           '但只要依旧存在光亮，若儿也会一直努力的',
+                           '想必来到这里的你也会有属于自己的愿望吧',
+                           '尽管若儿也不能做到些什么，但',
+                           '愿所有美好的心愿都能得到祝福'],
+                startDelay: 300,
+                typeSpeed: 150,
+                loop: false,
+                backSpeed: 50,
+                showCursor: false,
+                backDelay: 1500
+            });
+          },50000)
+        </script>
         </div>
+
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
@@ -911,6 +937,7 @@
     }
   });
 </script>
+
     <!-- Side menu -->
     <div class="openNav no-select" style="height: 50px;">
       <div class="iconflat no-select" style="width: 50px; height: 50px;">
@@ -1630,9 +1657,11 @@
     <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
   
   
-    <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/piao.js" type="text/javascript"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/piao.js" type="text/javascript"></script>
   
-
+  <script>
+    console.log("为什么老是会报错呢，哭哭")
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 <style>
