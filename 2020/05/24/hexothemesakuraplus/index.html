@@ -6,7 +6,7 @@
   <!-- <meta name="baidu-site-verification" content="LukfTcyXmC" /> -->
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">博客开源 | 若儿的笔记</title>
+  <title itemprop="name">hexo-theme-sakuraplus | 若儿的笔记</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -29,7 +29,8 @@
   
     <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
-
+  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
+    
   <!-- 分析 -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -70,7 +71,7 @@
     /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-    var bg = "https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/1.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/2.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/3.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/4.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/5.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/6.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/7.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/8.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/9.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/10.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/11.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/12.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/13.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/14.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/15.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/16.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/17.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/18.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/19.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/20.webp".split(",");
+    var bg = "https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/1.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/2.jpg,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/3.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/4.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/5.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/6.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/7.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/8.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/9.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/10.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/11.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/12.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/13.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/14.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/15.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/16.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/17.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/18.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/19.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/20.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/21.jpg,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/22.jpg,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/23.webp,https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/24.webp".split(",");
     var bgindex = Math.floor(Math.random()*bg.length);
     if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
       alert('朋友，IE浏览器未适配哦~');
@@ -91,141 +92,6 @@
   <a href="#" class="cd-top faa-float animated"></a>
   <!-- Main content -->
   <section id="main-container">
-    <!-- Top menu -->
-    <div class="headertop filter-dot">
-  <div id="banner_wave_1"></div>
-  <div id="banner_wave_2"></div>
-  <figure id="centerbg" class="centerbg">
-    <div class="focusinfo no-select">
-      <div class="header-tou">
-        <a target="_blank" rel="noopener" href="https://yuein.net/">
-          <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png">
-        </a>
-      </div>
-      <div class="header-info">
-        <div class="description">
-        
-        <span id="description"></span>
-        <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
-        <script>
-            var typed = new Typed("#description", {
-                strings: ['你好，欢迎翻阅若儿的笔记，希望有可以帮到你的东西呀',
-                           '当然也可以先看看小站的阅览指南，就在下面不远处',
-                           '如果有什么问题的话也要记得留言哦',
-                           '祝你开心!'],
-                startDelay: 3000,
-                typeSpeed: 120,
-                loop: false,
-                backSpeed: 50,
-                showCursor: true,
-                backDelay: 1500
-            });
-        </script>
-        
-        <script>
-          setTimeout(function(){
-            $("#description").empty();
-            var typed = new Typed("#description", {
-                strings: ['咦，怎么还不走呀，是想和若儿再聊会天嘛',
-                           '呜~若儿好感动，很少有人会这样做呢',
-                           '那么，“如你所见”若儿是可爱的女孩子哦',
-                           '虽然这还只是停留在心中的小小愿望',
-                           '虽然有各种阻碍难以跨越',
-                           '但只要依旧存在光亮，若儿也会一直努力的',
-                           '想必来到这里的你也会有属于自己的愿望吧',
-                           '尽管若儿也不能做到些什么，但',
-                           '愿所有美好的心愿都能得到祝福'],
-                startDelay: 300,
-                typeSpeed: 150,
-                loop: false,
-                backSpeed: 50,
-                showCursor: false,
-                backDelay: 1500
-            });
-          },50000)
-        </script>
-        </div>
-
-        <div class="top-social_v2">
-          <li id="bg-pre">
-            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
-          </li>
-          
-            
-              
-                <li>
-                  <a href="http://github.com/rryuein" target="_blank" class="social-github" title="github">
-                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/github.png">
-                  </a>
-                </li>
-              
-            
-              
-                <li>
-                  <a href="https://space.bilibili.com/442451967" target="_blank" class="social-github" title="bilibili">
-                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/bilibili.png">
-                  </a>
-                </li>
-              
-            
-              
-                <li class="qq">
-                  <a href="/#">
-                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/qq.png">
-                  </a>
-                  <div class="qqInner">
-                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/qq.png">
-                  </div>
-                </li>
-              
-            
-              
-                <li>
-                  <a href="https://twitter.com/EVollerei" target="_blank" class="social-github" title="twitter">
-                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/twitter.png">
-                  </a>
-                </li>
-              
-            
-              
-                <li>
-                  <a href="https://steamcommunity.com/id/22136832" target="_blank" class="social-github" title="steam">
-                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/steam.png">
-                  </a>
-                </li>
-              
-            
-          
-          <li id="bg-next">
-            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
-          </li>
-        </div>
-      </div>
-    </div>
-  </figure>
-  
-  <div id="video-container">
-    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
-    </video>
-    <div id="video-btn" class="loadvideo videolive">
-    </div>
-    <div id="video-add">
-    </div>
-    <div class="video-stu">
-    </div>
-  </div>
-  <div class="headertop-down faa-float animated" onclick="headertop_down()">
-    <span>
-      <i class="fa fa-chevron-down" aria-hidden="true">
-      </i>
-    </span>
-  </div>
-</div>
-<style>
-  .headertop-down {
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
-  }
-</style>
     <div id="page" class="site wrapper">
       <!-- banner -->
       <header class="site-header no-select gizle sabit" role="banner">
@@ -318,6 +184,13 @@
                         </a>
                       </li>
                     
+                      <li>
+                        <a href="/categories/%E7%B3%96%E7%B3%96/">
+                          <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                          糖糖
+                        </a>
+                      </li>
+                    
                   </ul>
                 
               </li>
@@ -358,7 +231,7 @@
               </li>
             
               <li>
-                <a href="/comment/">
+                <a href="/comment">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
                     留言板
@@ -388,7 +261,7 @@
               </li>
             
               <li>
-                <a href="/">
+                <a href="javascript:;">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
                     关于
@@ -426,24 +299,27 @@
       <!-- body -->
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/sharejs.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-
-
 <div class="pattern-center-blank"></div>
-
- 
 <div class="pattern-center single-center">
   
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://api.ixiaowai.cn/api/api.php)"
-      src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://api.ixiaowai.cn/api/api.php">
-    </div>  
+  <!-- 有配图默认渲染第一张 -->
+  <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/startdash/sakura.md.png)"
+    src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/startdash/sakura.md.png">
+  </div>
   
   <header class="pattern-header single-header">
-    <h1 class="entry-title">博客开源</h1>
+    <h1 class="entry-title">hexo-theme-sakuraplus</h1>
     <p class="entry-census">
+      
+      <span class="post-meta-item">
+        <a target="_blank" rel="noopener" href="https://https://cungudafa.js.org/">
+          <img src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg">
+        </a>
+      </span>
       
       
       <span class="post-meta-item">
-        <a target="_blank" rel="noopener" href="https://undefined"> 洪卫 </a>
+        <a target="_blank" rel="noopener" href="https://https://cungudafa.js.org/"> cungudafa </a>
       </span>
       <span class="bull">
         ·</span>
@@ -452,7 +328,7 @@
         <span class="post-meta-item-icon">
           <i class="fa fa-calendar"></i>
         </span>
-        <span class="post-meta-item-text"> 2019-8-27 </span>
+        <span class="post-meta-item-text"> 2020-5-24 </span>
       </span>
       <span class="bull">
         ·</span>
@@ -476,7 +352,7 @@
     <i class="fa fa-book"></i>
     <span class="post-meta-item-text">字数统计: </span>
     <!-- 安装插件npm install hexo-wordcount --save -->
-    <span class="post-count">1.2k字</span>
+    <span class="post-count">5.8k字</span>
   </span>
 </span>
 <span class="bull">
@@ -485,7 +361,7 @@
   <span class="post-meta-item-icon">
     <i class="fa fa-coffee"></i>
     <span class="post-meta-item-text">阅读时长≈</span>
-    <span class="post-count">4分钟</span>
+    <span class="post-count">24分钟</span>
   </span>
 </span>
         
@@ -510,82 +386,670 @@
     <main id="main" class="site-main" role="main">
       <article id="post-1"
         class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content">  -->
-        <!--套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h1><p><img src="https://raw.githubusercontent.com/shw2018/cdn/master/blog_files/img/Blog-Open-Source/blog-demo1.gif" alt="演示Demo"></p>
-<h1 id="简短介绍"><a href="#简短介绍" class="headerlink" title="简短介绍"></a>简短介绍</h1><p>倒腾了一两周总算把个人博客网站完善了，目前这个版本使用应该是够了，当然还有一些优化项和功能增加后续在慢慢更新，为了回馈开源，今天准备把我自己修改完善的<code>blog</code>网站源代码开源。这不是生成后的网页文件，是您可以直接使用的源码，您只需要把博客相关信息换成您自己的就可以部署了，对于新手或者不懂编程的小伙伴来说，简直是福音，极大简化了您构建博客的工作量和复杂度，每个人都可以下载并修改成自己喜欢样式！如果你有修改想法，欢迎PR！最后，我们还是给这个开源小项目取个名字吧，就叫<a target="_blank" rel="noopener" href="https://github.com/shw2018/hexo-blog-fly.git">hexo-blog-fly</a>吧，怎么样？&lt;&lt;&lt;&lt;&lt;<a target="_blank" rel="noopener" href="https://github.com/shw2018/hexo-blog-fly">源代码下载</a>&gt;&gt;&gt;&gt;&gt;</p>
-<p>本博客基于<code>Hexo</code>框架搭建，用到<a target="_blank" rel="noopener" href="https://github.com/shw2018/hexo-theme-matery">hexo-theme-matery</a>主题, 并在此基础之上做了很多修改，修复了一些bug，增加了一些新的特性和功能，博客地址：<a target="_blank" rel="noopener" href="https://shw2018.github.io/">https://shw2018.github.io</a>，博客演示：<a target="_blank" rel="noopener" href="https://sunhwee.com/">sunhwee.com</a>。</p>
-<hr>
-<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p><strong>原主题特性</strong>:</p>
-<ul>
+          <p>　　大佬写的使用文档，直接搬运过来了，这个主题真的很好看，感兴趣的话就换上吧！</p>
+<h1 id="一、-看一看瞧一瞧，再决定做不做"><a href="#一、-看一看瞧一瞧，再决定做不做" class="headerlink" title="一、 看一看瞧一瞧，再决定做不做"></a>一、 看一看瞧一瞧，再决定做不做</h1><ul>
+<li><p>示例站：<a target="_blank" rel="noopener" href="https://cungudafa.top/">cungudafa.top</a>   </p>
+<p>  现在看这个：<a target="_blank" rel="noopener" href="https://cungudafa.js.org/">cungudafa.js.org</a></p>
+</li>
+<li><p>预览视频： <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1C7411N762">bilibili</a>  </p>
+</li>
+<li><p>源码地址：<a target="_blank" rel="noopener" href="https://gitee.com/cungudafa/hexo-theme-sakuraplus">hexo-theme-sakuraplus</a></p>
+</li>
+</ul>
+<blockquote>
+<p>Hexo主题Sakura由<a target="_blank" rel="noopener" href="https://www.hojun.cn/">Hojun大佬</a>修改自WordPress主题<a target="_blank" rel="noopener" href="https://github.com/mashirozx/Sakura/">Sakura</a>，感谢原作者<a target="_blank" rel="noopener" href="https://2heng.xin/">Mashiro</a></p>
+</blockquote>
+<p>由于sakura最近没有再更新了，我对之前的<a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/category_9714183.html">魔改笔记</a>进行了调整和整理，开源<a target="_blank" rel="noopener" href="https://gitee.com/cungudafa/hexo-theme-sakuraplus">hexo-theme-sakuraplus</a>版本。</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
 <li>简单漂亮，文章内容美观易读</li>
-<li><a target="_blank" rel="noopener" href="https://material.io/">Material Design</a> 设计</li>
 <li>响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现</li>
-<li>首页轮播文章及每天动态切换 <code>Banner</code> 图片</li>
-<li>瀑布流式的博客文章列表（文章无特色图片时会有 <code>24</code> 张漂亮的图片代替）</li>
+<li>首页轮播文章及自动切换 <code>Banner</code> 图片</li>
+<li>背景壁纸切换（增加）</li>
 <li>时间轴式的归档页</li>
-<li><strong>词云</strong>的标签页和<strong>雷达图</strong>的分类页</li>
-<li>丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）</li>
-<li>可自定义的数据的友情链接页面</li>
-<li>支持文章置顶和文章打赏</li>
+<li>支持pjax刷新</li>
+<li>友情链接页面 （增加了config可选设置提示语和本网站信息）</li>
+<li>支持在首页的音乐播放和视频播放功能</li>
+<li>支持文章置顶和文章打赏（增加了提示语）</li>
 <li>支持 <code>MathJax</code></li>
 <li><code>TOC</code> 目录</li>
-<li>可设置复制文章内容时追加版权信息</li>
-<li>可设置阅读文章时做密码验证</li>
-<li><a target="_blank" rel="noopener" href="https://gitalk.github.io/">Gitalk</a>、<a target="_blank" rel="noopener" href="https://imsun.github.io/gitment/">Gitment</a>、<a target="_blank" rel="noopener" href="https://valine.js.org/">Valine</a> 和 <a target="_blank" rel="noopener" href="https://disqus.com/">Disqus</a> 评论模块（推荐使用 <code>Gitalk</code>）</li>
-<li>集成了<a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子统计</a>、谷歌分析（<code>Google Analytics</code>）和文章字数统计等功能</li>
-<li>支持在首页的音乐播放和视频播放功能</li>
-</ul>
-<p> <strong>增加的工作或特性(未打钩的是已做但还没更新到源码的)</strong>:</p>
-<ul>
-<li>修改了原主题的一些很多<code>bug</code>   2019.08.05</li>
-<li>加入图片懒加载功能，在根目录配置文件开启和关闭    2019.08.09</li>
-<li>增加<code>留言板</code>功能          2019.08.05</li>
-<li>在关于板块,加入<code>简历</code>功能页   2019.08.05</li>
-<li>增加视听[视觉听觉影音]板块       2019.08.10</li>
-<li>支持<code>emoji</code>表情，用<code>markdown emoji</code>语法书写直接生成对应的能<strong>跳跃</strong>的表情。  2019.08.10</li>
-<li>增加网站运行时间显示  2019.08.10</li>
-<li>增加<code>动漫模型</code>     2019.08.10</li>
-<li>整体替换Banner图片和文章特色图片   2019.08.10</li>
-<li>增加分类<code>相册</code>功能         2019.08.29</li>
-<li>去掉标签页,将其合并至<code>分类</code>页中                2019.09.01</li>
-<li>修改了一些控件的参数   2019.09.01</li>
-<li>修改部分样式,比如: 文章卡片,固定高度,使其不至于因为文章摘要的长短不同导致卡片大小不一使页面布局很不美观,类似的还有友链卡片,优化了页面内容布局,视觉更整齐美观          2019.09.01</li>
-<li>解决首页文章列表卡片上方 <code>border-radius</code>圆角失效的bug  2019.09.01</li>
-<li>添加页面樱花飘落动效            2019.09.09</li>
-<li>添加鼠标点击烟花爆炸动效   2019.09.09</li>
-<li>加入天气接口控件   2019.09.09</li>
-<li>加入鼠标点击文字特效   2019.09.10</li>
-<li>添加页面雪花飘落动效            2019.09.10</li>
-<li>添加在线聊天插件            2019.09.12</li>
-<li>持续更新…</li>
+<li>缓加载动画</li>
+<li>增加了相册页面（一个快速查找文章的接口，后面可能会美化）</li>
+<li>增加了豆瓣读书、豆瓣电影页面</li>
+<li>增加了<a target="_blank" rel="noopener" href="https://artitalk.js.org/">个性说说在线发布</a>页面（增加了）</li>
+<li>优化了文章底部作者信息不填写时显示为空的问题</li>
+<li>优化了<a target="_blank" rel="noopener" href="https://valine.js.org/">Valine</a>评论模块（最新可定制表情等）</li>
+<li>可设置复制文章内容时追加版权信息（可设置是否追加版权信息）</li>
+<li>增加了 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a>在线聊天功能</li>
+<li>增加了可设置代码块相关（是否显示名称、是否可复制，是否可收缩，是否可折行）</li>
+<li>增加了ICP备案信息显示（可选）</li>
+<li>增加了标签云页面（如果需要更多功能，后面可补充）</li>
+<li>增加了看板娘动画</li>
+<li>增加了可设置首页音乐提示</li>
+<li>增加了<a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子统计</a>、谷歌分析（<code>Google Analytics</code>）和文章字数统计等功能（需要安装hexo-wordcount）</li>
+<li>优化了<a target="_blank" rel="noopener" href="https://www.bootcdn.cn/botui/">自我介绍</a>页面</li>
+<li>增加了自定义logo的接口</li>
+<li>增加了fancybox查看大图功能（可选）</li>
+<li>增加了外链转知乎卡片形式</li>
+<li>增加了谷歌分析和<a target="_blank" rel="noopener" href="https://tongji.baidu.com/">百度分析</a></li>
+<li>增加了<a target="_blank" rel="noopener" href="https://widgetpack.com/">widgetpack星星评分</a></li>
+<li>多种背景和点击动画（可选设置）</li>
+<li>优化css和js在config可配置</li>
+<li>优化文章图片阴影显示和引用样式（阅读butter）</li>
+<li>增加播放器隐藏选项</li>
+<li>新增了分析页面（echarts图）</li>
+<li>归档页新增<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#calendar">文章日历</a>（echarts图）</li>
+<li>新增文章描述为空时，自动获取文章前50字</li>
+<li>新增404页面</li>
+<li>新增左侧悬浮框（回到顶部，打开左侧目录，跳转评论，黑夜模式，背景音乐播放<code>在config设置</code>）</li>
 </ul>
 <hr>
-<p><strong>简单使用方法：</strong></p>
-<ol>
-<li><code>star</code> 本项目</li>
-<li>安装<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a>, 安装<a target="_blank" rel="noopener" href="https://nodejs.org/en/">nodeJS</a></li>
-<li>你可以直接<code>fork</code>一份源码到你的仓库，<code>clone</code>到本地</li>
-<li>在本地博客仓库运行<code>npm i</code>命令安装依赖包</li>
-<li>修改配置信息，改成自己的信息</li>
-<li>运行命令<code>hexo  clean</code>（清除生成文件），<code>hexo g</code>（生成网页）， <code>hexo  s</code>（本地预览），<code>hexo d</code>（部署）</li>
-</ol>
+<h1 id="二、-使用方法"><a href="#二、-使用方法" class="headerlink" title="二、 使用方法"></a>二、 使用方法</h1><h2 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h2><p>当你看到这里的时候，应该已经有一个自己的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> 博客了。如果还没有的话，不妨使用 Hexo 和 <a target="_blank" rel="noopener" href="https://www.appinn.com/markdown/">Markdown</a> 来写博客和文章。</p>
+<p>点击 <a target="_blank" rel="noopener" href="https://gitee.com/cungudafa/hexo-theme-sakuraplus/repository/archive/master.zip">这里</a> 下载 <code>master</code> 分支的最新稳定版的代码，解压缩后，将 <code>hexo-theme-sakuraplus</code> 的文件夹复制到你 Hexo 的 <code>themes</code> 文件夹中即可。</p>
+<p>当然你也可以在你的 <code>themes</code> 文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<pre><code class="bash">git clone https://gitee.com/cungudafa/hexo-theme-sakuraplus.git
+</code></pre>
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h2><h3 id="2-1切换主题"><a href="#2-1切换主题" class="headerlink" title="2.1切换主题"></a>2.1切换主题</h3><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的  <code>theme</code> 的值：<code>theme: hexo-theme-sakuraplus</code></p>
+<p> <strong><code>_config.yml</code> 文件的其它修改建议</strong> </p>
+<ul>
+<li><p>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。</p>
+</li>
+<li><p>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</p>
+</li>
+<li><p>建议修改permalink，可修改为<a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/104312892">短链接</a>。<br>  安装插件：</p>
+<pre><code class="bash">npm install hexo-abbrlink --save
+</code></pre>
+<p>  主配置文件修改和添加：</p>
+<pre><code class="bash">#permalink: :year/:month/:day/:title/ #主题默认文章链接配置
+permalink: post/:abbrlink.html #修改
+
+## 启用算法生成不重复文件编号，添加
+abbrlink:
+      alg: crc16   #算法： crc16(default) and crc32
+      rep: hex   #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制
+</code></pre>
+</li>
+</ul>
+<h3 id="2-2新建分类-categories-页"><a href="#2-2新建分类-categories-页" class="headerlink" title="2.2新建分类 categories 页"></a>2.2新建分类 categories 页</h3><p><code>categories</code> 页是用来展示所有分类的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>categories/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre><code class="bash">hexo new page &quot;categories&quot;
+</code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/categories/index.md</code>，至少需要以下内容：</p>
+<pre><code class="yaml">---
+title: 分类
+date: 2020-04-21 00:00:00
+type: &quot;categories&quot;
+photos: https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg
+comments: false
+layout: &quot;categories&quot;
+---
+</code></pre>
+<h3 id="2-3新建标签-tags-页"><a href="#2-3新建标签-tags-页" class="headerlink" title="2.3新建标签 tags 页"></a>2.3新建标签 tags 页</h3><p><code>tags</code> 页是用来展示所有标签的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>tags/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre><code class="bash">hexo new page &quot;tags&quot;
+</code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/tags/index.md</code>，至少需要以下内容：</p>
+<pre><code class="yaml">---
+title: tags
+type: tags
+date: 2020-02-13 20:24:16
+photos: https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg
+comments: false
+layout: &quot;tags&quot;
+---
+</code></pre>
+<h3 id="2-4新建关于我-about-页"><a href="#2-4新建关于我-about-页" class="headerlink" title="2.4新建关于我 about 页"></a>2.4新建关于我 about 页</h3><p><code>about</code> 页是用来展示<strong>关于我和我的博客</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>about/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre><code class="bash">hexo new page &quot;about&quot;
+</code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/about/index.md</code>，至少需要以下内容：</p>
 <blockquote>
-<p><strong>更多详情教程，强烈推荐看我写的：<a target="_blank" rel="noopener" href="https://sunhwee.com/posts/6e8839eb.html">Hexo+Github博客搭建完全教程</a></strong></p>
+<p><code>Tips:</code> 这里用了<a target="_blank" rel="noopener" href="https://www.bootcdn.cn/botui/">botui</a>，还需要单独配置（&#x2F;js&#x2F;third-party&#x2F;botui.js）</p>
 </blockquote>
+<pre><code class="yaml">---
+title: about
+date: 2020-2-12 22:14:36
+keywords: 关于
+description: 
+layout: &quot;about&quot;
+comments: false
+photos: https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/about.jpg
+---
+&lt;!-- https://www.bootcdn.cn/botui/ --&gt;
+&lt;link href=&quot;https://cdn.bootcss.com/botui/0.3.9/botui-theme-default.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;https://cdn.bootcss.com/botui/0.3.9/botui.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+
+<!-- 因为vue和botui更新导至bug,现将对话移至js下的botui中配置 -->
+<div class="entry-content">
+  <div class="moe-cungudafa" style="text-align:center; font-size: 50px; margin-bottom: 20px;">姑的小屋</div>
+  <div id="hello-cungudafa" class="popcontainer" style="min-height: 300px; padding: 2px 6px 4px; background-color: rgb(36, 200, 255); border-radius: 10px;">
+    <center>
+    <p>
+    </p>
+    <h4>
+    与&nbsp;<ruby>
+    cungduafa&nbsp;<rp>
+    （</rp>
+    <rt>
+    真（ま）白（しろ）</rt>
+    <rp>
+    ）</rp>
+    </ruby>
+    对话中...</h4>
+    <p>
+    </p>
+    </center>
+    <bot-ui></botui>
+  </div>
+</div>
+<script src="/js/botui.js"></script>
+<script>
+ bot_ui_ini()
+</script>
+
+</code></pre>
+<h3 id="2-5新建留言板-comment-页（可选的）"><a href="#2-5新建留言板-comment-页（可选的）" class="headerlink" title="2.5新建留言板 comment 页（可选的）"></a>2.5新建留言板 comment 页（可选的）</h3><p><code>conmment</code> 页是用来展示<strong>留言板</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>conmment/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre><code class="bash">hexo new page &quot;conmment&quot;
+</code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/contact/index.md</code>，至少需要以下内容：</p>
+<pre><code class="yaml">---
+title: 留言板
+type: comment
+layout: &quot;comment&quot;
+date: 2020-04-21 20:17:58
+photos: https://gitee.com/cungudafa/source/raw/master/img/bg/hyo/3.jpg
+---
+
+&lt;h2 align=&quot;center&quot;&gt;有什么想说的?&lt;/h2&gt;
+
+&lt;h2 align=&quot;center&quot;&gt;有什么想问的?&lt;/h2&gt;
+</code></pre>
 <blockquote>
-<p><strong>最后，如果项目和教程对你有所帮助或者你看见了还算比较喜欢，欢迎给我<code>star</code>，谢谢您！</strong></p>
+<p><strong>注</strong>：本留言板功能依赖于第三方评论系统，请<strong>激活</strong>你的评论系统才有效果。</p>
 </blockquote>
-<p><strong>持续更新中…，如果遇到问题欢迎联系我，在文章最后评论区【留言和讨论】，当然，欢迎点击文章最后的打赏按键，请博主一杯冰阔乐，笑～</strong><br><escape></p>
+<h2 id="2-6新建友情链接-links-页（可选的）"><a href="#2-6新建友情链接-links-页（可选的）" class="headerlink" title="2.6新建友情链接 links 页（可选的）"></a>2.6新建友情链接 links 页（可选的）</h2><p><code>links</code> 页是用来展示<strong>友情链接</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>links/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre><code class="bash">hexo new page &quot;links&quot;
+</code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/links/index.md</code>，至少需要以下内容：</p>
+<pre><code class="yaml">---
+layout: links
+title: links
+date: 2020-02-13 23:11:06
+keywords: 友人帐
+description: 
+comments: true
+photos: https://cdn.jsdelivr.net/gh/cungudafa/img/images/pic01.jpg
+links:
+  - group: 多站快速门
+    desc: 
+    items:
+    - url: https://blog.csdn.net/cungudafa
+      img: https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg
+      name: CSDN
+      desc: 我的技术栈
+  - group: 友情链接
+    desc: 
+    items:
+    - url: https://blog.csdn.net/cungudafa
+      img: https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg
+      name: CSDN
+      desc: 我的技术栈
+    - name: 总站导航
+      url: https://cungudafa.js.org/
+      img: https://cungudafa.top/img/avatar.png
+      desc: cungudafa.js.org
+---
+</code></pre>
+<blockquote>
+<p><code>Tips：</code>注意前面的空格哦，很重要！</p>
+</blockquote>
+<p>增加了友链要求提示项<code>tips</code>（支持html标签格式），在主题配置文件，<code>name、desc、url、img</code>可以直接写入你的网站信息。</p>
+<pre><code class="yaml"># 友链页信息,tips支持html语言
+mylinkinfo:
+  enable: true
+  tips: &#39;&lt;p&gt;&lt;strong&gt;Tips:&lt;/strong&gt;网站不要求https强制加锁，但头像图片尽量用安全链接哦！&lt;/p&gt; &lt;p style=&quot;font-size: 13px;color: #ff9999;&quot;&gt; 1. 请先 &lt;font color=#ff1234 size=5&gt;添加本站链接&lt;/font&gt;，在本站留言，待站长审核通过即添加友链。&lt;br&gt;2. 拒绝广告站，技术博客优先~&lt;br&gt;3. 对于取消本站链接或死链，站长会定期移除。&lt;/p&gt;&#39;
+  name: cungudafa
+  desc: 一个学习记录者
+  url: https://cungudafa.top
+  img: https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg
+</code></pre>
+<h2 id="3-菜单导航配置"><a href="#3-菜单导航配置" class="headerlink" title="3.菜单导航配置"></a>3.菜单导航配置</h2><p> <strong>配置基本菜单导航的名称、路径url和图标icon.</strong> </p>
+<p>1.菜单导航名称可以是中文也可以是英文(如：<code>Index</code>或<code>主页</code>)<br>2.图标icon 可以在<a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/faicons/">Font Awesome v4</a> 中查找   </p>
+<pre><code class="yaml">menus:
+  首页: &#123; path: /, fa: fa-fort-awesome faa-shake &#125;
+  归档: &#123; path: /archives, fa: fa-archive faa-shake, submenus: &#123; 
+    统计: &#123;path: /analytics/ , fa: fa-line-chart &#125;,
+    标签: &#123;path: /tags, fa: fa-tags &#125;, 
+    技术: &#123;path: /categories/技术/, fa: fa-code &#125;, 
+    生活: &#123;path: /categories/生活/, fa: fa-file-text-o &#125; #, 
+    #资源: &#123;path: /categories/资源/, fa: fa-cloud-download &#125;, 
+    #随想: &#123;path: /categories/随想/, fa: fa-commenting-o &#125;,
+    #转载: &#123;path: /categories/转载/, fa: fa-book &#125;
+  &#125; &#125;
+  清单: &#123; path: javascript:;, fa: fa-list-ul faa-vertical, submenus: &#123; 
+    说说: &#123;path: /artitalk/, fa: fa-commenting-o fa-commenting &#125;, 
+    相册: &#123;path: /photos/, fa: fa-photo &#125;,
+    悦读: &#123;path: /books/, fa: fa-book &#125;,
+    追剧: &#123;path: /movies/, fa: fa-film faa-vertical &#125;
+  &#125; &#125;
+  留言板: &#123; path: /comment/, fa: fa-pencil-square-o faa-tada &#125;
+  友人帐: &#123; path: /links/, fa: fa-link faa-shake &#125;
+  赞赏: &#123; path: /donate/, fa: fa-heart faa-pulse &#125;
+  关于: &#123; path: /, fa: fa-leaf faa-wrench , submenus: &#123; 
+    我？: &#123;path: /about/, fa: fa-meetup&#125;, 
+    主题: &#123;path: /theme-sakura/, fa: iconfont icon-sakura &#125;,
+    # Lab: &#123;path: /lab/, fa: fa-cogs &#125;,
+    # valine: &#123;path: /valine/, fa: fa-cogs &#125;
+  &#125; &#125;
+  项目: &#123; path: /client/, fa: fa-android faa-vertical &#125;
+  RSS: &#123; path: /atom.xml, fa: fa-rss faa-pulse &#125;
+
+#social  url, img PC端配置
+social:
+  gitee: &#123;url: https://gitee.com/cungudafa, img: /img/social/gitee.png&#125;
+  github: &#123;url: http://github.com/cungudafa, img: /img/social/github.png&#125;
+  csdn: &#123;url: https://blog.csdn.net/cungudafa, img: /img/social/csdn.png&#125;
+  zhihu: &#123;url: https://www.zhihu.com/people/cungudafa, img: /img/social/zhihu.png&#125;
+  #jianshu: &#123;url: /https://www.jianshu.com/u/9b726a534140, img: /img/social/jianshu.png&#125;
+  # sina: &#123;url: http://weibo.com/3829198906/info, img: /img/social/sina.png&#125;
+  bilibili: &#123;url: https://space.bilibili.com/430247358, img: /img/social/bilibili.png&#125;
+  #wangyiyun: &#123;url: https://music.163.com/#/user/home?id=337394988, img: /img/social/wangyiyun.png&#125;
+  wechat: &#123;url: /#, qrcode: /img/custom/cungudafa.png, img: /img/social/wechat.png&#125;
+
+#social  url, img 移动端配置
+msocial:
+  github: &#123;url: http://github.com/cungudafa, fa: fa-github, color: 333&#125;
+  weibo: &#123;url: http://weibo.com/3829198906/info, fa: fa-weibo, color: dd4b39&#125;
+  #qq: &#123;url: https://wpa.qq.com/msgrd?v=3&amp;uin=2627039020&amp;site=qq&amp;menu=yes, fa: fa-qq, color: 25c6fe&#125;
+  csdn: &#123;url: https://blog.csdn.net/cungudafa, fa: fa-star, color: ff9900&#125;
+</code></pre>
+<blockquote>
+<p><code>Tips:</code>注意二级菜单和图标的写法</p>
+</blockquote>
+<h2 id="4-代码高亮"><a href="#4-代码高亮" class="headerlink" title="4.代码高亮"></a>4.代码高亮</h2><p>由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 <a target="_blank" rel="noopener" href="https://github.com/ele828/hexo-prism-plugin">hexo-prism-plugin</a> 的 Hexo 插件来做代码高亮，安装命令如下：</p>
+<pre><code class="bash">npm i -S hexo-prism-plugin
+</code></pre>
+<p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并新增 <code>prism</code> 插件相关的配置，主要配置如下：</p>
+<pre><code class="yaml">highlight:
+  enable: false
+
+prism_plugin:
+  mode: &#39;preprocess&#39;    # realtime/preprocess
+  theme: &#39;tomorrow&#39;
+  line_number: false    # default false
+  custom_css:
+</code></pre>
+<h2 id="5-搜索"><a href="#5-搜索" class="headerlink" title="5.搜索"></a>5.搜索</h2><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/hexo-generator-json-content">hexo-generator-json-content</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
+<pre><code class="bash">npm install hexo-generator-json-content --save
+</code></pre>
+<h2 id="6-文章字数统计插件（建议安装）"><a href="#6-文章字数统计插件（建议安装）" class="headerlink" title="6.文章字数统计插件（建议安装）"></a>6.文章字数统计插件（建议安装）</h2><p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 <a target="_blank" rel="noopener" href="https://github.com/willin/hexo-wordcount">hexo-wordcount</a>插件。</p>
+<p>安装命令如下：</p>
+<pre><code class="bash">npm i --save hexo-wordcount
+</code></pre>
+<h2 id="7-添加emoji表情支持（可选的）"><a href="#7-添加emoji表情支持（可选的）" class="headerlink" title="7.添加emoji表情支持（可选的）"></a>7.添加emoji表情支持（可选的）</h2><p>本主题新增了对<code>emoji</code>表情的支持，使用到了 <a target="_blank" rel="noopener" href="https://npm.taobao.org/package/hexo-filter-github-emojis">hexo-filter-github-emojis</a> 的 Hexo 插件来支持 <code>emoji</code>表情的生成，把对应的<code>markdown emoji</code>语法（<code>::</code>,例如：<code>:smile:</code>）转变成会跳跃的<code>emoji</code>表情，安装命令如下：</p>
+<pre><code class="bash">npm install hexo-filter-github-emojis --save
+</code></pre>
+<p>在 Hexo <strong>根目录</strong>下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre><code class="yaml">githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+</code></pre>
+<h2 id="8-添加-RSS-订阅支持（可选的）"><a href="#8-添加-RSS-订阅支持（可选的）" class="headerlink" title="8.添加 RSS 订阅支持（可选的）"></a>8.添加 RSS 订阅支持（可选的）</h2><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 的 Hexo 插件来做 <code>RSS</code>，安装命令如下：</p>
+<pre><code class="bash">npm install hexo-generator-feed --save
+</code></pre>
+<p>在 Hexo <strong>根目录</strong>下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<pre><code class="yaml">feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: &#39; &#39;
+  order_by: -date
+</code></pre>
+<p>执行 <code>hexo clean &amp;&amp; hexo g</code> 重新生成博客文件，然后在 <code>public</code> 文件夹中即可看到 <code>atom.xml</code> 文件，说明你已经安装成功了。</p>
+<h2 id="9-添加-DaoVoice-在线聊天功能（可选的）"><a href="#9-添加-DaoVoice-在线聊天功能（可选的）" class="headerlink" title="9.添加 DaoVoice 在线聊天功能（可选的）"></a>9.添加 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a> 在线聊天功能（可选的）</h2><p>前往 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a> 官网注册并且获取 <code>app_id</code>，并将 <code>app_id</code> 填入主题的 <code>_config.yml</code> 文件中。</p>
+<pre><code class="yaml"># Online contact ##在线聊天 https://www.daocloud.io/
+daovoice: 
+  enable: false
+  app_id: f6b2a0b1 ##这里替换成你DaoVoice上的appid
+</code></pre>
+<h2 id="10-在线发布说说页面"><a href="#10-在线发布说说页面" class="headerlink" title="10.在线发布说说页面"></a>10.在线发布说说页面</h2><p>根据官网教程配置<a target="_blank" rel="noopener" href="https://artitalk.js.org/">artitalk.js.org</a>，本主题融合了自定义配置背景的功能，具体可以参考<a target="_blank" rel="noopener" href="https://cungudafa.blog.csdn.net/article/details/106224223">个性定制教程</a>。</p>
+<pre><code class="yaml"># 动态说说页面
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://artitalk.js.org
+artitalk:
+  appID: CiSXX5nyVSt0RIztkC1oLL9P-MdYXbMMI
+  appKEY: vrfkqkuHou88MuRKfF3OeExc
+  per: 7 #每页显示说说的数量
+  username: cungudafa # Leancloud中设置的用户名
+  placeholder1: 没有密码，不能评论！ # 密码框提示语
+  lazy: 1 # 加载动画1:加载,0:取消加载
+  img: https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg #用户默认头像
+  bgimg: https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich16.gif # 输入框小动画
+  # 极简黑白主题minimalist、渐变主题gradient、壁纸wallpaper 
+  # 参考 https://blog.csdn.net/cungudafa/article/details/106224223
+  style: 
+    enable: true #个性定制
+    wallpaper: https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg #https://bing.rthe.net/wallpaper  # 壁纸
+    color: white   #字体颜色
+    linear_gradient: rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35) 95% # 渐变规律颜色+百分比 rgb(109, 208, 242) 15%, rgb(245, 154, 190) 85%
+    border_right_color: &#39;#FFC0BE&#39; #三角颜色
+    animation: false #true打开动画渐变渲染(壁纸和动画渐变渲染建议只开一个)
+</code></pre>
+<blockquote>
+<p>根据你的爱好修改字体颜色，背景，动画等。</p>
+</blockquote>
+<h2 id="11-修改页脚"><a href="#11-修改页脚" class="headerlink" title="11.修改页脚"></a>11.修改页脚</h2><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 <code>/layout/_partial/footer.ejs</code> 文件中，包括站点、使用的主题、访问量等。</p>
+<h2 id="12-修改打赏的二维码图片"><a href="#12-修改打赏的二维码图片" class="headerlink" title="12.修改打赏的二维码图片"></a>12.修改打赏的二维码图片</h2><p>在主题config里面可以修改路径，你可以替换成你的的微信和支付宝的打赏二维码图片。</p>
+<pre><code class="yaml">donate:
+  title: 谢谢饲主了喵~
+  message: 我能想到最浪漫的事，就是我喝奶茶你付钱~
+  paypal: #https://www.paypal.me/hojuncn
+  alipay: /img/custom/donate/AliPay.jpg #大图
+  alipayQR: /img/custom/donate/AliPayQR.jpg
+  wechat: /img/custom/donate/WeChatPay.png #大图
+  wechatQR: /img/custom/donate/WeChanQR.jpg
+  wechatSQ: /img/custom/donate/WeChanSQ.jpg
+</code></pre>
+<p><code>donates</code> 页是单独的打赏页面（可选），如果在你的博客 <code>source</code> 目录下还没有 <code>donate/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<pre><code class="bash">hexo new page &quot;donate&quot;
+</code></pre>
+<p>编辑你刚刚新建的页面文件 <code>/source/donate/index.md</code>，至少需要以下内容：</p>
+<pre><code class="yaml">---
+layout: donate
+title: donate
+date: 2020-02-13 23:13:05
+keywords: 谢谢饲主了喵~
+description: 
+comments: false
+photos: https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/banner/donate.jpg
+---
+</code></pre>
+<p>在主题文件的 <code>themes\sakura\layout\donate.ejs</code> 文件中，可以增加更多的打赏方式。</p>
+<h2 id="13-配置视频、音乐播放器（可选的）"><a href="#13-配置视频、音乐播放器（可选的）" class="headerlink" title="13.配置视频、音乐播放器（可选的）"></a>13.配置视频、音乐播放器（可选的）</h2><p>要支持音乐播放，在主题的 <code>_config.yml</code> 配置文件中激活music配置即可：</p>
+<pre><code class="yaml"># 视频地址为https://cdn.jsdelivr.net/gh/honjun/hojun@1.2/Unbroken.mp4，配置如下
+movies:
+  enable: false
+  url: https://cdn.jsdelivr.net/gh/honjun/hojun@1.2
+  # 多个视频用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
+  name: Unbroken.mp4
+
+aplayer:  ##媒体播放引擎，移动端会禁止自动播放
+  enable: false
+  id: 2660651585
+  server: netease
+  type: playlist
+  fixed: true ##开启吸底模式，固定到底部
+  autoplay: false ##音频自动播放
+  loop: all  ##音频循环播放, 可选值: &#39;all&#39;, &#39;one&#39;, &#39;none&#39;
+  order: random ##音频循环顺序, 可选值: &#39;list&#39;, &#39;random&#39;
+  preload: auto ##预加载，可选值: &#39;none&#39;, &#39;metadata&#39;, &#39;auto&#39;
+  volume: 0.7 ##默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  mutex: true ##互斥，阻止多个播放器同时播放
+</code></pre>
+<h2 id="14-评论"><a href="#14-评论" class="headerlink" title="14.评论"></a>14.评论</h2><p>根据官网的配置教程，严格配置：<a target="_blank" rel="noopener" href="https://valine.js.org/">valine.js.org</a></p>
+<pre><code class="yaml"># Valine ##极简留言功能
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+valine:
+  enable: true ##打开valine评论功能true
+  appId: cBzr9TtJ0xY0s6f3H8bpmB3M-gzGzoHsz
+  appKey: 3opMyv2Vyx3mHa0IWitRGSoi
+  notify: false #true自带评论mail回复提醒，第三方邮件提醒就设置为false
+  verify: true #验证码
+  visitor: false #统计阅读量
+  comment_count: true #统计评论数
+  avatar: monsterid # Gravatar style : mp/identicon/monsterid/wavatar/retro/hide
+  guest_info: nick #,mail,link # custom comment header
+  pageSize: 10
+  palaceholder: 你是我一生只会遇见一次的惊喜 # Comment Box placeholder
+  requiredFields: [&#39;nick&#39;,&#39;mail&#39;] #设置必填项
+  background: https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich2.gif
+</code></pre>
+<h2 id="15-文章分析"><a href="#15-文章分析" class="headerlink" title="15.文章分析"></a>15.文章分析</h2><p>日历页面（在归档页面下方，可选择性开启），文章分析页面（选择性开启，若关闭，请在菜单栏中删除即可）</p>
+<pre><code class="yaml"># Whether to display post-calender in the `archive` page
+# 设置在归档页面achive中是否显示&#39;文章日历&#39;控件
+postCalendar: true 
+</code></pre>
+<hr>
+<h1 id="三、-hexo特性设置及文章撰写"><a href="#三、-hexo特性设置及文章撰写" class="headerlink" title="三、  hexo特性设置及文章撰写"></a>三、  hexo特性设置及文章撰写</h1><h2 id="1-文章-Front-matter-介绍"><a href="#1-文章-Front-matter-介绍" class="headerlink" title="1.文章 Front-matter 介绍"></a>1.文章 Front-matter 介绍</h2><p> <strong>Front-matter 选项详解</strong> </p>
+<p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
 <table>
-  <tr>
-    <td><img width="100" src="https://sunhwee.com/medias/reward/alipay.bmp" ></td>    <td><img width="100" src="https://sunhwee.com/medias/reward/wechat.bmp" ></td>    <td><img width="100" src="https://sunhwee.com/medias/reward/zan.png" ></td>   
-  </tr>
-</table>
-</escape>
+<thead>
+<tr>
+<th align="center">配置选项</th>
+<th align="center">默认值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">title</td>
+<td align="center"><code>Markdown</code> 的文件标题</td>
+<td align="center">文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td align="center">date</td>
+<td align="center">文件创建时的日期时间</td>
+<td align="center">发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td align="center">author</td>
+<td align="center">根 <code>_config.yml</code> 中的 <code>author</code></td>
+<td align="center">文章作者 ，也可以修改</td>
+</tr>
+<tr>
+<td align="center">authorLink</td>
+<td align="center">无</td>
+<td align="center">链接</td>
+</tr>
+<tr>
+<td align="center">avatar</td>
+<td align="center">无</td>
+<td align="center">头像</td>
+</tr>
+<tr>
+<td align="center">authorAbout</td>
+<td align="center">无</td>
+<td align="center">简介（非文章页设置为一言）</td>
+</tr>
+<tr>
+<td align="center">photos</td>
+<td align="center"><code>bg</code> 中的某个值</td>
+<td align="center">文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <code>http://xxx.com/xxx.jpg</code></td>
+</tr>
+<tr>
+<td align="center">top</td>
+<td align="center"><code>true</code></td>
+<td align="center">推荐文章（文章是否置顶），如果 <code>top</code> 值为 <code>true</code>，则会作为首页推荐文章</td>
+</tr>
+<tr>
+<td align="center">mathjax</td>
+<td align="center"><code>false</code></td>
+<td align="center">是否开启数学公式支持 ，本文章是否开启 <code>mathjax</code>，且需要在主题的 <code>_config.yml</code> 文件中也需要开启才行</td>
+</tr>
+<tr>
+<td align="center">categories</td>
+<td align="center">无</td>
+<td align="center">文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td align="center">tags</td>
+<td align="center">无</td>
+<td align="center">文章标签，一篇文章可以多个标签</td>
+</tr>
+<tr>
+<td align="center">description</td>
+<td align="center">默认取文章前40个字</td>
+<td align="center">一句话描述摘要</td>
+</tr>
+<tr>
+<td align="center">keywords</td>
+<td align="center">文章标题</td>
+<td align="center">文章关键字，SEO 时需要</td>
+</tr>
+<tr>
+<td align="center">reprintPolicy</td>
+<td align="center">cc_by</td>
+<td align="center">文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>注意</strong>:</p>
+<ol>
+<li>如果 <code>photos</code> 属性不填写的话，首页会在主题配置文件的bg下，随机选择一张图片，同时进入文章内部不显示顶部图像。</li>
+<li><code>date</code> 的值尽量保证每篇文章是唯一的。</li>
+<li>建议文章标签和文章分类填写上。</li>
+<li>您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则</li>
+</ol>
+</blockquote>
+<p>以下为文章的 <code>Front-matter</code> 示例。</p>
+<p> <strong>最简示例</strong> </p>
+<pre><code class="yaml">---
+title: 主题介绍
+date: 2020-05-20 09:25:00
+---
+</code></pre>
+<p> <strong>最全示例</strong> </p>
+<pre><code class="yaml">---
+title: 阿里云部署hexo完整教程
+author: cungudafa
+authorLink: &#39;https://cungudafa.top&#39;
+avatar: &#39;https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg&#39;
+authorAbout: 姑，一个学习记录者
+tags:
+  - nginx
+  - https
+  - SSL
+categories: 技术
+comment: false
+photos: https://test.png
+description: 描述一句话摘要
+abbrlink: ccbf
+date: 2020-03-02 13:59:10
+---
+</code></pre>
+<h2 id="2-文章统计"><a href="#2-文章统计" class="headerlink" title="2.文章统计"></a>2.文章统计</h2><p>在本主题的 <code>_config.yml</code> 中可以修改部分自定义信息，有以下几个部分：</p>
+<p>代码块是否可复制、图片大图查看功能、知乎外链样式、文章字数统计等。</p>
+<pre><code class="yaml"># Whether to activate the copyright information of the blog and author when copying the post content.
+# minCharNumber: Approve copyright information by copying at least how many characters.
+# 是否激活复制文章时追加博客和作者的版权信息.
+copyright:
+  enable: false
+  minCharNumber: 120 # 至少复制多少个字符就追加版权信息.
+  description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
+
+# 代码块相关
+code:
+  lang: true # 代码块是否显示名称
+  copy: true # 代码块是否可复制
+  shrink: true # 代码块是否可以收缩
+  break: false # 代码是否折行
+
+# 查看大图
+fancybox:
+  enable: true
+
+# 外链转知乎卡片形式 
+linkcard:
+  enable: true 
+
+# 是否开启字数统计 (可以在formatton设置no_word_count: true)
+#不需要使用，直接设置值为false，或注释掉
+word_count: true
+
+# busuanzi(http://busuanzi.ibruce.info/) website statistics
+# 不蒜子(http://busuanzi.ibruce.info/) 网站统计
+busuanziStatistics:
+  enable: true
+  totalTraffic: true # 总访问量
+  totalNumberOfvisitors: true # 总人次
+</code></pre>
+<h2 id="3-五星评分"><a href="#3-五星评分" class="headerlink" title="3.五星评分"></a>3.五星评分</h2><p>需要在 <a target="_blank" rel="noopener" href="https://widgetpack.com/">widgetpack.com</a>注册申请，</p>
+<pre><code class="yaml"># widgetpack 星星评分
+# To get your ID visit https://widgetpack.com
+widgetpack:
+  enable: true #false
+  id: 23889 #&lt;app_id&gt;
+  color: fc6423
+</code></pre>
+<hr>
+<h1 id="四、其他花里胡哨"><a href="#四、其他花里胡哨" class="headerlink" title="四、其他花里胡哨"></a>四、其他花里胡哨</h1><h2 id="16-天气"><a href="#16-天气" class="headerlink" title="16.天气"></a>16.天气</h2><p>需要在官网<a target="_blank" rel="noopener" href="http://weatherdt.com/">weatherdt.com</a>注册配置，具体<a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/104312892">天气教程</a>。</p>
+<pre><code class="yaml"># 天气显示 http://weatherdt.com/
+weather:
+  enable: false
+  app_id: yqRrzxwtvs ##这里替换成你的appid
+</code></pre>
+<blockquote>
+<p>更多：</p>
+<ol>
+<li>豆瓣页面：<a target="_blank" rel="noopener" href="https://cungudafa.blog.csdn.net/article/details/105773983">豆瓣读书和电影</a></li>
+<li>访问者地图：<a target="_blank" rel="noopener" href="https://cungudafa.blog.csdn.net/article/details/105925710">访问者地图</a></li>
+</ol>
+</blockquote>
+<h2 id="17-文章分析"><a href="#17-文章分析" class="headerlink" title="17.文章分析"></a>17.文章分析</h2><p>包括<a target="_blank" rel="noopener" href="https://tongji.baidu.com/">百度分析</a>和谷歌分析，都需要去注册申请。（可选操作）</p>
+<pre><code class="yaml"># Add google analytics configuration
+# 添加 Google Analytics 配置
+googleAnalytics:
+  enable: false
+  id:
+
+# Add baidu analytics configuration
+# 添加 baidu Analytics 配置 https://tongji.baidu.com/
+baiduAnalytics:
+  enable: true # 百度分析
+  id: b05d6287bdeab72f3886bffe3cff054a
+</code></pre>
+<p> <strong>效果预览</strong> </p>
+<p>示例站：<a target="_blank" rel="noopener" href="https://cungudafa.top/">cungudafa.top</a></p>
+<p>视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1C7411N762">bilibili</a></p>
+<h2 id="18-自定制修改"><a href="#18-自定制修改" class="headerlink" title="18.自定制修改"></a>18.自定制修改</h2><p>背景和一些常用的优化，在主题配置文件中都以可选配置了（防止动画冲突，建议背景和点击效果只打开一个），<br>如果更多有新的样式，可以留言或者pr，酌情添加。</p>
+<pre><code class="yaml"># 建议一项只开一个
+js:
+  hititle: false #浏览器搞笑标题
+  KeyBlock: false #按键屏蔽,不能F12调试和查看源代码
+  bg:
+    sakura_petals: false  #仅在首页花瓣飘落（大内存）
+    snow_petals: false # 雪花飘落（大内存）
+    piao: false #飘动彩带
+    live2d_widget: false #看板娘 需jq（大内存）
+    bgchange: true # 是否开启壁纸切换
+  clink:
+    word: false #点击出现字效
+    love: false #点击出现爱心
+    cursor: false # 星星跟随坠落(大内存)
+</code></pre>
+<blockquote>
+<p>给出一系列魔改的笔记：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/104330959">logo</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/104295156">花里胡哨教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/104651901">今日诗词、一言接口</a></li>
+</ol>
+</blockquote>
+<hr>
+<p> :new_moon_with_face: 总结时间</p>
+<h1 id="参与贡献"><a href="#参与贡献" class="headerlink" title="参与贡献"></a>参与贡献</h1><p> @<a target="_blank" rel="noopener" href="https://gitee.com/cungudafa">cungudafa</a></p>
+<h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><strong>2.4</strong> </p>
+<p>文字总数统计wordcount修改为非必要选项，可以不展示文字统计总字数</p>
+<p><strong>9.8 &amp; 10.15</strong> </p>
+<p>更新了valine和artitalk，添加了gitalk评论作为选择</p>
+<p><strong>6.9</strong> </p>
+<p>补充粘贴复制（<a target="_blank" rel="noopener" href="https://blog.csdn.net/cungudafa/article/details/106647255">教程</a>）</p>
+<p><strong>6.2</strong></p>
+<p>修复代码块样式（删掉<code>npm uninstall hexo-prism-plugin</code>插件）<br>新增左侧悬浮框（回到顶部，打开左侧目录<code>小屏幕生效，否则只显示顶部目录</code>，跳转评论，黑夜模式，背景音乐播放<code>在config设置bg_music</code>）</p>
+<p><strong>5.28</strong></p>
+<p>修复了<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/style.css">css</a>（首页bug）<br>修改了post文章引用样式（以前的不明显）<br>增加了post文章图片样式（增加阴影）、段落h12345增加阿拉伯编号<br>添加了tags页面多种词云效果</p>
+<p><strong>5.25</strong></p>
+<p>修复了没有设置文章时首页显示404图片，（bg中随机选择）<br>新增了分析页面（echarts图），来源于drew整理matery主题的效果<br>归档页新增文章日历（echarts图）<br>新增标题下显示浏览数<br>新增自动获取前50字为文章描述</p>
+<p><strong>5.23</strong></p>
+<p>计划修改文章页面展现效果（对代码块和表格图片展现更加优化）</p>
+<p><strong>5.22</strong></p>
+<p>重铸</p>
+
         </div>
 
         <!-- .entry-content -->
@@ -633,22 +1097,37 @@
             <div class="social-share sharehidden share-component"></div>
             <i class="iconfont show-share icon-forward"></i>
           </div>
-        </footer><!-- .entry-footer -->
-        <!-- <div class="tag-cloud">
-          <div class="tag-cloud-title">
-          </div>
-          <div class="tag-cloud-tags">
-            <a href="/tags/Github/" style="font-size: 10px; color: #f06966">Github</a> <a href="/tags/Hexo/" style="font-size: 20px; color: #39bae8">Hexo</a> <a href="/tags/web/" style="font-size: 10px; color: #f06966">web</a> <a href="/tags/%E5%86%8D%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%A0%87%E7%AD%BE%E8%AF%95%E8%AF%95/" style="font-size: 10px; color: #f06966">再加一个标签试试</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px; color: #f06966">博客</a> <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 10px; color: #f06966">悦读</a>
-          </div>
-        </div> -->
+        </footer>
+
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81-%E7%9C%8B%E4%B8%80%E7%9C%8B%E7%9E%A7%E4%B8%80%E7%9E%A7%EF%BC%8C%E5%86%8D%E5%86%B3%E5%AE%9A%E5%81%9A%E4%B8%8D%E5%81%9A"><span class="toc-number">1.</span> <span class="toc-text">一、 看一看瞧一瞧，再决定做不做</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">特性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">二、 使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.1.</span> <span class="toc-text">1.下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text">2.配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.1切换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E6%96%B0%E5%BB%BA%E5%88%86%E7%B1%BB-categories-%E9%A1%B5"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2新建分类 categories 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3%E6%96%B0%E5%BB%BA%E6%A0%87%E7%AD%BE-tags-%E9%A1%B5"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.3新建标签 tags 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4%E6%96%B0%E5%BB%BA%E5%85%B3%E4%BA%8E%E6%88%91-about-%E9%A1%B5"><span class="toc-number">2.2.4.</span> <span class="toc-text">2.4新建关于我 about 页</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#hello-cungudafa"><span class="toc-number">2.2.4.1.</span> <span class="toc-text">
+    与 
+    cungduafa 
+    （
+    
+    真（ま）白（しろ）
+    
+    ）
+    
+    对话中...</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5%E6%96%B0%E5%BB%BA%E7%95%99%E8%A8%80%E6%9D%BF-comment-%E9%A1%B5%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">2.2.5.</span> <span class="toc-text">2.5新建留言板 comment 页（可选的）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6%E6%96%B0%E5%BB%BA%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-links-%E9%A1%B5%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">2.6新建友情链接 links 页（可选的）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%8F%9C%E5%8D%95%E5%AF%BC%E8%88%AA%E9%85%8D%E7%BD%AE"><span class="toc-number">2.4.</span> <span class="toc-text">3.菜单导航配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-number">2.5.</span> <span class="toc-text">4.代码高亮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%90%9C%E7%B4%A2"><span class="toc-number">2.6.</span> <span class="toc-text">5.搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%96%87%E7%AB%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6%EF%BC%88%E5%BB%BA%E8%AE%AE%E5%AE%89%E8%A3%85%EF%BC%89"><span class="toc-number">2.7.</span> <span class="toc-text">6.文章字数统计插件（建议安装）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%B7%BB%E5%8A%A0emoji%E8%A1%A8%E6%83%85%E6%94%AF%E6%8C%81%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">2.8.</span> <span class="toc-text">7.添加emoji表情支持（可选的）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%B7%BB%E5%8A%A0-RSS-%E8%AE%A2%E9%98%85%E6%94%AF%E6%8C%81%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">2.9.</span> <span class="toc-text">8.添加 RSS 订阅支持（可选的）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E6%B7%BB%E5%8A%A0-DaoVoice-%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%8A%9F%E8%83%BD%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">2.10.</span> <span class="toc-text">9.添加 DaoVoice 在线聊天功能（可选的）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E5%9C%A8%E7%BA%BF%E5%8F%91%E5%B8%83%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.11.</span> <span class="toc-text">10.在线发布说说页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E4%BF%AE%E6%94%B9%E9%A1%B5%E8%84%9A"><span class="toc-number">2.12.</span> <span class="toc-text">11.修改页脚</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E4%BF%AE%E6%94%B9%E6%89%93%E8%B5%8F%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E7%89%87"><span class="toc-number">2.13.</span> <span class="toc-text">12.修改打赏的二维码图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E9%85%8D%E7%BD%AE%E8%A7%86%E9%A2%91%E3%80%81%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">2.14.</span> <span class="toc-text">13.配置视频、音乐播放器（可选的）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E8%AF%84%E8%AE%BA"><span class="toc-number">2.15.</span> <span class="toc-text">14.评论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%96%87%E7%AB%A0%E5%88%86%E6%9E%90"><span class="toc-number">2.16.</span> <span class="toc-text">15.文章分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81-hexo%E7%89%B9%E6%80%A7%E8%AE%BE%E7%BD%AE%E5%8F%8A%E6%96%87%E7%AB%A0%E6%92%B0%E5%86%99"><span class="toc-number">3.</span> <span class="toc-text">三、  hexo特性设置及文章撰写</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%96%87%E7%AB%A0-Front-matter-%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.1.</span> <span class="toc-text">1.文章 Front-matter 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1"><span class="toc-number">3.2.</span> <span class="toc-text">2.文章统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BA%94%E6%98%9F%E8%AF%84%E5%88%86"><span class="toc-number">3.3.</span> <span class="toc-text">3.五星评分</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8"><span class="toc-number">4.</span> <span class="toc-text">四、其他花里胡哨</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E5%A4%A9%E6%B0%94"><span class="toc-number">4.1.</span> <span class="toc-text">16.天气</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E6%96%87%E7%AB%A0%E5%88%86%E6%9E%90"><span class="toc-number">4.2.</span> <span class="toc-text">17.文章分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-%E8%87%AA%E5%AE%9A%E5%88%B6%E4%BF%AE%E6%94%B9"><span class="toc-number">4.3.</span> <span class="toc-text">18.自定制修改</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE"><span class="toc-number">5.</span> <span class="toc-text">参与贡献</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="toc-number">6.</span> <span class="toc-text">更新日志</span></a></li></ol>
+
+<style>
+    .toc {
+        max-height: 500px;
+        width: 250px;
+        right: calc((96% - 950px - 250px) / 2);
+    }
+    .toc-fixed {
+        right: calc((98% - 950px - 250px) / 2)
+    }
+</style>
+
       </article>
       <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
         
-        <div class="post-nepre half previous">
-          
+          <div class="post-nepre full previous">
+            
             <a href="/2022/04/11/helloworld/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src=""
@@ -664,23 +1143,6 @@
           </div>
           
           
-          
-          <div class="post-nepre half next">
-            
-              <a href="/2018/12/12/hexothemesakura/" rel="next">
-                <div class="background">
-                  <img class="lazyload" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/webp/307473.webp"
-                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
-                    onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/webp/307473.webp">
-                </div>
-                <span class="label">Next Post</span>
-                <div class="info">
-                  <h3>Hexo-Theme-Sakura</h3>
-                  <hr>
-                </div>
-              </a>
-            </div>
-            
       </section>
       <!-- 加密文章隐藏评论 -->
       <section class="comment" >
@@ -854,159 +1316,6 @@
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-    <!-- footer-->    
-    
-    <footer id="colophon" class="site-footer" role="contentinfo">
-    <div class="site-info">
-        <div class="footertext">
-          <div class="img-preload">
-              <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
-              <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
-          </div>
-        </div>
-        <!-- 网站数据统计 -->
-        <div class="footer-device">
-          <p style="font-family: 'Ubuntu', sans-serif;">
-            <span style="color: #ff9999;padding-left: 20px;">
-                <!-- 网站运行时间统计 -->
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                <span id="time" align="center">载入时间中...</span>
-                <script>
-                var now = new Date(); 
-                function createtime() { 
-                      var grt= new Date("Tue Apr 12 2022 01:20:00 GMT+0800 (中国标准时间)");//在此处修改你的建站时间
-                      now.setTime(now.getTime()+250); 
-                      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-                      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-                      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-                      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-                      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-                      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-                      document.getElementById("time").innerHTML = "若儿已经在这里 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒了哦";      
-                  } 
-                  setInterval("createtime()",250);
-                </script>
-            </span> 
-          </p>
-        </div>
-        <div class="footer-device">
-          <p style="font-family: 'Ubuntu', sans-serif;">
-            <span style="color: #b9b9b9;padding-left: 20px;">
-              <!-- 全网站字数统计wordcount -->
-              
-              <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">4.4k</span>字</span>
-              
-              <!-- 不蒜子网页计数器 -->
-              
-              <span style="padding-left: 20px;"><i class="fa fa-fire" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span id="busuanzi_container_site_pv">总访问量： <span id="busuanzi_value_site_pv" style="color:#ff9999;"></span>次</span>
-              </span>
-              
-              
-              <span style="padding-left: 20px;"><i class="fa fa-user" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span id="busuanzi_container_site_uv">总访问人数： <span id="busuanzi_value_site_uv" style="color:#ff9999;"></span>人</span>
-              </span>
-              
-            </span>
-          </p>
-        </div>
-        <!-- 作者注明 -->
-        <div class="footer-device">
-          <p style="font-family: 'Ubuntu', sans-serif;">
-              <span style="color: #b9b9b9;">
-                Copyright &copy; 2022
-                &nbsp;<a style="color: #ff9999;display:inline-block"> yuein </a>
-                &nbsp;<i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> 
-                &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank" style="color: #ff9999;display:inline-block">Hexo</a>
-                |&nbsp;Theme&nbsp;<a href="https://gitee.com/cungudafa/hexo-theme-sakuraplus" target="_blank" style="color: #ff9999;display:inline-block">SakuraPlus</a>
-              </span>
-          </p>
-        </div>
-         <!-- 网站作者版权注明 -->
-         
-    </div><!-- .site-info -->
-</footer>
-
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/lib.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/InsightSearch.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/sakura-app.js"></script>
-
-<link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all"> 
-<!-- fancybox大图查看 需jq -->
-
-  <script src="/js/fancybox.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js"></script>
-  <script>
-    $('[data-fancybox="images"]').fancybox({
-      thumbs : {
-        autoStart : true //缩略图
-      }
-    });
-    $('[data-fancybox]').fancybox({
-      protect: true,//图片右键不能下载
-      youtube : {
-          controls : 0,
-          showinfo : 0
-      },
-      vimeo : {
-          color : 'f00'
-      }
-    });
-  </script>
-
-
-<!-- 自适应浏览器 -->
-<script type="text/javascript">
-  /* <![CDATA[ */
-  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    var Poi = {"pjax":"1","movies":{"url": "none","name":"none","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
-  } else {
-    var Poi = {"pjax":"1","movies":{"url": "none","name":"none","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
-  }
-  /* ]]> */
-  
-  </script>
-  <script>
-  $(document).ready(function() {
-    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
-      if ($(".pattern-center").length > 0) { //有图的情况
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.toc', // 放置目录的容器
-            // Where to grab the headings to build the table of contents.
-            contentSelector: '.entry-content', // 正文内容所在
-            // Which headings to grab inside of the contentSelector element.
-            scrollSmooth: true,
-            headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-            headingsOffset: -400,
-            scrollSmoothOffset: -85
-        });
-      } else {
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.toc', // 放置目录的容器
-            // Where to grab the headings to build the table of contents.
-            contentSelector: '.entry-content', // 正文内容所在
-            // Which headings to grab inside of the contentSelector element.
-            scrollSmooth: true,
-            headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-            headingsOffset: -85,
-            scrollSmoothOffset: -85
-        });
-      }
-      var offsetTop = $('.toc').offset().top - 95;
-      window.onscroll = function() {
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrollTop >= offsetTop) {
-          $('.toc').addClass('toc-fixed');
-        } else {
-          $('.toc').removeClass('toc-fixed');
-        }
-      }
-    }
-  });
-</script>
-
     <!-- Side menu -->
     <div class="openNav no-select" style="height: 50px;">
       <div class="iconflat no-select" style="width: 50px; height: 50px;">
@@ -1091,6 +1400,13 @@
                 </a>
               </li>
             
+              <li>
+                <a href="/categories/%E7%B3%96%E7%B3%96/">
+                  <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                  糖糖
+                </a>
+              </li>
+            
           </ul>
         
       </li>
@@ -1131,7 +1447,7 @@
       </li>
     
       <li>
-        <a href="/comment/">
+        <a href="/comment">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
             留言板
@@ -1161,7 +1477,7 @@
       </li>
     
       <li>
-        <a href="/">
+        <a href="javascript:;">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
             关于
@@ -1730,8 +2046,162 @@
   
   <script>
     console.log("为什么老是会报错呢，哭哭")
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
+  <!-- footer-->  
+  <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+        <div class="footertext">
+          <div class="img-preload">
+              <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+              <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+          </div>
+        </div>
+        <!-- 网站数据统计 -->
+        <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+            <span style="color: #ff9999;padding-left: 20px;">
+                <!-- 网站运行时间统计 -->
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <span id="time" align="center">载入时间中...</span>
+                <script>
+                var now = new Date(); 
+                function createtime() { 
+                      var grt= new Date("Tue Apr 12 2022 01:20:00 GMT+0800 (中国标准时间)");//在此处修改你的建站时间
+                      now.setTime(now.getTime()+250); 
+                      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                      document.getElementById("time").innerHTML = "若儿已经在这里 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒了哦";      
+                  } 
+                  setInterval("createtime()",250);
+                </script>
+            </span> 
+          </p>
+        </div>
+        <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+            <span style="color: #b9b9b9;padding-left: 20px;">
+              <!-- 全网站字数统计wordcount -->
+              
+              <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">6.4k</span>字</span>
+              
+              <!-- 不蒜子网页计数器 -->
+              
+              <span style="padding-left: 20px;"><i class="fa fa-fire" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span id="busuanzi_container_site_pv">总访问量： <span id="busuanzi_value_site_pv" style="color:#ff9999;"></span>次</span>
+              </span>
+              
+              
+              <span style="padding-left: 20px;"><i class="fa fa-user" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span id="busuanzi_container_site_uv">总访问人数： <span id="busuanzi_value_site_uv" style="color:#ff9999;"></span>人</span>
+              </span>
+              
+            </span>
+          </p>
+        </div>
+        <!-- 作者注明 -->
+        <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;">
+                Copyright &copy; 2022
+                &nbsp;<a style="color: #ff9999;display:inline-block"> yuein </a>
+                &nbsp;<i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> 
+                &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank" style="color: #ff9999;display:inline-block">Hexo</a>
+                |&nbsp;Theme&nbsp;<a href="https://gitee.com/cungudafa/hexo-theme-sakuraplus" target="_blank" style="color: #ff9999;display:inline-block">SakuraPlus</a>
+              </span>
+          </p>
+        </div>
+         <!-- 网站作者版权注明 -->
+         
+    </div><!-- .site-info -->
+</footer>
 
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/InsightSearch.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/sakura-app.js"></script>
+
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all"> 
+<!-- fancybox大图查看 需jq -->
+
+  <script src="/js/fancybox.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js"></script>
+  <script>
+    $('[data-fancybox="images"]').fancybox({
+      thumbs : {
+        autoStart : true //缩略图
+      }
+    });
+    $('[data-fancybox]').fancybox({
+      protect: true,//图片右键不能下载
+      youtube : {
+          controls : 0,
+          showinfo : 0
+      },
+      vimeo : {
+          color : 'f00'
+      }
+    });
+  </script>
+
+
+<!-- 自适应浏览器 -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = {"pjax":"1","movies":{"url": "none","name":"none","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  } else {
+    var Poi = {"pjax":"1","movies":{"url": "none","name":"none","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  }
+  /* ]]> */
+  
+  </script>
+  <script>
+  $(document).ready(function() {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { //有图的情况
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc', // 放置目录的容器
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.entry-content', // 正文内容所在
+            // Which headings to grab inside of the contentSelector element.
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+            headingsOffset: -400,
+            scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc', // 放置目录的容器
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.entry-content', // 正文内容所在
+            // Which headings to grab inside of the contentSelector element.
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+            headingsOffset: -85,
+            scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+</script>
+
+
+  <!-- 后退强制刷新 --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
 </body>
 <style>
   #waifu-toggle {
