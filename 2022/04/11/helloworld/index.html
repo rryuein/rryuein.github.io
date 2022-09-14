@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -25,11 +26,9 @@
   <!-- 自定义logo -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/logo.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/LOGO/logo.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-  
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
+  <script src="/js/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
+  <script src="/js/pjax.js"></script>
 
   <!-- 分析 -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -92,7 +91,103 @@
   <a href="#" class="cd-top faa-float animated"></a>
   <!-- Main content -->
   <section id="main-container">
+    <!-- 首页显示 -->
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a target="_blank" rel="noopener" href="https://yuein.net/">
+          <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png">
+        </a>
+      </div>
+      <div class="header-info">
+        <div class="description" style="min-height: 30px;">
+        </div>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/rryuein" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://space.bilibili.com/442451967" target="_blank" class="social-github" title="bilibili">
+                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/bilibili.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="qq">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/qq.png">
+                  </a>
+                  <div class="qqInner">
+                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/qq.png">
+                  </div>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://twitter.com/EVollerei" target="_blank" class="social-github" title="twitter">
+                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/twitter.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://steamcommunity.com/id/22136832" target="_blank" class="social-github" title="steam">
+                    <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/social/steam.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  
+  <div id="video-container">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+<style>
+  .headertop-down {
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
+  }
+</style>
+
     <div id="page" class="site wrapper">
+      
       <!-- banner -->
       <header class="site-header no-select gizle sabit" role="banner">
   <div class="site-top">
@@ -373,7 +468,6 @@
     <main id="main" class="site-main" role="main">
       <article id="post-1"
         class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        
         <div class="entry-content">
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
@@ -452,9 +546,11 @@
           
             <a href="/2022/05/22/test/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src=""
-                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
-                  src="">
+                
+                    <img class="lazyload" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://www.dmoe.cc/random.php"
+                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
+                    src="http://www.dmoe.cc/random.php">
+                
               </div>
               <span class="label">Previous Post</span>
               <div class="info">
@@ -470,9 +566,11 @@
             
               <a href="/2020/05/24/hexothemesakuraplus/" rel="next">
                 <div class="background">
-                  <img class="lazyload" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/startdash/sakura.md.png"
-                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
-                    onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/startdash/sakura.md.png">
+                    
+                    <img class="lazyload" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/startdash/sakura.md.png"
+                      style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+                      onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/startdash/sakura.md.png">
+                  
                 </div>
                 <span class="label">Next Post</span>
                 <div class="info">
@@ -491,15 +589,6 @@
       
       
     <div id="vcomments"></div>
-    <!-- <script src="//unpkg.com/valine/dist/Valine.min.js"></script> -->
-    <!-- <script src="../js/Valine144.min.js"></script> -->
-    <!-- <style>
-    #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/null") 100% 100% no-repeat;
-    }
-    </style> -->
-
     <!-- 评论框美化 -->
     <style>
         .v .vcards .vcard{
@@ -537,8 +626,6 @@
             boolean: true,
             appId: '1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI',
             appKey: 'TmHhsnH8nkud95mapACnGeNO',
-            //notify: 'false' === 'true',
-            //verify: 'true' === 'true',
             visitor: 'false' === 'true',
             avatar: 'monsterid',
             pageSize: '10',
@@ -582,15 +669,6 @@
         })
     </script>
 
-    <!-- 
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        jinrishici.load(function(result) {
-            var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author;
-            document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
-        })
-    </script>
-     -->
 
 
 
@@ -901,7 +979,7 @@
 
     preload="auto"
 
-    volume="0.7"
+    volume="0.5"
 
     mutex="true"
 
@@ -1230,10 +1308,15 @@
         color: rgba(255, 255, 255, .6);
     }
 
+    .DarkMode .notice{
+        background: #77777740;
+        color: #ffffffb5;
+    }
     /* .DarkMode #page, */
     .DarkMode #colophon,
     .DarkMode #main-container,
     .DarkMode #content,
+    .DarkMode #foot-container,
     .DarkMode #contentss,
     .DarkMode #footer {
         background-color: #0b0b10a3;
@@ -1393,80 +1476,93 @@
     console.log("为什么老是会报错呢，哭哭")
   </script>
   <!-- footer-->  
+  <section id="foot-container">
   <footer id="colophon" class="site-footer" role="contentinfo">
-    <div class="site-info">
-        <div class="footertext">
-          <div class="img-preload">
-              <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
-              <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      <div class="site-info">
+          <div class="footertext">
+            <div class="img-preload">
+                <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+                <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+            </div>
           </div>
-        </div>
-        <!-- 网站数据统计 -->
-        <div class="footer-device">
-          <p style="font-family: 'Ubuntu', sans-serif;">
-            <span style="color: #ff9999;padding-left: 20px;">
-                <!-- 网站运行时间统计 -->
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                <span id="time" align="center">载入时间中...</span>
-                <script>
-                var now = new Date(); 
-                function createtime() { 
-                      var grt= new Date("Tue Apr 12 2022 01:20:00 GMT+0800 (中国标准时间)");//在此处修改你的建站时间
-                      now.setTime(now.getTime()+250); 
-                      days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-                      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-                      if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-                      mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-                      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-                      snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-                      document.getElementById("time").innerHTML = "若儿已经在这里 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒了哦";      
-                  } 
-                  setInterval("createtime()",250);
-                </script>
-            </span> 
-          </p>
-        </div>
-        <div class="footer-device">
-          <p style="font-family: 'Ubuntu', sans-serif;">
-            <span style="color: #b9b9b9;padding-left: 20px;">
-              <!-- 全网站字数统计wordcount -->
-              
-              <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">6.4k</span>字</span>
-              
-              <!-- 不蒜子网页计数器 -->
-              
-              <span style="padding-left: 20px;"><i class="fa fa-fire" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span id="busuanzi_container_site_pv">总访问量： <span id="busuanzi_value_site_pv" style="color:#ff9999;"></span>次</span>
+          <!-- 网站数据统计 -->
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #ff9999;padding-left: 20px;">
+                  <!-- 网站运行时间统计 -->
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <span id="time" align="center">载入时间中...</span>
+                  <script>
+                  var now = new Date(); 
+                  function createtime() { 
+                        var grt= new Date("Tue Apr 12 2022 01:20:00 GMT+0800 (中国标准时间)");//在此处修改你的建站时间
+                        now.setTime(now.getTime()+250); 
+                        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                        document.getElementById("time").innerHTML = "若儿已经在这里 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒了哦";      
+                    } 
+                    setInterval("createtime()",250);
+                  </script>
+              </span> 
+            </p>
+          </div>
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;padding-left: 20px;">
+                <!-- 全网站字数统计wordcount -->
+                
+                <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">6.4k</span>字</span>
+                
+                <!-- 不蒜子网页计数器 -->
+                
+                <span style="padding-left: 20px;"><i class="fa fa-fire" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span>总访问量： <span id="busuanzi_value_site_pv" style="color:#ff9999;"><i class="fa fa-spinner"></i></span>次</span>
+                </span>
+                
+                
+                <span style="padding-left: 20px;"><i class="fa fa-user" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span>总访问人数： <span id="busuanzi_value_site_uv" style="color:#ff9999;"><i class="fa fa-spinner"></i></span>人</span>
+                </span>
+                
               </span>
-              
-              
-              <span style="padding-left: 20px;"><i class="fa fa-user" aria-hidden="true" style="color: #ff9999;display:inline-block"></i><span id="busuanzi_container_site_uv">总访问人数： <span id="busuanzi_value_site_uv" style="color:#ff9999;"></span>人</span>
-              </span>
-              
-            </span>
-          </p>
-        </div>
-        <!-- 作者注明 -->
-        <div class="footer-device">
-          <p style="font-family: 'Ubuntu', sans-serif;">
-              <span style="color: #b9b9b9;">
-                Copyright &copy; 2022
-                &nbsp;<a style="color: #ff9999;display:inline-block"> yuein </a>
-                &nbsp;<i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> 
-                &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank" style="color: #ff9999;display:inline-block">Hexo</a>
-                |&nbsp;Theme&nbsp;<a href="https://gitee.com/cungudafa/hexo-theme-sakuraplus" target="_blank" style="color: #ff9999;display:inline-block">SakuraPlus</a>
-              </span>
-          </p>
-        </div>
-         <!-- 网站作者版权注明 -->
-         
-    </div><!-- .site-info -->
-</footer>
+            </p>
+          </div>
+          <!-- 作者注明 -->
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+                <span style="color: #b9b9b9;">
+                  Copyright &copy; 2022
+                  &nbsp;<a style="color: #ff9999;display:inline-block"> yuein </a>
+                  &nbsp;<i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> 
+                  &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank" style="color: #ff9999;display:inline-block">Hexo</a>
+                  |&nbsp;Theme&nbsp;<a href="https://gitee.com/cungudafa/hexo-theme-sakuraplus" target="_blank" style="color: #ff9999;display:inline-block">SakuraPlus</a>
+                </span>
+            </p>
+          </div>
+          <!-- 网站作者版权注明 -->
+          
+      </div><!-- .site-info -->
+  </footer>
+</section>
 
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/InsightSearch.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/sakura-app.js"></script>
+
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" pjax></script>
+
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script>
+  document.addEventListener('pjax:complete', function () {
+    $('script[data-pjax], .pjax-reload script').each(function () {
+      $(this).parent().append($(this).remove());
+    });
+  });
+</script>
+
 
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all"> 
 <!-- fancybox大图查看 需jq -->
@@ -1502,50 +1598,48 @@
   }
   /* ]]> */
   
-  </script>
-  <script>
-  $(document).ready(function() {
-    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
-      if ($(".pattern-center").length > 0) { //有图的情况
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.toc', // 放置目录的容器
-            // Where to grab the headings to build the table of contents.
-            contentSelector: '.entry-content', // 正文内容所在
-            // Which headings to grab inside of the contentSelector element.
-            scrollSmooth: true,
-            headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-            headingsOffset: -400,
-            scrollSmoothOffset: -85
-        });
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
       } else {
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.toc', // 放置目录的容器
-            // Where to grab the headings to build the table of contents.
-            contentSelector: '.entry-content', // 正文内容所在
-            // Which headings to grab inside of the contentSelector element.
-            scrollSmooth: true,
-            headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-            headingsOffset: -85,
-            scrollSmoothOffset: -85
-        });
-      }
-      var offsetTop = $('.toc').offset().top - 95;
-      window.onscroll = function() {
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrollTop >= offsetTop) {
-          $('.toc').addClass('toc-fixed');
-        } else {
-          $('.toc').removeClass('toc-fixed');
-        }
+        $('.toc').removeClass('toc-fixed');
       }
     }
-  });
-</script>
+  }
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
-
-  <!-- 后退强制刷新 --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 </body>
 <style>

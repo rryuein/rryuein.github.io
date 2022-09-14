@@ -1,4 +1,3 @@
-;
 var _typeof = typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol' ? function (a) {
   return typeof a
 } : function (a) {
@@ -1048,8 +1047,8 @@ mashiro_global.ini.normalize()
 var home = location.href,
   s = $('#bgvideo')[0],
   Siren = {
-    BSZ: function() {
-      $.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
+   BSZ: function() {
+      $.getScript('https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
     },
     TOC: function () {
       if ($('.toc').length > 0 && document.body.clientWidth > 1200) {
