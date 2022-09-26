@@ -15,21 +15,27 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/style.css" type="text/css" media="all" id="saukra_css-css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" id="saukra_css-css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/jquery.fancybox.min.css" media="all">  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/lib.min.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/font.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/insight.css" media="all">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/tags.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/tags.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-  <link rel="stylesheet" href="/css/tag-bubble.css">
-  <!-- 自定义logo -->
+  <!-- 自定义logo及字体引入 -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/logo.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/LOGO/logo.css">
-  <script src="/js/jquery.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
-  <script src="/js/pjax.js"></script>
+  <link rel="stylesheet" type="text/css" href="/fonts/kitty/kitty.css">
+  <link rel="stylesheet" type="text/css" href="/fonts/cute/cute.css">
+  <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
 
+  <script src="/js/jquery.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/echarts.min.js" data-pjax1></script>
+  <script type="text/javascript" src="/js/artitalk.js"></script>
+
+  <script src="/js/waline.js"></script>
+  <link rel="stylesheet" href="/css/waline.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
   <!-- 分析 -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -80,12 +86,9 @@
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   
-  
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/Valine144.min.js"></script>
-  
 
   
-  <!-- Dynamic sliders -->
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Dynamic sliders -->
   <div class="scrollbar" id="bar">
   </div>
   <a href="#" class="cd-top faa-float animated"></a>
@@ -189,7 +192,11 @@
     <div id="page" class="site wrapper">
       
       <!-- banner -->
-      <header class="site-header no-select gizle sabit" role="banner">
+      <!--进入页面时定位顶部-->
+<script>
+  window.scrollTo(0,0)
+</script>
+<header class="site-header no-select gizle sabit" role="banner" id="header">
   <div class="site-top">
     <div class="site-branding">
         <span class="site-title">
@@ -399,41 +406,12 @@
     <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
       
       <!-- .entry-content -->
-      
-    <div id="vcomments"></div>
-    <!-- 评论框美化 -->
-    <style>
-        .v .vcards .vcard{
-            margin-left: 30px;
-        }
-        .v .veditor{min-height: 10rem;
-            background-image: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/images/comment_bg.png);
-            background-size: 260px;
-            background-repeat: no-repeat;
-            background-position: right;
-            height: 125px;
-            cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/texto.cur), text;
-            background-color: rgba(255,255,255,0);
-           /* resize: none; */
-        }
-        .v .emoji, .v .vemoji {
-            max-height: 27px;
-            vertical-align: middle;
-            margin: 1px 1px;
-            display: inline-block;
-        }
-        .v .vwrap {
-            border: 2px solid #a6a4a4;
-            border-radius: 15px;
-        }
-        .v .vwrap .vheader .vinput {
-            border-bottom: 1px dashed #706f6f;
-            cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/texto.cur), text;
-        }
-    </style>
+                  
+    <div id="waline"></div>
     <script>
-        new Valine({
-            el: '#vcomments',
+        Waline.init({
+            el: '#waline',
+            path: window.location.pathname,
             enableQQ: true,
             boolean: true,
             appId: '1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI',
@@ -441,48 +419,69 @@
             visitor: 'false' === 'true',
             avatar: 'monsterid',
             pageSize: '10',
-            lang: 'en',
-            placeholder: '有没有想对若儿说的呢~',
-            serverURLs: 'https://leancloud.yuein.net',
-            requiredFields: ['nick','mail'], //设置必填项
-            // 设置Bilibili表情包地址
-            emojiCDN: '', 
-            // 表情title和图片映射
-            emojiMaps: {
-                // ... 更多表情
+            lang: 'zh-CN',
+            requiredMeta: ['nick'],
+            serverURL: 'https://waline.yuein.net',
+            emoji:['//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/tv',
+                    '//unpkg.com/@waline/emojis@1.1.0/qq',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/泠鸢yousa',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/蛆音娘',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/鹿乃',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/洛天依',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/hanser',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/缘结神',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/崩坏3',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/2233',
+                    '//cdn.jsdelivr.net/gh/rryuein/cdn/emoji/原神',
+                ],
+            locale: {
+                placeholder: '有没有想对若儿说的呢~',
+                nick: '昵称：',
+                mail: '邮箱：',
+                link: '网址：',
+                admin:'若儿',
+                level0: ' ',
+                level1: 'lv3',
+                level2: 'lv4',
+                level3: 'lv5',
+                level4: 'lv6',
+                level5: 'lv6+',
             }
+
         });
-            //   自定义邮箱审核规则
-        document.body.addEventListener('click', function(e) {
-            if (e.target.classList.contains('vsubmit')) {
-                const email = document.querySelector('input[type=email]');
-                const nick = document.querySelector('input[name=nick]');
-                const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-                if (!email.value || !nick.value || !reg.test(email.value)) {
-                    const str = `<div class="valert text-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
-                    const vmark = document.querySelector('.vmark');
-                    vmark.innerHTML = str;
-                    vmark.style.display = 'block';
-                    setTimeout(function() {
-                        vmark.style.display = 'none';
-                        vmark.innerHTML = '';
-                    }, 2500);
-                }
-            }
-         });
-        // 点击回复直接评论,官方版本点击回复时都是跳回到页面上方的评论框进行回复，评论框是固定不动的
-        // 参考https://immmmm.com/valine-diy,用到jQuery
-        $(document).ready(function(){
-            //$('.vemoji-btn').text('😀');
-            $("#vcomments").on('click', 'span.vat',function(){
-                $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
-                $('textarea#veditor').focus();
-            })
-        })
     </script>
 
-
-
+<style>
+    .v .vcards .vcard{
+        margin-left: 30px;
+        border-block-start: dashed;
+        border-block-start-width: 2px;
+    }
+    .wl-editor{min-height: 10rem;
+        background-image: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/images/comment_bg.png);
+        background-size: 260px;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 125px;
+        cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/texto.cur), text;
+        background-color: rgba(255,255,255,0);
+    /* resize: none; */
+    }
+    .v .emoji, .v .vemoji {
+        max-height: 27px;
+        vertical-align: middle;
+        margin: 1px 1px;
+        display: inline-block;
+    }
+    .wl-panel {
+        border: 2px solid #a6a4a4;
+        border-radius: 15px;
+    }
+    .v .vwrap .vheader .vinput {
+        border-bottom: 1px dashed #706f6f;
+        cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/texto.cur), text;
+    }
+</style>
 
       <div class="single-reward">
         <div class="reward-open">
@@ -1112,30 +1111,113 @@
     .DarkMode a,
     .DarkMode p,
     .DarkMode .v *,
-    .DarkMode .label {
+    .DarkMode .label ,
+    .DarkMode label,
+    .DarkMode .wl-card .wl-delete,
+    .DarkMode .wl-card .wl-like, 
+    .DarkMode .wl-card .wl-reply, 
+    .DarkMode .wl-card .wl-edit,
+    .DarkMode .wl-empty,
+    .DarkMode .highlight-wrap code[data-rel]:before,
+    .DarkMode .hljs-ln-n:before,
+    .DarkMode .entry-content ul,
+    .DarkMode .entry-content ol{
         color: rgba(255, 255, 255, .6);
     }
-
+    .DarkMode .entry-content a{
+        color: #e67474;
+    }
+    .DarkMode .entry-content a:hover {
+        color: orange;
+    }
+    .DarkMode .post-list{
+        background-color: rgb(0 0 0 / 34%);
+        box-shadow: -1px 1px 10px 0px rgb(179 179 179 / 50%);
+    }
     .DarkMode .notice{
         background: #77777740;
         color: #ffffffb5;
     }
+    .DarkMode #banner_wave_1{
+        background-image: url("/images/wave1_dark.png");
+    }
+    .DarkMode #banner_wave_2{
+        background-image: url("/images/wave2_dark.png");
+    }
     /* .DarkMode #page, */
+    .DarkMode body::after,
     .DarkMode #colophon,
-    .DarkMode #main-container,
-    .DarkMode #content,
-    .DarkMode #foot-container,
     .DarkMode #contentss,
-    .DarkMode #footer {
+    .DarkMode #footer{
         background-color: #0b0b10a3;
     }
-    .DarkMode strong,
+    .DarkMode #content{
+        background-color: #1a1a1e87;
+    }
+    .DarkMode .post-list-thumb{
+        background-color: rgb(0 0 0 / 44%);
+    }
+    .DarkMode #centerbg::before{
+       content: '';
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.35);
+    }
+    .DarkMode .site-header{
+        box-shadow: 0px 6px 20px 13px rgb(0 0 0 / 64%);
+        background: rgb(0 0 0 / 63%);
+    }
+    .DarkMode .lower li ul{
+        background: rgb(0 0 0 / 63%);
+    }
+    .DarkMode .pattern-center::after{
+        background: linear-gradient(to top, #0000008a, transparent);
+    }
+    /* .DarkMode .pattern-center-blank {
+        background-color: #0b0b10a3;
+    } */
+    .DarkMode #page > header:hover {
+        background-color: #000;
+    }
+    .DarkMode .site-top ul li a:hover {
+        color: orange
+    }
+    .DarkMode .site-top ul li a,.DarkMode i.iconfont.js-toggle-search.iconsearch,.DarkMode .logolink.logo a{
+        color: #c4c4c4;
+    }
+    .DarkMode #show-nav .line,.DarkMode .logolink .sakuraso{
+        background-color: #c4c4c4;
+    }
     .DarkMode img,
-    .DarkMode .pattern-center {
-        filter: brightness(.7);
+    .DarkMode #page > div.pattern-center > div ,
+    .DarkMode #artitalk_main .power a, 
+    .DarkMode #artitalk_main svg, 
+    .DarkMode #artitalk_main .at_button,
+    .DarkMode #artitalk_main .shuoshuo_text,
+    .DarkMode #donateBox{
+        filter: brightness(.75);
+    }
+    .DarkMode #maina > li > span.shuoshuo_author_img{
+        filter: brightness(1.15);
+    }
+    .DarkMode #artitalk_main img.atemoji{
+        filter: brightness(1);
+    }
+    .DarkMode #artitalk_main div#loading_txt{
+        color: #d3d3d3;
+    }
+    .DarkMode #artitalk_main .preloader{
+        filter: brightness(1.6);
+    }
+    .DarkMode #artitalk_main #lazy{
+        background: #9b9b9b;
     }
     .DarkMode #page .yya {
-        background-color: #0d0d16cc;
+        background-color: #11111dc2;
+    }
+    .DarkMode #page .yya:hover {
+        background-color: #0d0d16;
     }
     .DarkMode .v .vbtn {
         background-color: #0d0d16cc;
@@ -1157,21 +1239,82 @@
     .DarkMode .skin-menu{
         background-color:rgba(175, 175, 175, .6) ;
     }
-    .DarkMode .menu-list li , .font-family-controls button{
+    .DarkMode .menu-list li , 
+    .font-family-controls button{
         background-color: rgba(0, 0, 0, .33);
     }
     .DarkMode .font-family-controls button.selected{
         background-color: #ffd8618a;
     }
     .DarkMode .highlight-wrap code[data-rel]:before{
-        background-color: #fedede8a;
+        background-color: #000000;
+    }
+    .DarkMode table tbody tr:nth-child(2n){
+        background-color: rgba(0, 0, 0, .3);
     }
     .DarkMode td.hljs-ln-numbers{
-        background-color: #fff4d569;
+        background-color: #00000078;
     }
     .DarkMode .highlight-wrap code{
         color: #abb2bf;
         background-color: #00000094; 
+    }
+    .DarkMode table{
+        border: 1px solid #000000;
+    }
+    .DarkMode .highlight-wrap{
+        box-shadow: -3px 4px 7px 0px rgb(151 151 151 / 40%);
+    }
+    .DarkMode .wl-btn{
+        background: rgb(0 0 0 / 32%);
+        color: rgb(153 153 153);
+        box-shadow: none;
+    }
+    .DarkMode .wl-btn:disabled{
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #000;
+    }
+    .DarkMode .wl-btn.primary{
+        background: rgb(39 174 96 / 28%);
+    }
+    .DarkMode .wl-btn.primary:hover{
+        background: rgb(79 188 125);
+        color:#fff;
+    }
+    .DarkMode .wl-content .vemoji, .DarkMode .wl-content .wl-emoji{
+        filter: brightness(.85);
+    }
+    .DarkMode #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel{
+        background-color: #515151a8 !important;
+    }
+    .DarkMode #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel::after{
+        border-right-color: #636363 !important;
+    }
+    .DarkMode .waves-area .parallax > use:first-child {
+        fill: rgb(29 32 42 / 63%);
+    }
+    .DarkMode .waves-area .parallax > use:nth-child(2) {
+        fill: rgb(34 39 50 / 52%);
+    }
+    .DarkMode .waves-area .parallax > use:nth-child(3) {
+        fill: rgb(24 30 44 / 25%);
+    }
+    .DarkMode .waves-area .parallax > use:nth-child(4) {
+        fill: #161b2757;
+    }
+    .DarkMode #post-calendar{
+        background-color: rgb(206 206 206 / 63%);
+    }
+    .DarkMode #post-calendar::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.29);
+        bottom: 0px;
+        border-radius: 12px;
+        z-index: 1;
+        pointer-events: none;
     }
     /* sun and noon */
     .Cuteen_DarkSky,
@@ -1278,11 +1421,7 @@
   
     <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/piao.js" type="text/javascript"></script>
   
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/echarts.min.js"></script>
 
-  <script>
-    console.log("为什么老是会报错呢，哭哭")
-  </script>
   <!-- footer-->  
   <section id="foot-container">
   <footer id="colophon" class="site-footer" role="contentinfo">
@@ -1355,28 +1494,47 @@
   </footer>
 </section>
 
+<script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
+<script src="/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
+
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/lib.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/InsightSearch.js"></script>
 
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" pjax></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <script type="text/javascript" src="/js/sakura-app.js"></script>
+
+<!--pjax重载-->
 <script>
-  document.addEventListener('pjax:complete', function () {
+  $(document).pjax('script[data-pjax]', '#pjax-box', {fragment:'#pjax-box', timeout:8000
+  }).on('pjax:complete', function () {
     $('script[data-pjax], .pjax-reload script').each(function () {
       $(this).parent().append($(this).remove());
     });
-  });
+  })
+  .on('pjax:start', function () {
+    $('#pjax-box, .pjax-reload #pjax-box').each(function () {
+      $(this).parent().append($(this).remove());
+    })
+  })  
+  .on('pjax:send', function () {
+    $('script[data-pjax1], .pjax-reload script').each(function () {
+      $(this).parent().append($(this).remove());
+    })
+  })
 </script>
 
+<script type="text/javascript" src="/js/track.js" data-pjax></script>
+<script type="text/javascript" src="/js/headroom.js"></script>
+<script type="text/javascript" src="/js/jq-headroom.js"></script>
 
-<link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all"> 
 <!-- fancybox大图查看 需jq -->
 
-  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/fancybox.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js"></script>
+<div id="pjax-box">
+  <script src="/js/fancybox.js"></script> <!--加入pjax重载-->
+  <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
   <script>
     $('[data-fancybox="images"]').fancybox({
       thumbs : {
@@ -1395,6 +1553,16 @@
     });
   </script>
 
+</div>
+<!--标签云相关，但放在外面会报错，应该没有关系吧-->
+<script type="text/javascript" src="/js/jqcloud.js" data-pjax></script>
+<script type="text/javascript" data-pjax>
+  
+
+  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"}], {
+      autoResize: true
+  });
+</script>
 
 <!-- 自适应浏览器 -->
 <script type="text/javascript">
@@ -1407,47 +1575,15 @@
   /* ]]> */
   
 </script>
-<script>
-$(document).ready(function() {
-  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
-    if ($(".pattern-center").length > 0) { //有图的情况
-      tocbot.init({
-          // Where to render the table of contents.
-          tocSelector: '.toc', // 放置目录的容器
-          // Where to grab the headings to build the table of contents.
-          contentSelector: '.entry-content', // 正文内容所在
-          // Which headings to grab inside of the contentSelector element.
-          scrollSmooth: true,
-          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-          headingsOffset: -400,
-          scrollSmoothOffset: -85
-      });
-    } else {
-      tocbot.init({
-          // Where to render the table of contents.
-          tocSelector: '.toc', // 放置目录的容器
-          // Where to grab the headings to build the table of contents.
-          contentSelector: '.entry-content', // 正文内容所在
-          // Which headings to grab inside of the contentSelector element.
-          scrollSmooth: true,
-          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-          headingsOffset: -85,
-          scrollSmoothOffset: -85
-      });
-    }
-    var offsetTop = $('.toc').offset().top - 95;
-    window.onscroll = function() {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      if (scrollTop >= offsetTop) {
-        $('.toc').addClass('toc-fixed');
-      } else {
-        $('.toc').removeClass('toc-fixed');
-      }
-    }
-  }
-});
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
+<script>
+  $(document).ready(function () {
+    // select your header or whatever element you wish
+    const header = document.querySelector("#header");
+    const headroom = new Headroom(header);
+    headroom.init();
+  });
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 </body>
 <style>
@@ -1461,3 +1597,6 @@ $(document).ready(function() {
     background: rgb(255 255 255 / 0%);
   }
 </style>
+  <script>
+    console.log("为什么老是会报错呢，哭哭")
+</script>

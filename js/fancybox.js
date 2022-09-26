@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('img').not('.notice img').not('.copyright-wrap img').not('.sidebar-image img').not('.author-profile .profile img').not(".mdl-menu img").not(".something-else-logo img").not('.lazyload').not('.top-social_v2 img').each(function() {
+  $('img').not('.notice img').not('.copyright-wrap img').not('.sidebar-image img').not('.author-profile .profile img').not(".mdl-menu img").not(".something-else-logo img").not('.lazyload').not('.top-social_v2 img').not('.wl-emoji-popup .wl-tabs .wl-tab .wl-emoji').each(function() {
     if ($(this).parent().hasClass('fancybox')) return;
     if ($(this).hasClass('nofancybox')) return;
     var alt = this.alt;

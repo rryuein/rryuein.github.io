@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "kitty";
+    src: url("kitty.eot"); /* IE9 */
+    src: url("kitty.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("kitty.woff") format("woff"), /* chrome、firefox */
+    url("kitty.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("kitty.svg#kitty") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

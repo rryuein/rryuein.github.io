@@ -1,0 +1,214 @@
+.author-profile {
+    position: relative;
+    padding: 15px 12.78%;
+    text-align: center;
+    border-radius: 20px;
+    background:transparent url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/banner/about.jpg) center center no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+.author-profile::after{    
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter:blur(3px) brightness(0.8);
+    z-index:-1;
+    background:inherit;
+    border-radius: 20px;
+}
+.author-profile .info {
+    overflow: hidden;
+    text-align: center
+}
+.author-profile .profile {
+    display: inline-block;
+    width: 70px;
+    height: 70px
+}
+.author-profile .profile img {
+    max-width: 100%;
+    border-radius: 100%;
+    padding: 3px;
+    border: 1px solid #ddd
+}
+.author-profile hr {
+    width: 50%;
+    height: 0;
+    margin: 0
+}
+.author-profile .meta {
+    display: block;
+    text-align: center
+}
+.author-profile .meta h3 {
+    margin: 0px 0 0;
+    text-transform: none
+}
+.author-profile .meta h3 a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0px;
+    color: #ff9999c7
+}
+.author-profile .meta .title {
+    display: none
+}
+.author-profile p {
+    font-size: 13px;
+    line-height: 15px;
+    margin: 6px 0 0;
+    color: #e3e3e3;
+    letter-spacing: 0;
+    display: inline-block;
+    padding: 10px 20px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef
+}
+.author-profile i {
+    float: none;
+    margin-right: 10px;
+    font-size: 16px
+}
+
+.toc-title{
+    font-family: 'kitty';
+    font-size: 24px;
+    padding-left: 4px;
+}
+.fa-indent:before{
+    font-size: 24px;
+}
+.toc-article {
+    /* float:left;  */
+    min-width:290px;
+    max-width: 290px;
+    max-height: 320px;
+    padding: 12px 0 4px 10px;
+    margin-top: 40px;
+    font-size: 12px; 
+    background-color: #eee;
+    border-radius: 20px;
+}
+.toc-article a {
+    font-size: 16px;
+    border-bottom: 0px;
+    color:currentColor;
+    height:100%
+}
+.toc-article ol {
+    margin: 5px 0px 5px 10px;
+    line-height: 160%;
+    padding-left: 7px;
+    list-style-type: none;
+}
+.toc-article .is-collapsible{
+    border-left: 1px solid #91919159;
+    overflow: hidden;
+    transition: all 300ms ease-in-out
+}
+.toc-article .is-active-link{
+    background: #fe9600cc;
+    color: #fff;
+}
+.toc-article .toc-link{
+    transition: all 0.5s ease-in-out;
+}
+.toc-container{
+    border-top: 3px solid #7c7c7c66;
+    margin-left: 16px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    max-height: 245px;
+}
+#toc > div.toc-container > ol > ol{
+    margin:0;
+    padding-left:10px;
+    margin-top: 4px;
+    overflow:hidden;
+    position:relative;
+}
+.toc-container ol.toc{
+    margin-left: -11px;
+    margin-right: 8px;
+    text-align:justify;
+}
+.side-fixed{
+    position: fixed;
+    top: -15px;
+}
+.side-re{
+    position: sticky; /* 据说sticky兼容性不好，就放这里吧*/
+    top: 20px;
+    width: 290px;
+}
+.toc-article li {
+    list-style: decimal;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    list-style:none
+}
+.toc{overflow-y:auto}
+.is-collapsed{max-height:0}
+.is-position-fixed{position:fixed !important;top:0}
+.is-active-link{font-weight:700}
+
+/*sidebar style*/
+.flex-row-reverse {
+    flex-direction: row-reverse!important;
+}
+.justify-content-center {
+    justify-content: center!important;
+    }
+.allparts {
+    --bs-gutter-x: -17rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex: 1 0 100%;
+    flex-wrap: nowrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+.allparts>*{
+    flex-shrink: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: 15px;
+    margin-top: var(--bs-gutter-y);
+}
+.side{
+    flex: 0 0 auto;
+    width: 24%;
+    animation: main 1s;
+}
+.sidebar-box{
+    height: 100%;
+    width: 290px;
+    min-height: 10rem;
+    word-break: break-all;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    display: initial;
+}
+@media screen and (max-width: 1200px) {
+    .toc-article{
+        min-width: 0px;
+    }
+    .toc-fixed{
+        min-width: 0px;
+        position: sticky;
+    }
+    .side{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1000px){
+    #sidebar{
+        display: none;
+    }
+}

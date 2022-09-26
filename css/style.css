@@ -770,6 +770,10 @@
 #content {
     animation: main 1s;
     position: relative;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #808080;
+    border: none !important;
+    padding: 0 2.5rem 25px 2.5rem;
 }
 
 .headertop,
@@ -855,6 +859,16 @@ body {
     font: 300 17px;
     text-shadow: 0 0 1px rgba(0, 0, 0, .1)
 }
+body::after{
+    content: "";
+    background-color: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: -1;
+}
+
 
 input:-webkit-autofill {
     box-shadow: 0 0 0 1000px white inset
@@ -891,6 +905,16 @@ progress,
 video {
     display: inline-block;
     vertical-align: baseline
+}
+canvas{
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/normal.cur), auto;
+}
+#al_expand_collapse{
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/vertical.cur), s-resize !important;
+}
+.the-feature.from_left_and_right .info p{
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer !important;
+
 }
 
 audio:not([controls]) {
@@ -1082,10 +1106,6 @@ optgroup {
     font-weight: bold
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
 
 td,
 th {
@@ -1136,9 +1156,9 @@ blockquote {
     display: block;
     background: (255,255,255,1);
     padding: 15px 20px 15px 45px;
-    margin: 0 0 20px;
+    margin: 25px 10px 20px 10px;
     position: relative;
-    font-family: Georgia, serif;
+    font-family: 'cute',Georgia, serif;
     font-size: 16px;
     line-height: 1.2;
     color: #666;
@@ -1153,6 +1173,8 @@ blockquote {
 
 /* blockquote:before {
     content: "\f10d" !important;
+    左双引号的Unicode编码
+
     font-size: 1rem;
     position: absolute;
     top: -15px;
@@ -1170,29 +1192,9 @@ blockquote:after {
     color: orange;
     font-family: FontAwesome
 }
-blockquote p {
-    margin: 5px 0
-}
 */
-blockquote::before {
-    content: "\f10d";
-    /*左双引号的Unicode编码*/
-
-    /*字体*/
-    font-family: Georgia, serif;
-    font-size: 60px;
-    font-weight: bold;
-    color: #999;
-
-    /*位置*/
-    position: absolute;
-    left: 10px;
-    top: 5px;
-}
-
-blockquote::after {
-    content: "";
-    /*如果要显示右双引号，则写 content: "\201D"; */
+blockquote p {
+    margin: 5px 0 5px 0px !important;
 }
 
 address {
@@ -1270,8 +1272,6 @@ body {
     cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/normal.cur), auto;
 }
 
-blockquote:before,
-blockquote:after,
 q:before,
 q:after {
     content: ""
@@ -1343,11 +1343,11 @@ table td {
 table th {
     font-weight: bold; /*加粗*/
     text-align: center !important; /*内容居中，加上 !important 避免被 Markdown 样式覆盖*/
-    background: rgba(158,188,226,0.2); /*背景色*/
+    background: rgb(255 248 231 / 55%); /*背景色*/
 }
 
 table tbody tr:nth-child(2n) {
-    background: rgba(158,188,226,0.12);
+    background: rgb(255 224 224 / 25%);
 }
 
 table th {
@@ -1609,9 +1609,11 @@ a:active {
     position: relative;
     top: 0;
     left: 0;
-    height: 420px;
+    height: 600px;
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: -7px 2px 20px 5px #545252bf;
 }
 
 .pattern-center::before {
@@ -1621,24 +1623,36 @@ a:active {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(158, 158, 158, .3)
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVQImU3IMREAIAgAwJfNkQCEsH8cijjpMf6vnXlQaIiJFx+omEBfmqIEZLe2jzcAAAAASUVORK5CYII=);
+    z-index: 1;
+}
+.pattern-attachment-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-origin: border-box;
+    /* -webkit-filter: blur(2px); */
+    margin: auto;
+    height: 600px;
 }
 
 .pattern-center::after {
     content: '';
-    /* width: 150%; */
-    height: 4.375rem;
-    background: #fff;
-    left: -25%;
-    bottom: -2.875rem;
-    border-radius: 100%;
-    position: absolute
+    position: absolute;
+    width: 100%;
+    height: 18%;
+    bottom: -16px;
+    left: 0;
+    background: linear-gradient(to top, #fff, transparent);
+    z-index: 1;
+    filter: blur(6px);
+    border-radius: 96% / 103% 101% 0 0;
 }
 
 .pattern-center header.pattern-header {
     position: absolute;
     top: 35%;
-    left: 0;
+    left: 0px;
     right: 0;
     text-align: center;
     color: #fff;
@@ -1667,12 +1681,13 @@ a:active {
 }
 
 .pattern-center header.single-header {
-    max-width: 800px;
+    max-width: 900px;
     padding: 0 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    top: auto;
+    top: 400px;
+    left: -140px;
     bottom: 20px
 }
 
@@ -1730,10 +1745,10 @@ a:active {
     margin: 0 auto
 }
 
-.pattern-center-blank {
+/* .pattern-center-blank {
     padding-top: 75px;
     background-color: #fff
-}
+} */
 
 @media(max-width:860px) {
     .pattern-center-sakura {
@@ -1759,16 +1774,6 @@ a:active {
     background-color: rgba(0, 0, 0, .3)
 }
 
-.pattern-attachment-img {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-origin: border-box;
-    width: 85%;
-    -webkit-filter: blur(2px);
-    margin: auto;
-    height: 420px;
-}
 
 .pattern-center-sakura header.pattern-header {
     position: absolute;
@@ -1858,8 +1863,9 @@ a:active {
 
 .site-header {
     width: 100%;
-    height: 75px;
-    background: none;
+    height: 70px;
+    box-shadow: 0px 9px 17px 8px rgb(255 255 255 / 50%);
+    background: #ffffff82;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
     position: fixed;
@@ -1906,7 +1912,8 @@ a:active {
     position: relative;
     height: 75px;
     line-height: 75px;
-    margin-left: -6px
+    margin-left: -6px;
+    margin-top: -8px;
 }
 
 .site-title {
@@ -1935,10 +1942,10 @@ a:active {
     opacity: 1
 }
 
-//site-description {
-//    float: right
-//}
-
+/*site-description {
+    float: right
+}
+*/
 .header-focus {
     height: 250px;
     background: #f9f9f9;
@@ -1979,7 +1986,18 @@ a:active {
     opacity: 0;
     pointer-events: none;
 }
-
+  .headroom {
+    will-change: transform;
+  }
+  .headroom--pinned {
+    transform: translateY(0%);
+  }
+  .headroom--unpinned {
+    transform: translateY(-96%);
+  }
+  .headroom--unpinned:hover{
+    transform: translateY(0%);
+  }
 @media(max-width:1200px) {
     /* .site-top .lower {
         right: -26% 
@@ -2029,6 +2047,8 @@ a:active {
 }
 
 .site-top ul li {
+    font-family: 'kitty';
+    font-size: 16px;
     float: left;
     margin: 0 13px;
     position: relative;
@@ -2038,7 +2058,7 @@ a:active {
 .site-top ul li a {
     padding: 10px 0;
     display: inline-block;
-    color: #666
+    color: #3f3f3f
 }
 
 .site-top ul li a:hover {
@@ -2049,7 +2069,7 @@ a:active {
     content: "";
     display: block;
     position: absolute;
-    bottom: -16px;
+    bottom: -11px;
     height: 6px;
     background-color: #fe9600;
     width: 100%;
@@ -2092,7 +2112,7 @@ a:active {
     width: 28px;
     margin-left: -15px;
     height: 2px;
-    background: #666;
+    background: #3f3f3f;
     -webkit-transition: all .2s ease
 }
 
@@ -2193,7 +2213,7 @@ a:active {
 }
 
 .site-content {
-    max-width: 800px;
+    max-width: 900px;
     padding: 0 10px;
     margin-left: auto;
     margin-right: auto;
@@ -2685,9 +2705,11 @@ i.iconfont.hotpost {
 .site-footer {
     padding: 2%;
     background: rgba(255, 255, 255, .8);
-    max-width: 800px;
+    /* max-width: 800px; */
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    margin-top: 2%;
+    border-radius: 15px;
 }
 
 .site-info {
@@ -2745,9 +2767,9 @@ i.iconfont.hotpost {
 .entry-content ul {
     list-style: disc;
     border: 1px dashed #e4e4e4;
-    padding: 15px 10px 15px 50px;
+    padding: 15px 10px 13px 40px;
     color: #616161;
-    margin-left: 0;
+    margin: 0px 10px 20px 10px;
     border-radius: 10px
 }
 
@@ -2766,7 +2788,7 @@ i.iconfont.hotpost {
 }
 
 .entry-content {
-    position: relative
+    position: relative;
 }
 
 .entry-content h3 {
@@ -2889,9 +2911,10 @@ h1.entry-title {
 
 .entry-content p {
     color: #797979;
-    line-height: 30px;
+    line-height: 33px;
+    text-align:justify;
+    margin: 0px 25px 15px 25px;
 }
-
 .entry-content hr {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -3148,6 +3171,7 @@ h1.page-title.mb- {
     cursor: pointer;
     opacity: .6;
     float: right;
+    cursor:url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur),pointer;
     -moz-transition: opacity .1s ease-out;
     -o-transition: opacity .1s ease-out;
     -webkit-transition: opacity .1s ease-out;
@@ -3350,75 +3374,6 @@ h1.page-title.mb- {
     height: 250px
 }
 
-.author-profile {
-    padding: 15px 12.78%;
-    text-align: center
-}
-
-.author-profile .info {
-    overflow: hidden;
-    text-align: center
-}
-
-.author-profile .profile {
-    display: inline-block;
-    width: 70px;
-    height: 70px
-}
-
-.author-profile .profile img {
-    max-width: 100%;
-    border-radius: 100%;
-    padding: 3px;
-    border: 1px solid #ddd
-}
-
-.author-profile hr {
-    width: 50%;
-    height: 0;
-    margin: 0
-}
-
-.author-profile .meta {
-    display: block;
-    text-align: center
-}
-
-.author-profile .meta h3 {
-    margin: 0px 0 0;
-    text-transform: none
-}
-
-.author-profile .meta h3 a {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0px;
-    color: #ff9999c7
-}
-
-.author-profile .meta .title {
-    display: none
-}
-
-.author-profile p {
-    font-size: 13px;
-    line-height: 15px;
-    margin: 6px 0 0;
-    color: #7d8588;
-    letter-spacing: 0;
-    display: inline-block;
-    padding: 10px 20px;
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef
-}
-
-.author-profile i {
-    color: #65c186;
-    float: none;
-    margin-right: 10px;
-    font-size: 16px
-}
 
 .mashiro-profile {
     color: #7a7b7c;
@@ -3784,10 +3739,6 @@ h3#comments-list-title {
 
 .sticky {
     display: block
-}
-
-.hentry {
-    margin: 0 0 1.5em
 }
 
 .byline,
@@ -5349,7 +5300,7 @@ li.feature-2 {
 }
 
 i.iconfont.js-toggle-search.iconsearch {
-    color: #666;
+    color: #3f3f3f;
     cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     font-size: 26px;
     -webkit-transition: all 300ms ease-in-out;
@@ -6900,7 +6851,7 @@ i.iconfont.down {
     width: 100%;
     margin: 35px auto;
     text-align: center;
-    z-index: 999
+    z-index: 2
 }
 
 .single-reward .reward-open {
@@ -8442,56 +8393,8 @@ li>ol {
     background: #0bf
 }
 
-.toc-container {
-    z-index: 98;
-    width: 200px;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0);
-    transform: translateX(0);
-    right: calc((100% - 950px - 250px)/2);
-    position: absolute !important;
-    top: 480px;
-    position: absolute;
-    padding-top: 10px;
-    padding-bottom: 10px
-}
 
-.toc {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 100px
-}
-
-@media(max-width:860px) {
-    .toc-container {
-        display: none
-    }
-}
-
-.toc {
-    overflow-y: auto
-}
-
-.toc>.toc-list {
-    overflow: hidden;
-    position: relative
-}
-
-.toc>.toc-list li {
-    list-style: none
-}
-
-.toc-list {
-    margin: 0;
-    padding-left: 10px
-}
-
-a.toc-link {
-    color: currentColor;
-    height: 100%
-}
-
-.is-collapsible {
+/* .is-collapsible {
     max-height: 1000px;
     overflow: hidden;
     transition: all 300ms ease-in-out
@@ -8523,7 +8426,7 @@ a.toc-link {
 
 .is-active-link::before {
     background-color: orange !important
-}
+} */
 
 .flipx {
     -moz-transform: scaleX(-1);
@@ -9049,14 +8952,14 @@ a.toc-link {
 }
 
 .the-feature img {
-    height: 160px;
-    width: 257px
+    height: 165px;
+    width: 270px
 }
 
 .the-feature.from_left_and_right {
     position: relative;
-    height: 160px;
-    width: 257px;
+    height: 165px;
+    width: 270px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
     overflow: hidden;
     border-radius: 10px
@@ -9160,7 +9063,8 @@ a.toc-link {
     margin-top: -20px;
     -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
     box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
-    z-index: 2
+    z-index: 2;
+    pointer-events: none;
 }
 
 .highlight-wrap {
@@ -9169,13 +9073,13 @@ a.toc-link {
     border-radius: 5px;
     font: 0px/22px "Microsoft YaHei", "Arial", Sans-Serif;
     line-height: 1.6;
-    margin-bottom: 1.6em;
+    margin: 15px 10px 16px 10px;
     max-width: 100%;
     overflow: auto;
     text-shadow: none;
     color: #000;
     padding-top: 30px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .4)
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .4);
 }
 
 .highlight .line span::-moz-selection,
@@ -9216,7 +9120,7 @@ a.toc-link {
     padding: 2px;
     text-shadow: none;
     border-radius: 0 0 5px 5px;
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur), auto
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .highlight-wrap code[data-rel]:before {
@@ -9230,7 +9134,7 @@ a.toc-link {
     margin-top: -35px;
     left: 0;
     width: 100%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'cute','Ubuntu', sans-serif;
     font-weight: bold;
     padding: 0 80px;
     text-indent: 15px;
@@ -9242,7 +9146,7 @@ a.toc-link {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    pointer-events: none
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/normal.cur), auto;
 }
 
 .hljs {
@@ -9405,7 +9309,7 @@ a.toc-link {
 }
 
 .serif {
-    font-family: 'Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
+    font-family: 'cute','Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
 }
 
 @media(max-width:860px) {
@@ -9612,7 +9516,7 @@ img[src*="#in-center"] {
 #banner_wave_1 {
     width: auto;
     height: 65px;
-    background: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave1.png") repeat-x;
+    background: url("https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/wave1.png") repeat-x;
     position: absolute;
     bottom: 0;
     width: 400%;
@@ -9626,7 +9530,7 @@ img[src*="#in-center"] {
 #banner_wave_2 {
     width: auto;
     height: 80px;
-    background: url("https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wave2.png") repeat-x;
+    background: url("https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/wave2.png") repeat-x;
     position: absolute;
     bottom: 0;
     width: 400%;
@@ -9805,7 +9709,9 @@ td.hljs-ln-numbers {
     font-family: 'Source Code Pro', monospace, Helvetica, Tahoma, Arial, STXihei, "STHeiti Light", "Microsoft YaHei", sans-serif;
     vertical-align: top;
     left: 0;
-    width: 30px;
+    width: 25px;
+    min-width: 25px;
+    max-width: 35px;
 }
 
 .post-share:hover .show-share,
@@ -9835,29 +9741,6 @@ td.hljs-ln-numbers {
     outline: 0;
 }
 
-.toc {
-    width: 200px;
-    height: auto;
-    z-index: 98;
-    background-color: rgba(255, 255, 255, 0);
-    transform: translateX(0);
-    right: calc((100% - 950px - 250px) / 2);
-    top: 10px;
-    position: absolute;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.toc-fixed {
-    position: fixed !important;
-    top: 85px;
-}
-
-@media(max-width:1200px) {
-    .toc {
-        display: none;
-    }
-}
 
 .github-badge {
     display: inline-block;
@@ -10181,7 +10064,8 @@ i.iconfont.js-toggle-search.iconsearch:hover,
 }
 
 .hljs-ln {
-    border-collapse: collapse
+    border-collapse: collapse;
+    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur), auto
 }
 
 .hljs-ln td {

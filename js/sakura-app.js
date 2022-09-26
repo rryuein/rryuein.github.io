@@ -1050,8 +1050,16 @@ var home = location.href,
    BSZ: function() {
       $.getScript('https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
     },
+    HRM: function(){
+      $(document).ready(function () {
+        // select your header or whatever element you wish
+        const header = document.querySelector("#header");
+        const headroom = new Headroom(header);
+        headroom.init();
+      });    
+    },
     TOC: function () {
-      if ($('.toc').length > 0 && document.body.clientWidth > 1200) {
+      if ($('.toc').length > 0 && document.body.clientWidth > 1000) {
         if ($(".pattern-center").length > 0) { //有图的情况
           tocbot.init({
               // Where to render the table of contents.
@@ -1062,7 +1070,7 @@ var home = location.href,
               scrollSmooth: true,
               headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
               headingsOffset: -400,
-              scrollSmoothOffset: -85
+              scrollSmoothOffset: -85,
           });
         } else {
           tocbot.init({
@@ -1074,17 +1082,30 @@ var home = location.href,
               scrollSmooth: true,
               headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
               headingsOffset: -85,
-              scrollSmoothOffset: -85
+              scrollSmoothOffset: -85,
           });
         }
-        var offsetTop = $('.toc').offset().top - 135
+        var offsetTopz = $('.toc-article').offset().top + 5
         window.onscroll = function () {
           var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-          if (scrollTop >= offsetTop) {
-            $('.toc').addClass('toc-fixed')
-          } else {
-            $('.toc').removeClass('toc-fixed')
-          }
+          var bottomjudge =document.body.scrollHeight;
+          if (scrollTop >= offsetTopz) {
+            $('.sidesticky').addClass('side-fixed');
+                if((bottomjudge-scrollTop)<=937){
+                    $('.sidesticky').addClass('side-re');
+                } else{
+                    $('.sidesticky').removeClass('side-re');
+                }
+            } else {
+            $('.sidesticky').removeClass('side-fixed');
+            }
+            if(document.querySelector(".is-active-li")!=undefined){            
+                var activeDiv = document.querySelector(".is-active-li").getBoundingClientRect().top;
+                var marked = document.querySelector('.toc-list-item').getBoundingClientRect().top;
+                setTimeout(() => {
+                    $('.toc-container').scrollTop(activeDiv-marked-40);
+                }, 100); 
+            }        
         }
         $.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
       }
@@ -1521,7 +1542,7 @@ var home = location.href,
             scrollTop: 0
           }, scroll_top_duration)
       })
-    }
+    },
   }
 $(function () {
   Siren.AH()
@@ -1548,11 +1569,12 @@ $(function () {
       Siren.AH()
       Siren.PE()
       Siren.CE()
-      Siren.VA()
+//      Siren.VA()
       Siren.MJ()
       Siren.AB()
       Siren.TOC()
       Siren.BSZ()
+      Siren.HRM()
       if (mashiro_option.NProgressON) NProgress.done()
       mashiro_global.ini.pjax()
       $('#loading').fadeOut(500)
@@ -1674,102 +1696,4 @@ $(document).ready(function () {
   }, 0)
 })
 
-// function aplayerF() {
-//     'use strict';
-//     var aplayers = [],
-//         loadMeting = function () {
-//             function a(a, b) {
-//                 var c = {
-//                     container: a,
-//                     audio: b,
-//                     mini: null,
-//                     fixed: null,
-//                     autoplay: !1,
-//                     mutex: !0,
-//                     lrcType: 3,
-//                     listFolded: !1,
-//                     preload: 'auto',
-//                     theme: '#2980b9',
-//                     loop: 'all',
-//                     order: 'list',
-//                     volume: null,
-//                     listMaxHeight: null,
-//                     customAudioType: null,
-//                     storageName: 'metingjs'
-//                 };
-//                 if (b.length) {
-//                     b[0].lrc || (c.lrcType = 0);
-//                     var d = {};
-//                     for (var e in c) {
-//                         var f = e.toLowerCase();
-//                         (a.dataset.hasOwnProperty(f) || a.dataset.hasOwnProperty(e) || null !== c[e]) && (d[e] = a.dataset[f] || a.dataset[e] || c[e], ('true' === d[e] || 'false' === d[e]) && (d[e] = 'true' == d[e]))
-//                     }
-//                     aplayers.push(new APlayer(d))
-//                 }
-//                 for (var f = 0; f < aplayers.length; f++) try {
-//                     aplayers[f].lrc.hide();
-//                 } catch (a) {
-//                     console.log(a)
-//                 }
-//                 var lrcTag = 1;
-//                 $(".aplayer.aplayer-fixed").click(function () {
-//                     if (lrcTag == 1) {
-//                         for (var f = 0; f < aplayers.length; f++) try {
-//                             aplayers[f].lrc.show();
-//                         } catch (a) {
-//                             console.log(a)
-//                         }
-//                     }
-//                     lrcTag = 2;
-//                 });
-//                 var apSwitchTag = 0;
-//                 $(".aplayer.aplayer-fixed .aplayer-body").addClass("ap-hover");
-//                 $(".aplayer-miniswitcher").click(function () {
-//                     if (apSwitchTag == 0) {
-//                         $(".aplayer.aplayer-fixed .aplayer-body").removeClass("ap-hover");
-//                         apSwitchTag = 1;
-//                     } else {
-//                         $(".aplayer.aplayer-fixed .aplayer-body").addClass("ap-hover");
-//                         apSwitchTag = 0;
-//                     }
-//                 });
-//             }
-//             var b = 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r';
-//             'undefined' != typeof meting_api && (b = meting_api);
-//             for (var f = 0; f < aplayers.length; f++) try {
-//                 aplayers[f].destroy()
-//             } catch (a) {
-//                 console.log(a)
-//             }
-//             aplayers = [];
-//             for (var c = document.querySelectorAll('.aplayer'), d = function () {
-//                 var d = c[e],
-//                     f = d.dataset.id;
-//                 if (f) {
-//                     var g = d.dataset.api || b;
-//                     g = g.replace(':server', d.dataset.server), g = g.replace(':type', d.dataset.type), g = g.replace(':id', d.dataset.id), g = g.replace(':auth', d.dataset.auth), g = g.replace(':r', Math.random());
-//                     var h = new XMLHttpRequest;
-//                     h.onreadystatechange = function () {
-//                         if (4 === h.readyState && (200 <= h.status && 300 > h.status || 304 === h.status)) {
-//                             var b = JSON.parse(h.responseText);
-//                             a(d, b)
-//                         }
-//                     }, h.open('get', g, !0), h.send(null)
-//                 } else if (d.dataset.url) {
-//                     var i = [{
-//                         name: d.dataset.name || d.dataset.title || 'Audio name',
-//                         artist: d.dataset.artist || d.dataset.author || 'Audio artist',
-//                         url: d.dataset.url,
-//                         cover: d.dataset.cover || d.dataset.pic,
-//                         lrc: d.dataset.lrc,
-//                         type: d.dataset.type || 'auto'
-//                     }];
-//                     a(d, i)
-//                 }
-//             }, e = 0; e < c.length; e++) d()
-//         };
-//     document.addEventListener('DOMContentLoaded', loadMeting, !1);
-// }
-// if (document.body.clientWidth > 860) {
-//     aplayerF();
-// }
+
