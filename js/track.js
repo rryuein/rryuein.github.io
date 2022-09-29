@@ -1,3 +1,4 @@
+//TOC
 $(document).ready(function() {
     if ($(".toc").length > 0 && document.body.clientWidth > 1000) {
         if ($(".pattern-center").length > 0) { //有图的情况
@@ -25,20 +26,7 @@ $(document).ready(function() {
                 scrollSmoothOffset: -85,
             });
         }
-        var offsetTopz = $('.sidesticky').offset().top + 5;
-        window.onscroll = function() {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-            var bottomjudge =document.body.scrollHeight;
-            if (scrollTop >= offsetTopz) {
-            $('.sidesticky').addClass('side-fixed');
-                if((bottomjudge-scrollTop)<=937){
-                    $('.sidesticky').addClass('side-re');
-                } else{
-                    $('.sidesticky').removeClass('side-re');
-                }
-            } else {
-            $('.sidesticky').removeClass('side-fixed');
-            }
+        $(window).on('scroll', function() {
             if(document.querySelector(".is-active-li")!=undefined){            
                 var activeDiv = document.querySelector(".is-active-li").getBoundingClientRect().top;
                 var marked = document.querySelector('.toc-list-item').getBoundingClientRect().top;
@@ -46,6 +34,6 @@ $(document).ready(function() {
                     $('.toc-container').scrollTop(activeDiv-marked-40);
                 }, 100); 
             }        
-        }
+        })
     }
 });

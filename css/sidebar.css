@@ -136,11 +136,7 @@
     margin-right: 8px;
     text-align:justify;
 }
-.side-fixed{
-    position: fixed;
-    top: -15px;
-}
-.side-re{
+.side .sidesticky{
     position: sticky; /* 据说sticky兼容性不好，就放这里吧*/
     top: 20px;
     width: 290px;
@@ -178,12 +174,12 @@
     flex-shrink: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x)/ 2);
-    padding-left: 15px;
+    padding-left: 25px;
     margin-top: var(--bs-gutter-y);
 }
 .side{
     flex: 0 0 auto;
-    width: 24%;
+    width: 25%;
     animation: main 1s;
 }
 .sidebar-box{
@@ -211,4 +207,79 @@
     #sidebar{
         display: none;
     }
+}
+.musicbar{
+    width: 290px;
+    height: 65px;
+    display: none;
+}
+.musicbaropen{
+    display: block;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.aplayer-unfixed{
+    width: 290px;
+    float: right;
+    right: 0;
+    margin-right: 8.5rem;
+    display: none;
+    bottom: 45px;
+    position: sticky;
+}
+.aplayeropened{
+    display: block;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#aplayeropen{
+
+}
+.sideimg{
+    background-color: rgb(238 238 238);
+    box-shadow: 0px 0px 16px 7px #696868b3;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+.sideimg #topbar{
+    min-height: 30px;
+}
+.sideimg #midimg{
+    height: 200px;
+    background: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/23.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.sideimg #bottombar{
+    min-height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.sideimg #bottombar #music{
+    border-bottom-left-radius: 20px;
+    border: none;
+    width: 50%;
+}
+.sideimg #bottombar #candy{
+    border-bottom-right-radius: 20px;
+    border: none;
+    width: 50%;
+}
+#he-plugin-simple > div:nth-child(3) > div{
+    position: relative !important;
+}
+#he-plugin-simple[data-v-41ba7e2c]{
+    font-family: 'cute';
+    margin: 30px 0 -10px 0;
+}
+[data-v-db6ccf64]{
+    padding-left: 10px;
+    top: 2px;
+}
+.s-sticker div[data-v-41ba7e2c]{
+    display: contents;
+}
+.author-profile, .toc-article{
+    box-shadow: 0px 0px 16px 7px #696868b3;
 }

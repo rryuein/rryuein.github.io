@@ -27,12 +27,11 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/LOGO/logo.css">
   <link rel="stylesheet" type="text/css" href="/fonts/kitty/kitty.css">
   <link rel="stylesheet" type="text/css" href="/fonts/cute/cute.css">
-  <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
 
   <script src="/js/jquery.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/echarts.min.js" data-pjax1></script>
   <script type="text/javascript" src="/js/artitalk.js"></script>
-
+  
   <script src="/js/waline.js"></script>
   <link rel="stylesheet" href="/css/waline.css"/>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
@@ -85,7 +84,6 @@
 <meta name="generator" content="Hexo 6.1.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head> 
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
-  
 
   
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Dynamic sliders -->
@@ -499,93 +497,160 @@
     }
 </style>
 </div>
-<div id="content" class="site-content">
-  <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-    
+<div class="allparts justify-content-center flex-row-reverse">
+  <div id="sidebar" class="side">
+    <div class="sidebar-box">
+        <!--添加作者信息-->
+        <section class="author-profile" >
+            <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+              <a target="_blank" rel="noopener" href="https://yuein.net/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png" itemprop="image"
+                  alt="如若yuein" height="90" width="90"></a>
+              <div class="meta">
+                <span class="title">Author</span>
+                <h3 itemprop="name">
+                  <a target="_blank" href="https://yuein.net/" itemprop="url" rel="author noopener">如若yuein</a>
+                </h3>
+              </div>
+            </div>
+            <hr>
+            <p><i class="iconfont icon-write"></i>
+                
+                    
+                        大家会喜欢若儿的吧
+                    
+
+                
+            </p>
+        </section>
+        <div id="he-plugin-simple"></div>
+        <!--粘性侧边栏-->
+        <div class="sidesticky">
+            <div class="mouse">
+                <span>公告</span>
+                <p>要对小仓鼠好好的哦</p>
+                <div >
+                    <iframe width="290" height="260" frameborder="0" enablejsapi=1 src="https://yuein.net/widgets/hamster/hamster.html?up_bgColor=ffffff&up_bodyColor=e6debe&up_earColor=d4c898&up_snoutColor=f7f4e9&up_eyeColor=000000&up_feetColor=d4c898&up_tailColor=e6debe&up_waterColor=e0efff&up_foodColor=cba920&up_wheelColor=ffffff&up_wheelOuterColor=ff4d4d&up_wheelCenterColor=e4eb2f&up_wheelSpokeColor=dedede"></iframe>
+                </div>
+                    
+            </div>
+            <div class="sideimg">
+                <div id="topbar"></div>
+                <div id="midimg"></div>
+                <div id="bottombar">
+                    <button id="music" onclick="addmusic()">音乐</button>
+                    <button id="candy">吃糖</button>
+                </div>
+                <div class="musicbar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .mouse {
+        /* float:left;  */
+        min-width:290px;
+        max-width: 290px;
+        max-height: 320px;
+        margin-top: 40px;
+        font-size: 12px; 
+        background-color: #eee;
+        border-radius: 20px;
+    }
+    .mouse::after{
+        content: '';
+        pointer-events: none;
+        width: 200px;
+        height: 200px;
+        background-image: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/3.webp);
+    }
+</style>
+  <div id="content" class="site-content">
+    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
+      
+        <div class="links">
+          
+            <h3 class="link-title"><span class="fake-title">1. 大佬们</span></h3>
+            
+              <div class="link-description">感谢诸位大佬对小站的帮助</div>
+            
+            <ul class="link-items fontSmooth">
+              
+                <li class="link-item">
+                  <a class="link-item-inner effect-apollo" href="https://cungudafa.js.org" title="sakuraplus主题的魔改与优化，也是若儿主要使用的主题" target="_blank" rel="friend">
+                    <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg"" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg"">
+                    <span class="sitename">
+                    cungudafa</span>
+                    <div class="linkdes">
+                    sakuraplus主题的魔改与优化，也是若儿主要使用的主题</div>
+                  </a>
+                </li>
+              
+                <li class="link-item">
+                  <a class="link-item-inner effect-apollo" href="https://2heng.xin" title="sakura主题好看" target="_blank" rel="friend">
+                    <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://view.moezx.cc/images/2018/03/27/avatar.jpg" src="https://view.moezx.cc/images/2018/03/27/avatar.jpg">
+                    <span class="sitename">
+                    Mashiro</span>
+                    <div class="linkdes">
+                    sakura主题好看</div>
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <h3 class="link-title"><span class="fake-title">2. 小伙伴们</span></h3>
+            
+              <div class="link-description">欢迎交换友链 ꉂ(ˊᗜˋ)</div>
+            
+            <ul class="link-items fontSmooth">
+              
+                <li class="link-item">
+                  <a class="link-item-inner effect-apollo" href="https://shino.cc/fgvf" title="Google 镜像" target="_blank" rel="friend">
+                    <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cloud.moezx.cc/Picture/svg/landscape/fields.svg" src="https://cloud.moezx.cc/Picture/svg/landscape/fields.svg">
+                    <span class="sitename">
+                    Google</span>
+                    <div class="linkdes">
+                    Google 镜像</div>
+                  </a>
+                </li>
+              
+                <li class="link-item">
+                  <a class="link-item-inner effect-apollo" href="https://shino.cc/fgvf" title="Google 镜像" target="_blank" rel="friend">
+                    <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cloud.moezx.cc/Picture/svg/landscape/fields.svg" src="https://cloud.moezx.cc/Picture/svg/landscape/fields.svg">
+                    <span class="sitename">
+                    Google</span>
+                    <div class="linkdes">
+                    Google 镜像</div>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
       <div class="links">
         
-          <h3 class="link-title"><span class="fake-title">1. 大佬们</span></h3>
+        <h2>🌼欢迎交换友链</h2>
+          <h3>请留言告诉我你的:</h3>
+            <pre>
+              <code>name: 名称
+  url: 地址
+  img: 头像
+  desc: 描述
+              </code>
+            </pre>
           
-            <div class="link-description">感谢诸位大佬对小站的帮助</div>
-          
-          <ul class="link-items fontSmooth">
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="https://cungudafa.js.org" title="sakuraplus主题的魔改与优化，也是若儿主要使用的主题" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg"" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/custom/cungudafa.jpg"">
-                  <span class="sitename">
-                  cungudafa</span>
-                  <div class="linkdes">
-                  sakuraplus主题的魔改与优化，也是若儿主要使用的主题</div>
-                </a>
-              </li>
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="https://2heng.xin" title="sakura主题好看" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://view.moezx.cc/images/2018/03/27/avatar.jpg" src="https://view.moezx.cc/images/2018/03/27/avatar.jpg">
-                  <span class="sitename">
-                  Mashiro</span>
-                  <div class="linkdes">
-                  sakura主题好看</div>
-                </a>
-              </li>
-            
-          </ul>
-        
-          <h3 class="link-title"><span class="fake-title">2. 小伙伴们</span></h3>
-          
-            <div class="link-description">欢迎交换友链 ꉂ(ˊᗜˋ)</div>
-          
-          <ul class="link-items fontSmooth">
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="https://shino.cc/fgvf" title="Google 镜像" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cloud.moezx.cc/Picture/svg/landscape/fields.svg" src="https://cloud.moezx.cc/Picture/svg/landscape/fields.svg">
-                  <span class="sitename">
-                  Google</span>
-                  <div class="linkdes">
-                  Google 镜像</div>
-                </a>
-              </li>
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="https://shino.cc/fgvf" title="Google 镜像" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cloud.moezx.cc/Picture/svg/landscape/fields.svg" src="https://cloud.moezx.cc/Picture/svg/landscape/fields.svg">
-                  <span class="sitename">
-                  Google</span>
-                  <div class="linkdes">
-                  Google 镜像</div>
-                </a>
-              </li>
-            
-          </ul>
-        
-      </div>
-    
-    <div class="links">
-      
-      <h2>🌼欢迎交换友链</h2>
-        <h3>请留言告诉我你的:</h3>
+          <p>　</p> <p><strong>Tips:</strong>网站不要求https强制加锁，但头像图片尽量用安全链接哦！</p> <p style="font-size: 13px;color: #ff9999;"> 　1. 喜欢若儿的话就添加友链吧 <br>　2. 可以的话请先添加小站链接哦<br>　3. 广告站就不要添加了<br>　4. 对于死链，若儿会定期移除的。</p>
+          <h3>我的友链：</h3>
           <pre>
-            <code>name: 名称
-url: 地址
-img: 头像
-desc: 描述
+            <code>name: 如若yuein
+  desc: 渴望拥有自己的生活
+  url: https://yuein.net
+  img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
             </code>
           </pre>
-        
-        <p>　</p> <p><strong>Tips:</strong>网站不要求https强制加锁，但头像图片尽量用安全链接哦！</p> <p style="font-size: 13px;color: #ff9999;"> 　1. 喜欢若儿的话就添加友链吧 <br>　2. 可以的话请先添加小站链接哦<br>　3. 广告站就不要添加了<br>　4. 对于死链，若儿会定期移除的。</p>
-        <h3>我的友链：</h3>
-        <pre>
-          <code>name: 如若yuein
-desc: 渴望拥有自己的生活
-url: https://yuein.net
-img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
-          </code>
-        </pre>
-    </div>
-    
-                
+      </div>
+      
+                  
     <div id="waline"></div>
     <script>
         Waline.init({
@@ -662,37 +727,24 @@ img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
     }
 </style>
 
-    <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-    <footer class="post-footer">
-      <div class="post-lincenses" style="color: #ff9966;">
-        欢迎转载，转载时请注明来源哦！
-        <br>
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">
-        <i class="fa fa-creative-commons" aria-hidden="true"></i>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
-      </div>
-      <div class="post-tags">
-      </div>
-      <div class="post-share">
-        <div class="social-share sharehidden share-component"></div>
-        <i class="iconfont show-share icon-forward"></i>
-      </div>
-    </footer>
-  <!-- .entry-footer -->
-  </article>
-    <section class="author-profile">
-      <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png" itemprop="image" alt="yuein" height="70" width="70"></a>
-        <div class="meta">
-          <span class="title">Author</span>
-          <h3 itemprop="name">
-          <a target="_blank" href="https://yuein.net/" itemprop="url" rel="author noopener">yuein</a>
-          </h3>
+      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+      <footer class="post-footer">
+        <div class="post-lincenses" style="color: #ff9966;">
+          欢迎转载，转载时请注明来源哦！
+          <br>
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">
+          <i class="fa fa-creative-commons" aria-hidden="true"></i>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
         </div>
-      </div>
-      <p><i class="iconfont icon-write"></i>
-          <id="hitokoto" style="text-align:center"><b id="hitokoto_text"> 大家会喜欢若儿的吧 </b>
-      </p>
-    </section>
+        <div class="post-tags">
+        </div>
+        <div class="post-share">
+          <div class="social-share sharehidden share-component"></div>
+          <i class="iconfont show-share icon-forward"></i>
+        </div>
+      </footer>
+    <!-- .entry-footer -->
+    </article>
+  </div>
 </div>
       <!-- body.end -->
     </div>
@@ -917,7 +969,6 @@ img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
@@ -949,29 +1000,18 @@ img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
 </style>
 <meting-js
 
-    enable="true"
-
-    id="7466799465"
-
-    server="netease"
-
-    type="playlist"
-
-    fixed="true"
-
-    autoplay="false"
-
-    loop="all"
-
-    order="random"
-
-    preload="auto"
-
-    volume="0.5"
-
-    mutex="true"
-
->
+  enable="true"
+  id="7466799465"
+  server="netease"
+  type="playlist"
+  fixed="true"
+  autoplay="false"
+  loop="all"
+  order="random"
+  preload="auto"
+  volume="0.5"
+  mutex="true"
+  >
 </meting-js>
 <script>
   $(function(){
@@ -982,7 +1022,7 @@ img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
         $('.aplayer-lrc').addClass('lrc-show');
       }
     })
-  });
+  })
 </script>
 
    <!-- pages壁纸切换 -->
@@ -1674,7 +1714,6 @@ img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
       </div><!-- .site-info -->
   </footer>
 </section>
-
 <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
 <script src="/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
 
@@ -1706,8 +1745,11 @@ img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
     })
   })
 </script>
-
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0" data-pjax></script>
+<link rel="stylesheet" type="text/css" href="/css/sidebar.css">
 <script type="text/javascript" src="/js/track.js" data-pjax></script>
+<script src="/js/player.js"></script>
+
 <script type="text/javascript" src="/js/headroom.js"></script>
 <script type="text/javascript" src="/js/jq-headroom.js"></script>
 
@@ -1735,12 +1777,13 @@ img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
   </script>
 
 </div>
+<div><!--包装的div-->
 <!--标签云相关，但放在外面会报错，应该没有关系吧-->
 <script type="text/javascript" src="/js/jqcloud.js" data-pjax></script>
 <script type="text/javascript" data-pjax>
   
 
-  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"}], {
+  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"}], {
       autoResize: true
   });
 </script>
@@ -1764,7 +1807,34 @@ img: https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png
     const headroom = new Headroom(header);
     headroom.init();
   });
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  $('.aplayer').attr('id','aplayeropen');
+</script>
+<script>
+  WIDGET = {
+  "CONFIG": {
+      "modules": "01234",
+      "background": "1",
+      "tmpColor": "FFFFFF",
+      "tmpSize": "16",
+      "cityColor": "FFFFFF",
+      "citySize": "16",
+      "aqiColor": "FFFFFF",
+      "aqiSize": "16",
+      "weatherIconSize": "24",
+      "alertIconSize": "18",
+      "padding": "10px 10px 10px 10px",
+      "shadow": "1",
+      "language": "auto",
+      "borderRadius": "10",
+      "fixed": "false",
+      "vertical": "top",
+      "horizontal": "left",
+      "key": "6b74fb840911434ba83ca4ec653f9211"
+  }
+  }
+</script>
+</div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
   
 </body>
 <style>

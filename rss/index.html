@@ -27,12 +27,11 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/LOGO/logo.css">
   <link rel="stylesheet" type="text/css" href="/fonts/kitty/kitty.css">
   <link rel="stylesheet" type="text/css" href="/fonts/cute/cute.css">
-  <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
 
   <script src="/js/jquery.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/echarts.min.js" data-pjax1></script>
   <script type="text/javascript" src="/js/artitalk.js"></script>
-
+  
   <script src="/js/waline.js"></script>
   <link rel="stylesheet" href="/css/waline.css"/>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
@@ -85,7 +84,6 @@
 <meta name="generator" content="Hexo 6.1.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head> 
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
-  
 
   
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Dynamic sliders -->
@@ -400,8 +398,75 @@
       
       <!-- body -->
       
-      <div class="pattern-center-blank"></div>
-  
+    <div class="pattern-center-blank"></div>
+
+<div class="allparts justify-content-center flex-row-reverse">
+  <div id="sidebar" class="side">
+    <div class="sidebar-box">
+        <!--添加作者信息-->
+        <section class="author-profile" >
+            <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+              <a target="_blank" rel="noopener" href="https://yuein.net/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/custom/yuein.png" itemprop="image"
+                  alt="如若yuein" height="90" width="90"></a>
+              <div class="meta">
+                <span class="title">Author</span>
+                <h3 itemprop="name">
+                  <a target="_blank" href="https://yuein.net/" itemprop="url" rel="author noopener">如若yuein</a>
+                </h3>
+              </div>
+            </div>
+            <hr>
+            <p><i class="iconfont icon-write"></i>
+                
+                    
+                        你好呀
+                    
+
+                
+            </p>
+        </section>
+        <div id="he-plugin-simple"></div>
+        <!--粘性侧边栏-->
+        <div class="sidesticky">
+            <div class="mouse">
+                <span>公告</span>
+                <p>要对小仓鼠好好的哦</p>
+                <div >
+                    <iframe width="290" height="260" frameborder="0" enablejsapi=1 src="https://yuein.net/widgets/hamster/hamster.html?up_bgColor=ffffff&up_bodyColor=e6debe&up_earColor=d4c898&up_snoutColor=f7f4e9&up_eyeColor=000000&up_feetColor=d4c898&up_tailColor=e6debe&up_waterColor=e0efff&up_foodColor=cba920&up_wheelColor=ffffff&up_wheelOuterColor=ff4d4d&up_wheelCenterColor=e4eb2f&up_wheelSpokeColor=dedede"></iframe>
+                </div>
+                    
+            </div>
+            <div class="sideimg">
+                <div id="topbar"></div>
+                <div id="midimg"></div>
+                <div id="bottombar">
+                    <button id="music" onclick="addmusic()">音乐</button>
+                    <button id="candy">吃糖</button>
+                </div>
+                <div class="musicbar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .mouse {
+        /* float:left;  */
+        min-width:290px;
+        max-width: 290px;
+        max-height: 320px;
+        margin-top: 40px;
+        font-size: 12px; 
+        background-color: #eee;
+        border-radius: 20px;
+    }
+    .mouse::after{
+        content: '';
+        pointer-events: none;
+        width: 200px;
+        height: 200px;
+        background-image: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/3.webp);
+    }
+</style>
   <div id="content" class="site-content">
     <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
       
@@ -508,9 +573,8 @@
       </footer><!-- .entry-footer -->
     </article>
     <!-- #post-## -->
-    
   </div><!-- #primary -->
-
+</div>
 
 
       <!-- body.end -->
@@ -736,7 +800,6 @@
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
@@ -768,29 +831,18 @@
 </style>
 <meting-js
 
-    enable="true"
-
-    id="7466799465"
-
-    server="netease"
-
-    type="playlist"
-
-    fixed="true"
-
-    autoplay="false"
-
-    loop="all"
-
-    order="random"
-
-    preload="auto"
-
-    volume="0.5"
-
-    mutex="true"
-
->
+  enable="true"
+  id="7466799465"
+  server="netease"
+  type="playlist"
+  fixed="true"
+  autoplay="false"
+  loop="all"
+  order="random"
+  preload="auto"
+  volume="0.5"
+  mutex="true"
+  >
 </meting-js>
 <script>
   $(function(){
@@ -801,7 +853,7 @@
         $('.aplayer-lrc').addClass('lrc-show');
       }
     })
-  });
+  })
 </script>
 
    <!-- pages壁纸切换 -->
@@ -1493,7 +1545,6 @@
       </div><!-- .site-info -->
   </footer>
 </section>
-
 <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
 <script src="/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
 
@@ -1525,8 +1576,11 @@
     })
   })
 </script>
-
+<script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0" data-pjax></script>
+<link rel="stylesheet" type="text/css" href="/css/sidebar.css">
 <script type="text/javascript" src="/js/track.js" data-pjax></script>
+<script src="/js/player.js"></script>
+
 <script type="text/javascript" src="/js/headroom.js"></script>
 <script type="text/javascript" src="/js/jq-headroom.js"></script>
 
@@ -1554,12 +1608,13 @@
   </script>
 
 </div>
+<div><!--包装的div-->
 <!--标签云相关，但放在外面会报错，应该没有关系吧-->
 <script type="text/javascript" src="/js/jqcloud.js" data-pjax></script>
 <script type="text/javascript" data-pjax>
   
 
-  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"}], {
+  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"}], {
       autoResize: true
   });
 </script>
@@ -1583,7 +1638,34 @@
     const headroom = new Headroom(header);
     headroom.init();
   });
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  $('.aplayer').attr('id','aplayeropen');
+</script>
+<script>
+  WIDGET = {
+  "CONFIG": {
+      "modules": "01234",
+      "background": "1",
+      "tmpColor": "FFFFFF",
+      "tmpSize": "16",
+      "cityColor": "FFFFFF",
+      "citySize": "16",
+      "aqiColor": "FFFFFF",
+      "aqiSize": "16",
+      "weatherIconSize": "24",
+      "alertIconSize": "18",
+      "padding": "10px 10px 10px 10px",
+      "shadow": "1",
+      "language": "auto",
+      "borderRadius": "10",
+      "fixed": "false",
+      "vertical": "top",
+      "horizontal": "left",
+      "key": "6b74fb840911434ba83ca4ec653f9211"
+  }
+  }
+</script>
+</div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
   
 </body>
 <style>

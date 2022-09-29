@@ -10075,3 +10075,14 @@ i.iconfont.js-toggle-search.iconsearch:hover,
 .hljs-ln-n:before {
     content: attr(data-line-number)
 }
+#play_button .icon, #unmute_overlay .icon{
+    position: absolute;
+    top: 102% !important;
+    left: 50% !important;
+    width: 5% !important;
+    height: 5% !important;
+    /* max-width: 384px; */
+    /* max-height: 384px; */
+    /* transform: translate(-50%, -50%); */
+    opacity: 0.8;
+}

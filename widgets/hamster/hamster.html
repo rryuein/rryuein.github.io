@@ -1,0 +1,74 @@
+<html>
+<head>
+<script src='https://cdn.abowman.com/ruffle/ruffle.js'></script>
+<script src="https://cdn.abowman.com/widgets/js/embedswf.js" type="text/javascript"></script>
+<script src="https://cdn.abowman.com/widgets/js/swfobject.js" type="text/javascript"></script>
+
+<style type="text/css">
+#abowman {
+	position:fixed;
+	z-index:100;
+	cursor: pointer;
+}
+
+</style>
+
+</head>
+<body>
+<div id="abowman"></div>
+<div id="gadgetSWF"></div>
+
+<script type="text/javascript">
+// <![CDATA[
+
+var link = document.getElementById('abowman');
+var swfURL = "hamster.swf";
+var bgcolor = "FFFFFF";
+var flashVars = document.location.search.substring(1);
+
+link.addEventListener("click", function(e){
+ 	window.open('https://www.abowman.com','_blank');
+});
+
+
+embedSWF(swfURL, "gadgetSWF", {h:"100%",w:"100%",bgcolor:bgcolor, flashVars:flashVars});
+
+function resize(){
+	var viewportWidth = window.innerWidth;
+	var viewportHeight = window.innerHeight;
+	
+	var div = document.getElementById('gadgetSWF');
+	div.style.height = viewportHeight +"px";
+	div.style.width = viewportWidth +"px";
+	
+	var linkHeight = viewportHeight*.1;
+	var linkWidth = viewportHeight*.3;
+	var linkLeft = viewportWidth*.5 + viewportHeight*.35;
+	var linkTop = 0;
+	if(viewportHeight > viewportWidth*.75){
+		linkHeight = viewportWidth*.1;
+		linkWidth = viewportWidth*.4;
+		linkLeft = viewportWidth*.5 + viewportWidth*.25;
+		linkTop = viewportHeight*.5 - viewportWidth*.4;
+	}
+	link.style.left = linkLeft+"px";
+	link.style.top = linkTop+"px";
+	link.style.width = linkWidth+"px";
+	link.style.height = linkHeight+"px";
+}
+
+resize();
+window.onresize = resize;
+
+
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+		navigator.serviceWorker.register('https://cdn.abowman.com/widgets/hamster/sw.js');
+	});
+}
+
+
+// ]]&gt;
+</script>
+</body>
+</html>
