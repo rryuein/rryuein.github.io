@@ -138,7 +138,7 @@
 }
 .side .sidesticky{
     position: sticky; /* 据说sticky兼容性不好，就放这里吧*/
-    top: 20px;
+    top: 45px;
     width: 290px;
 }
 .toc-article li {
@@ -224,7 +224,7 @@
     right: 0;
     margin-right: 8.46rem;
     display: none;
-    bottom: 45px;
+    bottom: 53px;
     position: sticky;
 }
 .aplayeropened{

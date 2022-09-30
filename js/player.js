@@ -1,7 +1,7 @@
 //MCB
 $(document).ready(function() {
     $(window).on('scroll',function() {
-        if((window.innerHeight - 350)>=document.querySelector(".sideimg").getBoundingClientRect().top){
+        if((window.innerHeight - 377)>=document.querySelector(".sideimg").getBoundingClientRect().top){
             if(document.querySelector('.musicbaropen')==undefined){
                 $('.aplayer-unfixed').css("position","")
                 $('.aplayer-unfixed').css("top","")                
@@ -13,7 +13,7 @@ $(document).ready(function() {
                 $('.aplayer-fixed').removeClass('aplayer-narrow');            
                 $('.aplayer-fixed').removeClass('aplayer-fixed');
             }
-            if(document.querySelector(".sidesticky").getBoundingClientRect().top!=20){
+            if(document.querySelector(".sidesticky").getBoundingClientRect().top!=45){
                 $('.aplayeropened').css("position","relative")
                 $('.aplayeropened').css("top","-70px")
             } else {
