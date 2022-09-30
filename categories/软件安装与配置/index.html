@@ -14,8 +14,9 @@
   <meta http-equiv="x-dns-prefetch-control" content="on">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <div><!--依然是包装的div-->
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" id="saukra_css-css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/style.css" type="text/css" media="all" id="saukra_css-css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/jquery.fancybox.min.css" media="all">  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/lib.min.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/font.css" media="all">
@@ -25,16 +26,17 @@
   <!-- 自定义logo及字体引入 -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/logo.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/LOGO/logo.css">
-  <link rel="stylesheet" type="text/css" href="/fonts/kitty/kitty.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/kitty/kitty.css">
   <link rel="stylesheet" type="text/css" href="/fonts/cute/cute.css">
 
-  <script src="/js/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/echarts.min.js" data-pjax1></script>
-  <script type="text/javascript" src="/js/artitalk.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/artitalk.js"></script>
   
-  <script src="/js/waline.js"></script>
-  <link rel="stylesheet" href="/css/waline.css"/>
+  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/waline.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/waline.css"/>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
+  </div>
   <!-- 分析 -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -42,8 +44,6 @@
   <!-- Baidu Analytics -->
 
   
-  <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
-  " type="text/css" media="all"> -->
   <script>
     /*Initial Variables*/
     var mashiro_option = new Object();
@@ -60,8 +60,8 @@
     mashiro_option.site_name = "若儿的笔记";
     mashiro_option.author_name = "若儿的笔记";
     mashiro_option.site_url = "https://yuein.net/";
-    mashiro_option.v_appId = "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI";//
-    mashiro_option.v_appKey = "TmHhsnH8nkud95mapACnGeNO";//
+    //mashiro_option.v_appId = "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI";
+    //mashiro_option.v_appKey = "TmHhsnH8nkud95mapACnGeNO";
     mashiro_option.mathjax = "1";
     mashiro_option.copyright_enable = "true" ;
     mashiro_option.copyright_minCharNumber = parseInt("400") ;
@@ -1251,7 +1251,7 @@
             return;
         }
         if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-            if (new Date().getHours() >= 23 || new Date().getHours() < 7) {
+            if (new Date().getHours() >= 21 || new Date().getHours() < 7) {
                 $("html").addClass("DarkMode");
                 document.cookie = "DarkMode=1;path=/";
                 console.log('夜间模式开启');
@@ -1273,8 +1273,22 @@
             }
         }
     }
+    function autochange(){
+        if (new Date().getHours() >= 21 || new Date().getHours() < 7) {
+            $("html").addClass("DarkMode");
+            document.cookie = "DarkMode=1;path=/";
+            console.log('晚上了哦');
+            $('#modeicon').attr("xlink:href", "#icon-sun")
+        } else {
+            $("html").removeClass("DarkMode");
+            document.cookie = "DarkMode=0;path=/";
+            console.log('现在是白天啦');
+            $('#modeicon').attr("xlink:href", "#icon-_moon")
+        }        
+    }
     BackTOP();
     checkNightMode();
+    autochange();
 </script>
 
 <style>
@@ -1334,7 +1348,8 @@
     .DarkMode .highlight-wrap code[data-rel]:before,
     .DarkMode .hljs-ln-n:before,
     .DarkMode .entry-content ul,
-    .DarkMode .entry-content ol{
+    .DarkMode .entry-content ol,
+    .DarkMode .aplayer .aplayer-info .aplayer-music .aplayer-author{
         color: rgba(255, 255, 255, .6);
     }
     .DarkMode .entry-content a{
@@ -1361,8 +1376,44 @@
     .DarkMode body::after,
     .DarkMode #colophon,
     .DarkMode #contentss,
-    .DarkMode #footer{
+    .DarkMode #footer,
+    .DarkMode .mouse,
+    .DarkMode .toc-article{
         background-color: #0b0b10a3;
+    }
+    .DarkMode .mouse::after{
+        content:'';
+        background-color: #00000075;
+        position: absolute;
+        top: 90px;
+        width: 100%;
+        height: 221px;
+        border-radius: 20px;
+        pointer-events: none;
+    }
+    .DarkMode .sideimg #midimg{
+        filter: brightness(.85);
+    }
+    .DarkMode .sideimg #topbar{
+        background-color: #2c2c2fe3;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .DarkMode .sideimg #bottombar #music,.DarkMode .sideimg #bottombar #candy{
+        background-color: #2c2c2f;
+        border-radius: 0;
+    }
+    .DarkMode .aplayer .aplayer-list ol{
+        background-color: #38353f;
+    }
+    .DarkMode .aplayer.aplayer-fixed .aplayer-body{
+        background: none;
+    }
+    .DarkMode .aplayer .aplayer-list ol li.aplayer-list-light,.DarkMode .aplayer .aplayer-list ol li:hover, .DarkMode .aplayer{
+        background-color: #000;
+    }
+    .DarkMode .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path{
+        fill: rgba(255, 255, 255, 0.651);
     }
     .DarkMode #content{
         background-color: #1a1a1e87;
@@ -1706,8 +1757,10 @@
       </div><!-- .site-info -->
   </footer>
 </section>
+
+<div><!--包装的div-->
 <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
-<script src="/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
+<script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
 
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/lib.min.js"></script>
@@ -1716,7 +1769,7 @@
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/sakura-app.js"></script>
 
 <!--pjax重载-->
 <script>
@@ -1738,18 +1791,18 @@
   })
 </script>
 <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0" data-pjax></script>
-<link rel="stylesheet" type="text/css" href="/css/sidebar.css">
-<script type="text/javascript" src="/js/track.js" data-pjax></script>
-<script src="/js/player.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/sidebar.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/track.js" data-pjax></script>
+<script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/player.js"></script>
 
-<script type="text/javascript" src="/js/headroom.js"></script>
-<script type="text/javascript" src="/js/jq-headroom.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/headroom.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jq-headroom.js"></script>
 
 <!-- fancybox大图查看 需jq -->
 
 <div id="pjax-box">
-  <script src="/js/fancybox.js"></script> <!--加入pjax重载-->
-  <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/fancybox.js"></script> <!--加入pjax重载-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js"></script>
   <script>
     $('[data-fancybox="images"]').fancybox({
       thumbs : {
@@ -1769,13 +1822,12 @@
   </script>
 
 </div>
-<div><!--包装的div-->
 <!--标签云相关，但放在外面会报错，应该没有关系吧-->
-<script type="text/javascript" src="/js/jqcloud.js" data-pjax></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jqcloud.js" data-pjax></script>
 <script type="text/javascript" data-pjax>
   
 
-  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"}], {
+  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"}], {
       autoResize: true
   });
 </script>

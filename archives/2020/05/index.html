@@ -14,8 +14,9 @@
   <meta http-equiv="x-dns-prefetch-control" content="on">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <div><!--依然是包装的div-->
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" id="saukra_css-css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/style.css" type="text/css" media="all" id="saukra_css-css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/jquery.fancybox.min.css" media="all">  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/lib.min.css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/font.css" media="all">
@@ -25,16 +26,17 @@
   <!-- 自定义logo及字体引入 -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/logo.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/LOGO/logo.css">
-  <link rel="stylesheet" type="text/css" href="/fonts/kitty/kitty.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/fonts/kitty/kitty.css">
   <link rel="stylesheet" type="text/css" href="/fonts/cute/cute.css">
 
-  <script src="/js/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/echarts.min.js" data-pjax1></script>
-  <script type="text/javascript" src="/js/artitalk.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/artitalk.js"></script>
   
-  <script src="/js/waline.js"></script>
-  <link rel="stylesheet" href="/css/waline.css"/>
+  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/waline.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/waline.css"/>
   <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
+  </div>
   <!-- 分析 -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -42,8 +44,6 @@
   <!-- Baidu Analytics -->
 
   
-  <!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
-  " type="text/css" media="all"> -->
   <script>
     /*Initial Variables*/
     var mashiro_option = new Object();
@@ -60,8 +60,8 @@
     mashiro_option.site_name = "若儿的笔记";
     mashiro_option.author_name = "若儿的笔记";
     mashiro_option.site_url = "https://yuein.net/";
-    mashiro_option.v_appId = "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI";//
-    mashiro_option.v_appKey = "TmHhsnH8nkud95mapACnGeNO";//
+    //mashiro_option.v_appId = "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI";
+    //mashiro_option.v_appKey = "TmHhsnH8nkud95mapACnGeNO";
     mashiro_option.mathjax = "1";
     mashiro_option.copyright_enable = "true" ;
     mashiro_option.copyright_minCharNumber = parseInt("400") ;
@@ -403,7 +403,7 @@
 <div class="pattern-center ">
   <div class="pattern-attachment-img">
     
-        <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/5.webp" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+        <img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/18.webp" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
         
   </div>
   <header class="pattern-header ">
@@ -526,44 +526,32 @@
         <!--粘性侧边栏-->
         <div class="sidesticky">
             <div class="mouse">
-                <span>公告</span>
-                <p>要对小仓鼠好好的哦</p>
-                <div >
-                    <iframe width="290" height="260" frameborder="0" enablejsapi=1 src="https://yuein.net/widgets/hamster/hamster.html?up_bgColor=ffffff&up_bodyColor=e6debe&up_earColor=d4c898&up_snoutColor=f7f4e9&up_eyeColor=000000&up_feetColor=d4c898&up_tailColor=e6debe&up_waterColor=e0efff&up_foodColor=cba920&up_wheelColor=ffffff&up_wheelOuterColor=ff4d4d&up_wheelCenterColor=e4eb2f&up_wheelSpokeColor=dedede"></iframe>
+                <div class="card-widget card-announcement">
+                    <div class="item-headline">
+                        <i class="fa fa-ellipsis-v"></i>
+                        <span>公告</span>
+                    </div>
+                    <div class="announcement_content">点击领养小仓鼠<br> 要对小仓鼠好好的哦
+                    </div>
                 </div>
-                    
-            </div>
-            <div class="sideimg">
-                <div id="topbar"></div>
-                <div id="midimg"></div>
-                <div id="bottombar">
-                    <button id="music" onclick="addmusic()">音乐</button>
-                    <button id="candy">吃糖</button>
+                <div id="hamster">
+                    <iframe id="ifm" width="290" height="220" frameborder="0" style="border-radius: 20px;overflow:hidden;" src="https://cdn.abowman.com/widgets/hamster/hamster.html?up_bgColor=eeeeee&up_bodyColor=e6debe&up_earColor=d4c898&up_snoutColor=f7f4e9&up_eyeColor=000000&up_feetColor=d4c898&up_tailColor=e6debe&up_waterColor=e0efff&up_foodColor=cba920&up_wheelColor=ffffff&up_wheelOuterColor=ff4d4d&up_wheelCenterColor=e4eb2f&up_wheelSpokeColor=dedede"></iframe>
                 </div>
-                <div class="musicbar"></div>
             </div>
+            
+                <div class="sideimg">
+                    <div id="topbar"></div>
+                    <div id="midimg"></div>
+                    <div id="bottombar">
+                        <button id="music" onclick="addmusic()">音乐</button>
+                        <button id="candy">吃糖</button>
+                    </div>
+                    <div class="musicbar"></div>
+                </div>
+            
         </div>
     </div>
 </div>
-<style>
-    .mouse {
-        /* float:left;  */
-        min-width:290px;
-        max-width: 290px;
-        max-height: 320px;
-        margin-top: 40px;
-        font-size: 12px; 
-        background-color: #eee;
-        border-radius: 20px;
-    }
-    .mouse::after{
-        content: '';
-        pointer-events: none;
-        width: 200px;
-        height: 200px;
-        background-image: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/3.webp);
-    }
-</style>
   <div id="content" class="site-content">
     <article class="art">
       <div class="art-main">
@@ -760,7 +748,7 @@
         },
         calendar: [{
             left: 'center',
-            range: ["2021-09-29", "2022-09-29"],
+            range: ["2021-09-30", "2022-09-30"],
             cellSize: [13, 13],
             splitLine: {
                 show: false
@@ -792,7 +780,7 @@
             type: 'heatmap',
             coordinateSystem: 'calendar',
             calendarIndex: 0,
-            data: [["2021-09-29", 0], ["2021-09-30", 0], ["2021-10-01", 0], ["2021-10-02", 0], ["2021-10-03", 0], ["2021-10-04", 0], ["2021-10-05", 0], ["2021-10-06", 0], ["2021-10-07", 0], ["2021-10-08", 0], ["2021-10-09", 0], ["2021-10-10", 0], ["2021-10-11", 0], ["2021-10-12", 0], ["2021-10-13", 0], ["2021-10-14", 0], ["2021-10-15", 0], ["2021-10-16", 0], ["2021-10-17", 0], ["2021-10-18", 0], ["2021-10-19", 0], ["2021-10-20", 0], ["2021-10-21", 0], ["2021-10-22", 0], ["2021-10-23", 0], ["2021-10-24", 0], ["2021-10-25", 0], ["2021-10-26", 0], ["2021-10-27", 0], ["2021-10-28", 0], ["2021-10-29", 0], ["2021-10-30", 0], ["2021-10-31", 0], ["2021-11-01", 0], ["2021-11-02", 0], ["2021-11-03", 0], ["2021-11-04", 0], ["2021-11-05", 0], ["2021-11-06", 0], ["2021-11-07", 0], ["2021-11-08", 0], ["2021-11-09", 0], ["2021-11-10", 0], ["2021-11-11", 0], ["2021-11-12", 0], ["2021-11-13", 0], ["2021-11-14", 0], ["2021-11-15", 0], ["2021-11-16", 0], ["2021-11-17", 0], ["2021-11-18", 0], ["2021-11-19", 0], ["2021-11-20", 0], ["2021-11-21", 0], ["2021-11-22", 0], ["2021-11-23", 0], ["2021-11-24", 0], ["2021-11-25", 0], ["2021-11-26", 0], ["2021-11-27", 0], ["2021-11-28", 0], ["2021-11-29", 0], ["2021-11-30", 0], ["2021-12-01", 0], ["2021-12-02", 0], ["2021-12-03", 0], ["2021-12-04", 0], ["2021-12-05", 0], ["2021-12-06", 0], ["2021-12-07", 0], ["2021-12-08", 0], ["2021-12-09", 0], ["2021-12-10", 0], ["2021-12-11", 0], ["2021-12-12", 0], ["2021-12-13", 0], ["2021-12-14", 0], ["2021-12-15", 0], ["2021-12-16", 0], ["2021-12-17", 0], ["2021-12-18", 0], ["2021-12-19", 0], ["2021-12-20", 0], ["2021-12-21", 0], ["2021-12-22", 0], ["2021-12-23", 0], ["2021-12-24", 0], ["2021-12-25", 0], ["2021-12-26", 0], ["2021-12-27", 0], ["2021-12-28", 0], ["2021-12-29", 0], ["2021-12-30", 0], ["2021-12-31", 0], ["2022-01-01", 0], ["2022-01-02", 0], ["2022-01-03", 0], ["2022-01-04", 0], ["2022-01-05", 0], ["2022-01-06", 0], ["2022-01-07", 0], ["2022-01-08", 0], ["2022-01-09", 0], ["2022-01-10", 0], ["2022-01-11", 0], ["2022-01-12", 0], ["2022-01-13", 0], ["2022-01-14", 0], ["2022-01-15", 0], ["2022-01-16", 0], ["2022-01-17", 0], ["2022-01-18", 0], ["2022-01-19", 0], ["2022-01-20", 0], ["2022-01-21", 0], ["2022-01-22", 0], ["2022-01-23", 0], ["2022-01-24", 0], ["2022-01-25", 0], ["2022-01-26", 0], ["2022-01-27", 0], ["2022-01-28", 0], ["2022-01-29", 0], ["2022-01-30", 0], ["2022-01-31", 0], ["2022-02-01", 0], ["2022-02-02", 0], ["2022-02-03", 0], ["2022-02-04", 0], ["2022-02-05", 0], ["2022-02-06", 0], ["2022-02-07", 0], ["2022-02-08", 0], ["2022-02-09", 0], ["2022-02-10", 0], ["2022-02-11", 0], ["2022-02-12", 0], ["2022-02-13", 0], ["2022-02-14", 0], ["2022-02-15", 0], ["2022-02-16", 0], ["2022-02-17", 0], ["2022-02-18", 0], ["2022-02-19", 0], ["2022-02-20", 0], ["2022-02-21", 0], ["2022-02-22", 0], ["2022-02-23", 0], ["2022-02-24", 0], ["2022-02-25", 0], ["2022-02-26", 0], ["2022-02-27", 0], ["2022-02-28", 0], ["2022-03-01", 0], ["2022-03-02", 0], ["2022-03-03", 0], ["2022-03-04", 0], ["2022-03-05", 0], ["2022-03-06", 0], ["2022-03-07", 0], ["2022-03-08", 0], ["2022-03-09", 0], ["2022-03-10", 0], ["2022-03-11", 0], ["2022-03-12", 0], ["2022-03-13", 0], ["2022-03-14", 0], ["2022-03-15", 0], ["2022-03-16", 0], ["2022-03-17", 0], ["2022-03-18", 0], ["2022-03-19", 0], ["2022-03-20", 0], ["2022-03-21", 0], ["2022-03-22", 0], ["2022-03-23", 0], ["2022-03-24", 0], ["2022-03-25", 0], ["2022-03-26", 0], ["2022-03-27", 0], ["2022-03-28", 0], ["2022-03-29", 0], ["2022-03-30", 0], ["2022-03-31", 0], ["2022-04-01", 0], ["2022-04-02", 0], ["2022-04-03", 0], ["2022-04-04", 0], ["2022-04-05", 0], ["2022-04-06", 0], ["2022-04-07", 0], ["2022-04-08", 0], ["2022-04-09", 0], ["2022-04-10", 0], ["2022-04-11", 1], ["2022-04-12", 0], ["2022-04-13", 0], ["2022-04-14", 0], ["2022-04-15", 0], ["2022-04-16", 0], ["2022-04-17", 0], ["2022-04-18", 0], ["2022-04-19", 0], ["2022-04-20", 0], ["2022-04-21", 0], ["2022-04-22", 0], ["2022-04-23", 0], ["2022-04-24", 0], ["2022-04-25", 0], ["2022-04-26", 0], ["2022-04-27", 0], ["2022-04-28", 0], ["2022-04-29", 0], ["2022-04-30", 0], ["2022-05-01", 0], ["2022-05-02", 0], ["2022-05-03", 0], ["2022-05-04", 0], ["2022-05-05", 0], ["2022-05-06", 0], ["2022-05-07", 0], ["2022-05-08", 0], ["2022-05-09", 0], ["2022-05-10", 0], ["2022-05-11", 0], ["2022-05-12", 0], ["2022-05-13", 0], ["2022-05-14", 0], ["2022-05-15", 0], ["2022-05-16", 0], ["2022-05-17", 0], ["2022-05-18", 0], ["2022-05-19", 0], ["2022-05-20", 0], ["2022-05-21", 0], ["2022-05-22", 1], ["2022-05-23", 0], ["2022-05-24", 0], ["2022-05-25", 1], ["2022-05-26", 0], ["2022-05-27", 0], ["2022-05-28", 0], ["2022-05-29", 1], ["2022-05-30", 1], ["2022-05-31", 0], ["2022-06-01", 0], ["2022-06-02", 0], ["2022-06-03", 0], ["2022-06-04", 0], ["2022-06-05", 0], ["2022-06-06", 0], ["2022-06-07", 0], ["2022-06-08", 0], ["2022-06-09", 0], ["2022-06-10", 0], ["2022-06-11", 0], ["2022-06-12", 0], ["2022-06-13", 0], ["2022-06-14", 0], ["2022-06-15", 0], ["2022-06-16", 0], ["2022-06-17", 0], ["2022-06-18", 0], ["2022-06-19", 0], ["2022-06-20", 0], ["2022-06-21", 0], ["2022-06-22", 0], ["2022-06-23", 0], ["2022-06-24", 0], ["2022-06-25", 0], ["2022-06-26", 0], ["2022-06-27", 0], ["2022-06-28", 0], ["2022-06-29", 0], ["2022-06-30", 0], ["2022-07-01", 0], ["2022-07-02", 0], ["2022-07-03", 0], ["2022-07-04", 0], ["2022-07-05", 0], ["2022-07-06", 0], ["2022-07-07", 0], ["2022-07-08", 0], ["2022-07-09", 0], ["2022-07-10", 0], ["2022-07-11", 0], ["2022-07-12", 0], ["2022-07-13", 0], ["2022-07-14", 0], ["2022-07-15", 0], ["2022-07-16", 0], ["2022-07-17", 0], ["2022-07-18", 0], ["2022-07-19", 0], ["2022-07-20", 0], ["2022-07-21", 0], ["2022-07-22", 0], ["2022-07-23", 0], ["2022-07-24", 0], ["2022-07-25", 0], ["2022-07-26", 0], ["2022-07-27", 0], ["2022-07-28", 0], ["2022-07-29", 0], ["2022-07-30", 0], ["2022-07-31", 0], ["2022-08-01", 0], ["2022-08-02", 0], ["2022-08-03", 0], ["2022-08-04", 0], ["2022-08-05", 0], ["2022-08-06", 0], ["2022-08-07", 0], ["2022-08-08", 0], ["2022-08-09", 0], ["2022-08-10", 0], ["2022-08-11", 0], ["2022-08-12", 0], ["2022-08-13", 0], ["2022-08-14", 0], ["2022-08-15", 0], ["2022-08-16", 0], ["2022-08-17", 0], ["2022-08-18", 0], ["2022-08-19", 0], ["2022-08-20", 0], ["2022-08-21", 0], ["2022-08-22", 0], ["2022-08-23", 0], ["2022-08-24", 0], ["2022-08-25", 0], ["2022-08-26", 0], ["2022-08-27", 0], ["2022-08-28", 0], ["2022-08-29", 0], ["2022-08-30", 0], ["2022-08-31", 0], ["2022-09-01", 0], ["2022-09-02", 0], ["2022-09-03", 0], ["2022-09-04", 0], ["2022-09-05", 0], ["2022-09-06", 0], ["2022-09-07", 0], ["2022-09-08", 0], ["2022-09-09", 0], ["2022-09-10", 0], ["2022-09-11", 0], ["2022-09-12", 0], ["2022-09-13", 0], ["2022-09-14", 0], ["2022-09-15", 0], ["2022-09-16", 0], ["2022-09-17", 0], ["2022-09-18", 0], ["2022-09-19", 0], ["2022-09-20", 0], ["2022-09-21", 0], ["2022-09-22", 0], ["2022-09-23", 0], ["2022-09-24", 0], ["2022-09-25", 0], ["2022-09-26", 0], ["2022-09-27", 0], ["2022-09-28", 0], ["2022-09-29", 0]]
+            data: [["2021-09-30", 0], ["2021-10-01", 0], ["2021-10-02", 0], ["2021-10-03", 0], ["2021-10-04", 0], ["2021-10-05", 0], ["2021-10-06", 0], ["2021-10-07", 0], ["2021-10-08", 0], ["2021-10-09", 0], ["2021-10-10", 0], ["2021-10-11", 0], ["2021-10-12", 0], ["2021-10-13", 0], ["2021-10-14", 0], ["2021-10-15", 0], ["2021-10-16", 0], ["2021-10-17", 0], ["2021-10-18", 0], ["2021-10-19", 0], ["2021-10-20", 0], ["2021-10-21", 0], ["2021-10-22", 0], ["2021-10-23", 0], ["2021-10-24", 0], ["2021-10-25", 0], ["2021-10-26", 0], ["2021-10-27", 0], ["2021-10-28", 0], ["2021-10-29", 0], ["2021-10-30", 0], ["2021-10-31", 0], ["2021-11-01", 0], ["2021-11-02", 0], ["2021-11-03", 0], ["2021-11-04", 0], ["2021-11-05", 0], ["2021-11-06", 0], ["2021-11-07", 0], ["2021-11-08", 0], ["2021-11-09", 0], ["2021-11-10", 0], ["2021-11-11", 0], ["2021-11-12", 0], ["2021-11-13", 0], ["2021-11-14", 0], ["2021-11-15", 0], ["2021-11-16", 0], ["2021-11-17", 0], ["2021-11-18", 0], ["2021-11-19", 0], ["2021-11-20", 0], ["2021-11-21", 0], ["2021-11-22", 0], ["2021-11-23", 0], ["2021-11-24", 0], ["2021-11-25", 0], ["2021-11-26", 0], ["2021-11-27", 0], ["2021-11-28", 0], ["2021-11-29", 0], ["2021-11-30", 0], ["2021-12-01", 0], ["2021-12-02", 0], ["2021-12-03", 0], ["2021-12-04", 0], ["2021-12-05", 0], ["2021-12-06", 0], ["2021-12-07", 0], ["2021-12-08", 0], ["2021-12-09", 0], ["2021-12-10", 0], ["2021-12-11", 0], ["2021-12-12", 0], ["2021-12-13", 0], ["2021-12-14", 0], ["2021-12-15", 0], ["2021-12-16", 0], ["2021-12-17", 0], ["2021-12-18", 0], ["2021-12-19", 0], ["2021-12-20", 0], ["2021-12-21", 0], ["2021-12-22", 0], ["2021-12-23", 0], ["2021-12-24", 0], ["2021-12-25", 0], ["2021-12-26", 0], ["2021-12-27", 0], ["2021-12-28", 0], ["2021-12-29", 0], ["2021-12-30", 0], ["2021-12-31", 0], ["2022-01-01", 0], ["2022-01-02", 0], ["2022-01-03", 0], ["2022-01-04", 0], ["2022-01-05", 0], ["2022-01-06", 0], ["2022-01-07", 0], ["2022-01-08", 0], ["2022-01-09", 0], ["2022-01-10", 0], ["2022-01-11", 0], ["2022-01-12", 0], ["2022-01-13", 0], ["2022-01-14", 0], ["2022-01-15", 0], ["2022-01-16", 0], ["2022-01-17", 0], ["2022-01-18", 0], ["2022-01-19", 0], ["2022-01-20", 0], ["2022-01-21", 0], ["2022-01-22", 0], ["2022-01-23", 0], ["2022-01-24", 0], ["2022-01-25", 0], ["2022-01-26", 0], ["2022-01-27", 0], ["2022-01-28", 0], ["2022-01-29", 0], ["2022-01-30", 0], ["2022-01-31", 0], ["2022-02-01", 0], ["2022-02-02", 0], ["2022-02-03", 0], ["2022-02-04", 0], ["2022-02-05", 0], ["2022-02-06", 0], ["2022-02-07", 0], ["2022-02-08", 0], ["2022-02-09", 0], ["2022-02-10", 0], ["2022-02-11", 0], ["2022-02-12", 0], ["2022-02-13", 0], ["2022-02-14", 0], ["2022-02-15", 0], ["2022-02-16", 0], ["2022-02-17", 0], ["2022-02-18", 0], ["2022-02-19", 0], ["2022-02-20", 0], ["2022-02-21", 0], ["2022-02-22", 0], ["2022-02-23", 0], ["2022-02-24", 0], ["2022-02-25", 0], ["2022-02-26", 0], ["2022-02-27", 0], ["2022-02-28", 0], ["2022-03-01", 0], ["2022-03-02", 0], ["2022-03-03", 0], ["2022-03-04", 0], ["2022-03-05", 0], ["2022-03-06", 0], ["2022-03-07", 0], ["2022-03-08", 0], ["2022-03-09", 0], ["2022-03-10", 0], ["2022-03-11", 0], ["2022-03-12", 0], ["2022-03-13", 0], ["2022-03-14", 0], ["2022-03-15", 0], ["2022-03-16", 0], ["2022-03-17", 0], ["2022-03-18", 0], ["2022-03-19", 0], ["2022-03-20", 0], ["2022-03-21", 0], ["2022-03-22", 0], ["2022-03-23", 0], ["2022-03-24", 0], ["2022-03-25", 0], ["2022-03-26", 0], ["2022-03-27", 0], ["2022-03-28", 0], ["2022-03-29", 0], ["2022-03-30", 0], ["2022-03-31", 0], ["2022-04-01", 0], ["2022-04-02", 0], ["2022-04-03", 0], ["2022-04-04", 0], ["2022-04-05", 0], ["2022-04-06", 0], ["2022-04-07", 0], ["2022-04-08", 0], ["2022-04-09", 0], ["2022-04-10", 0], ["2022-04-11", 1], ["2022-04-12", 0], ["2022-04-13", 0], ["2022-04-14", 0], ["2022-04-15", 0], ["2022-04-16", 0], ["2022-04-17", 0], ["2022-04-18", 0], ["2022-04-19", 0], ["2022-04-20", 0], ["2022-04-21", 0], ["2022-04-22", 0], ["2022-04-23", 0], ["2022-04-24", 0], ["2022-04-25", 0], ["2022-04-26", 0], ["2022-04-27", 0], ["2022-04-28", 0], ["2022-04-29", 0], ["2022-04-30", 0], ["2022-05-01", 0], ["2022-05-02", 0], ["2022-05-03", 0], ["2022-05-04", 0], ["2022-05-05", 0], ["2022-05-06", 0], ["2022-05-07", 0], ["2022-05-08", 0], ["2022-05-09", 0], ["2022-05-10", 0], ["2022-05-11", 0], ["2022-05-12", 0], ["2022-05-13", 0], ["2022-05-14", 0], ["2022-05-15", 0], ["2022-05-16", 0], ["2022-05-17", 0], ["2022-05-18", 0], ["2022-05-19", 0], ["2022-05-20", 0], ["2022-05-21", 0], ["2022-05-22", 1], ["2022-05-23", 0], ["2022-05-24", 0], ["2022-05-25", 1], ["2022-05-26", 0], ["2022-05-27", 0], ["2022-05-28", 0], ["2022-05-29", 1], ["2022-05-30", 1], ["2022-05-31", 0], ["2022-06-01", 0], ["2022-06-02", 0], ["2022-06-03", 0], ["2022-06-04", 0], ["2022-06-05", 0], ["2022-06-06", 0], ["2022-06-07", 0], ["2022-06-08", 0], ["2022-06-09", 0], ["2022-06-10", 0], ["2022-06-11", 0], ["2022-06-12", 0], ["2022-06-13", 0], ["2022-06-14", 0], ["2022-06-15", 0], ["2022-06-16", 0], ["2022-06-17", 0], ["2022-06-18", 0], ["2022-06-19", 0], ["2022-06-20", 0], ["2022-06-21", 0], ["2022-06-22", 0], ["2022-06-23", 0], ["2022-06-24", 0], ["2022-06-25", 0], ["2022-06-26", 0], ["2022-06-27", 0], ["2022-06-28", 0], ["2022-06-29", 0], ["2022-06-30", 0], ["2022-07-01", 0], ["2022-07-02", 0], ["2022-07-03", 0], ["2022-07-04", 0], ["2022-07-05", 0], ["2022-07-06", 0], ["2022-07-07", 0], ["2022-07-08", 0], ["2022-07-09", 0], ["2022-07-10", 0], ["2022-07-11", 0], ["2022-07-12", 0], ["2022-07-13", 0], ["2022-07-14", 0], ["2022-07-15", 0], ["2022-07-16", 0], ["2022-07-17", 0], ["2022-07-18", 0], ["2022-07-19", 0], ["2022-07-20", 0], ["2022-07-21", 0], ["2022-07-22", 0], ["2022-07-23", 0], ["2022-07-24", 0], ["2022-07-25", 0], ["2022-07-26", 0], ["2022-07-27", 0], ["2022-07-28", 0], ["2022-07-29", 0], ["2022-07-30", 0], ["2022-07-31", 0], ["2022-08-01", 0], ["2022-08-02", 0], ["2022-08-03", 0], ["2022-08-04", 0], ["2022-08-05", 0], ["2022-08-06", 0], ["2022-08-07", 0], ["2022-08-08", 0], ["2022-08-09", 0], ["2022-08-10", 0], ["2022-08-11", 0], ["2022-08-12", 0], ["2022-08-13", 0], ["2022-08-14", 0], ["2022-08-15", 0], ["2022-08-16", 0], ["2022-08-17", 0], ["2022-08-18", 0], ["2022-08-19", 0], ["2022-08-20", 0], ["2022-08-21", 0], ["2022-08-22", 0], ["2022-08-23", 0], ["2022-08-24", 0], ["2022-08-25", 0], ["2022-08-26", 0], ["2022-08-27", 0], ["2022-08-28", 0], ["2022-08-29", 0], ["2022-08-30", 0], ["2022-08-31", 0], ["2022-09-01", 0], ["2022-09-02", 0], ["2022-09-03", 0], ["2022-09-04", 0], ["2022-09-05", 0], ["2022-09-06", 0], ["2022-09-07", 0], ["2022-09-08", 0], ["2022-09-09", 0], ["2022-09-10", 0], ["2022-09-11", 0], ["2022-09-12", 0], ["2022-09-13", 0], ["2022-09-14", 0], ["2022-09-15", 0], ["2022-09-16", 0], ["2022-09-17", 0], ["2022-09-18", 0], ["2022-09-19", 0], ["2022-09-20", 0], ["2022-09-21", 0], ["2022-09-22", 0], ["2022-09-23", 0], ["2022-09-24", 0], ["2022-09-25", 0], ["2022-09-26", 0], ["2022-09-27", 0], ["2022-09-28", 0], ["2022-09-29", 0], ["2022-09-30", 0]]
         }]
 
     };
@@ -1319,7 +1307,7 @@
             return;
         }
         if (document.cookie.replace(/(?:(?:^|.*;\s*)DarkMode\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-            if (new Date().getHours() >= 23 || new Date().getHours() < 7) {
+            if (new Date().getHours() >= 21 || new Date().getHours() < 7) {
                 $("html").addClass("DarkMode");
                 document.cookie = "DarkMode=1;path=/";
                 console.log('夜间模式开启');
@@ -1341,8 +1329,22 @@
             }
         }
     }
+    function autochange(){
+        if (new Date().getHours() >= 21 || new Date().getHours() < 7) {
+            $("html").addClass("DarkMode");
+            document.cookie = "DarkMode=1;path=/";
+            console.log('晚上了哦');
+            $('#modeicon').attr("xlink:href", "#icon-sun")
+        } else {
+            $("html").removeClass("DarkMode");
+            document.cookie = "DarkMode=0;path=/";
+            console.log('现在是白天啦');
+            $('#modeicon').attr("xlink:href", "#icon-_moon")
+        }        
+    }
     BackTOP();
     checkNightMode();
+    autochange();
 </script>
 
 <style>
@@ -1402,7 +1404,8 @@
     .DarkMode .highlight-wrap code[data-rel]:before,
     .DarkMode .hljs-ln-n:before,
     .DarkMode .entry-content ul,
-    .DarkMode .entry-content ol{
+    .DarkMode .entry-content ol,
+    .DarkMode .aplayer .aplayer-info .aplayer-music .aplayer-author{
         color: rgba(255, 255, 255, .6);
     }
     .DarkMode .entry-content a{
@@ -1429,8 +1432,44 @@
     .DarkMode body::after,
     .DarkMode #colophon,
     .DarkMode #contentss,
-    .DarkMode #footer{
+    .DarkMode #footer,
+    .DarkMode .mouse,
+    .DarkMode .toc-article{
         background-color: #0b0b10a3;
+    }
+    .DarkMode .mouse::after{
+        content:'';
+        background-color: #00000075;
+        position: absolute;
+        top: 90px;
+        width: 100%;
+        height: 221px;
+        border-radius: 20px;
+        pointer-events: none;
+    }
+    .DarkMode .sideimg #midimg{
+        filter: brightness(.85);
+    }
+    .DarkMode .sideimg #topbar{
+        background-color: #2c2c2fe3;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .DarkMode .sideimg #bottombar #music,.DarkMode .sideimg #bottombar #candy{
+        background-color: #2c2c2f;
+        border-radius: 0;
+    }
+    .DarkMode .aplayer .aplayer-list ol{
+        background-color: #38353f;
+    }
+    .DarkMode .aplayer.aplayer-fixed .aplayer-body{
+        background: none;
+    }
+    .DarkMode .aplayer .aplayer-list ol li.aplayer-list-light,.DarkMode .aplayer .aplayer-list ol li:hover, .DarkMode .aplayer{
+        background-color: #000;
+    }
+    .DarkMode .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path{
+        fill: rgba(255, 255, 255, 0.651);
     }
     .DarkMode #content{
         background-color: #1a1a1e87;
@@ -1774,8 +1813,10 @@
       </div><!-- .site-info -->
   </footer>
 </section>
+
+<div><!--包装的div-->
 <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
-<script src="/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
+<script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
 
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/lib.min.js"></script>
@@ -1784,7 +1825,7 @@
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/sakura-app.js"></script>
 
 <!--pjax重载-->
 <script>
@@ -1806,18 +1847,18 @@
   })
 </script>
 <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0" data-pjax></script>
-<link rel="stylesheet" type="text/css" href="/css/sidebar.css">
-<script type="text/javascript" src="/js/track.js" data-pjax></script>
-<script src="/js/player.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/sidebar.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/track.js" data-pjax></script>
+<script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/player.js"></script>
 
-<script type="text/javascript" src="/js/headroom.js"></script>
-<script type="text/javascript" src="/js/jq-headroom.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/headroom.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jq-headroom.js"></script>
 
 <!-- fancybox大图查看 需jq -->
 
 <div id="pjax-box">
-  <script src="/js/fancybox.js"></script> <!--加入pjax重载-->
-  <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/fancybox.js"></script> <!--加入pjax重载-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js"></script>
   <script>
     $('[data-fancybox="images"]').fancybox({
       thumbs : {
@@ -1837,13 +1878,12 @@
   </script>
 
 </div>
-<div><!--包装的div-->
 <!--标签云相关，但放在外面会报错，应该没有关系吧-->
-<script type="text/javascript" src="/js/jqcloud.js" data-pjax></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jqcloud.js" data-pjax></script>
 <script type="text/javascript" data-pjax>
   
 
-  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"}], {
+  $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"}], {
       autoResize: true
   });
 </script>
