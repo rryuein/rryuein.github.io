@@ -1112,7 +1112,8 @@ var home = location.href,
     },
     MCB: function(){
       $(document).ready(function() {
-        $(window).on('scroll',function() {
+          $(window).on('scroll',function() {
+          if(document.querySelector(".sideimg")!=null){
             if((window.innerHeight - 377)>=document.querySelector(".sideimg").getBoundingClientRect().top){
                 if(document.querySelector('.musicbaropen')==undefined){
                     $('.aplayer-unfixed').css("position","")
@@ -1144,8 +1145,8 @@ var home = location.href,
                 $('.aplayer-unfixed').addClass('aplayer-narrow');            
                 $('.aplayer-unfixed').removeClass('aplayer-unfixed');
             }
-          })
-        })
+          }})
+      })
         function addmusic(){
             if(document.querySelector('.musicbaropen')==undefined){
                 $('.musicbar').addClass('musicbaropen');
@@ -1628,7 +1629,6 @@ $(function () {
       Siren.AB()
       Siren.TOC()
       Siren.BSZ()
-      Siren.HRM()
       Siren.MCB()
       if (mashiro_option.NProgressON) NProgress.done()
       mashiro_global.ini.pjax()

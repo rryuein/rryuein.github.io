@@ -1,6 +1,7 @@
 //MCB
 $(document).ready(function() {
     $(window).on('scroll',function() {
+    if(document.querySelector(".sideimg")!=null){
         if((window.innerHeight - 377)>=document.querySelector(".sideimg").getBoundingClientRect().top){
             if(document.querySelector('.musicbaropen')==undefined){
                 $('.aplayer-unfixed').css("position","")
@@ -32,7 +33,7 @@ $(document).ready(function() {
             $('.aplayer-unfixed').addClass('aplayer-narrow');            
             $('.aplayer-unfixed').removeClass('aplayer-unfixed');
         }
-    })
+    }})
 })
 function addmusic(){
     if(document.querySelector('.musicbaropen')==undefined){

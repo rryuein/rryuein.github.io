@@ -60,8 +60,6 @@
     mashiro_option.site_name = "若儿的笔记";
     mashiro_option.author_name = "若儿的笔记";
     mashiro_option.site_url = "https://yuein.net/";
-    //mashiro_option.v_appId = "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI";
-    //mashiro_option.v_appKey = "TmHhsnH8nkud95mapACnGeNO";
     mashiro_option.mathjax = "1";
     mashiro_option.copyright_enable = "true" ;
     mashiro_option.copyright_minCharNumber = parseInt("400") ;
@@ -565,7 +563,7 @@ exclude:
 &lt;% &#125; %&gt;
 </code></pre>
 <p>即可，可以发现当‘judgement’判断为true时，渲染走post，即文章模式，这样就创建了一个page的文章页面，文章列表是检测不到的，这就完成了“隐藏”。</p>
-<p>　　可以参考小站的阅览指南<img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/emoji/蛆音娘/蛆音娘-卖萌.png" alt="蛆音娘-卖萌" style="zoom: 20%;box-shadow: 0px 0px 0px rgb(0 0 0 / 0%);margin-top: -36px;vertical-align: middle;" />。</p>
+<p>　　可以参考小站的阅览指南<img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/emoji/蛆音娘/蛆音娘-卖萌.png" alt="蛆音娘-卖萌" style="zoom: 20%;box-shadow: 0px 0px 0px rgb(0 0 0 / 0%);margin-top: -36px;vertical-align: middle;">。</p>
 
         </div>
 
@@ -616,10 +614,29 @@ exclude:
       <!-- #post-## -->
       <section class="post-squares nextprev">
         
+        
+        <div class="post-nepre half previous">
+          
+            <a href="/2022/09/30/sakurazhutijinyibuxiugai/" rel="prev">
+              <div class="background">
+                
+                    <img class="lazyload" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://www.dmoe.cc/random.php"
+                    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)"
+                    src="http://www.dmoe.cc/random.php">
+                
+              </div>
+              <span class="label">Previous Post</span>
+              <div class="info">
+                <h3>sakura主题进一步修改</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
           
           
-            <div class="post-nepre full next">
-              
+          
+          <div class="post-nepre half next">
+            
               <a href="/2022/05/29/kankanlianggezenmepai/" rel="next">
                 <div class="background">
                     
@@ -1723,7 +1740,7 @@ exclude:
               <span style="color: #b9b9b9;padding-left: 20px;">
                 <!-- 全网站字数统计wordcount -->
                 
-                <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">6.4k</span>字</span>
+                <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">10.2k</span>字</span>
                 
                 <!-- 不蒜子网页计数器 -->
                 
@@ -1754,8 +1771,8 @@ exclude:
       </div><!-- .site-info -->
   </footer>
 </section>
-
 <div><!--包装的div-->
+
 <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
 
@@ -1766,7 +1783,7 @@ exclude:
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/sakura-app.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
 
 <!--pjax重载-->
 <script>
@@ -1776,7 +1793,7 @@ exclude:
       $(this).parent().append($(this).remove());
     });
   })
-  .on('pjax:start', function () {
+  .on('pjax:complete', function () {
     $('#pjax-box, .pjax-reload #pjax-box').each(function () {
       $(this).parent().append($(this).remove());
     })
@@ -1790,45 +1807,29 @@ exclude:
 <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0" data-pjax></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/sidebar.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/track.js" data-pjax></script>
-<script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/player.js"></script>
+<script src="/js/player.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/headroom.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/headroom.js" data-pjax></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jq-headroom.js"></script>
 
 <!-- fancybox大图查看 需jq -->
 
 <div id="pjax-box">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js" ></script>
   <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/fancybox.js"></script> <!--加入pjax重载-->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js"></script>
-  <script>
-    $('[data-fancybox="images"]').fancybox({
-      thumbs : {
-        autoStart : true //缩略图
-      }
-    });
-    $('[data-fancybox]').fancybox({
-      protect: true,//图片右键不能下载
-      youtube : {
-          controls : 0,
-          showinfo : 0
-      },
-      vimeo : {
-          color : 'f00'
-      }
-    });
-  </script>
 
 </div>
 <!--标签云相关，但放在外面会报错，应该没有关系吧-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jqcloud.js" data-pjax></script>
-<script type="text/javascript" data-pjax>
-  
+<div id="pjax-box">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jqcloud.js"></script>
+  <script type="text/javascript">
+    
 
-  $('#tag-wordcloud').jQCloud([{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"},{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"}], {
-      autoResize: true
-  });
-</script>
-
+    $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"hexo","weight":1,"link":"hexo"},{"text":"sakura","weight":1,"link":"sakura"}], {
+        autoResize: true
+    });
+  </script>
+</div>
 <!-- 自适应浏览器 -->
 <script type="text/javascript">
   /* <![CDATA[ */
@@ -1840,16 +1841,17 @@ exclude:
   /* ]]> */
   
 </script>
-
-<script>
-  $(document).ready(function () {
-    // select your header or whatever element you wish
-    const header = document.querySelector("#header");
-    const headroom = new Headroom(header);
-    headroom.init();
-  });
-  $('.aplayer').attr('id','aplayeropen');
-</script>
+<div id="pjax-box">
+  <script>
+    $(document).ready(function () {
+      // select your header or whatever element you wish
+      const header = document.querySelector("#header");
+      const headroom = new Headroom(header);
+      headroom.init();
+    });
+    $('.aplayer').attr('id','aplayeropen');
+  </script>
+</div>
 <script>
   WIDGET = {
   "CONFIG": {

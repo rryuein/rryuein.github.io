@@ -60,8 +60,6 @@
     mashiro_option.site_name = "若儿的笔记";
     mashiro_option.author_name = "若儿的笔记";
     mashiro_option.site_url = "https://yuein.net/";
-    //mashiro_option.v_appId = "1H1RwWxmYkW1Fvw7zjuVG82z-MdYXbMMI";
-    //mashiro_option.v_appKey = "TmHhsnH8nkud95mapACnGeNO";
     mashiro_option.mathjax = "1";
     mashiro_option.copyright_enable = "true" ;
     mashiro_option.copyright_minCharNumber = parseInt("400") ;
@@ -1509,7 +1507,7 @@
               <span style="color: #b9b9b9;padding-left: 20px;">
                 <!-- 全网站字数统计wordcount -->
                 
-                <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">6.4k</span>字</span>
+                <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">10.2k</span>字</span>
                 
                 <!-- 不蒜子网页计数器 -->
                 
@@ -1540,8 +1538,8 @@
       </div><!-- .site-info -->
   </footer>
 </section>
-
 <div><!--包装的div-->
+
 <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/typed.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/pjax.js"></script> <!--修改后的pjax，解决前进后退页面出错的问题-->
 
@@ -1552,7 +1550,7 @@
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/sakura-app.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
 
 <!--pjax重载-->
 <script>
@@ -1562,7 +1560,7 @@
       $(this).parent().append($(this).remove());
     });
   })
-  .on('pjax:start', function () {
+  .on('pjax:complete', function () {
     $('#pjax-box, .pjax-reload #pjax-box').each(function () {
       $(this).parent().append($(this).remove());
     })
@@ -1576,45 +1574,29 @@
 <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0" data-pjax></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/rryuein/cdn/css/sidebar.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/track.js" data-pjax></script>
-<script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/player.js"></script>
+<script src="/js/player.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/headroom.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/headroom.js" data-pjax></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jq-headroom.js"></script>
 
 <!-- fancybox大图查看 需jq -->
 
 <div id="pjax-box">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js" ></script>
   <script src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/fancybox.js"></script> <!--加入pjax重载-->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jquery.fancybox.min.js"></script>
-  <script>
-    $('[data-fancybox="images"]').fancybox({
-      thumbs : {
-        autoStart : true //缩略图
-      }
-    });
-    $('[data-fancybox]').fancybox({
-      protect: true,//图片右键不能下载
-      youtube : {
-          controls : 0,
-          showinfo : 0
-      },
-      vimeo : {
-          color : 'f00'
-      }
-    });
-  </script>
 
 </div>
 <!--标签云相关，但放在外面会报错，应该没有关系吧-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jqcloud.js" data-pjax></script>
-<script type="text/javascript" data-pjax>
-  
+<div id="pjax-box">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rryuein/cdn/js/jqcloud.js"></script>
+  <script type="text/javascript">
+    
 
-  $('#tag-wordcloud').jQCloud([{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"},{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"}], {
-      autoResize: true
-  });
-</script>
-
+    $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"再加一个标签试试","weight":1,"link":"再加一个标签试试"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"hexo","weight":1,"link":"hexo"},{"text":"sakura","weight":1,"link":"sakura"}], {
+        autoResize: true
+    });
+  </script>
+</div>
 <!-- 自适应浏览器 -->
 <script type="text/javascript">
   /* <![CDATA[ */
@@ -1626,16 +1608,17 @@
   /* ]]> */
   
 </script>
-
-<script>
-  $(document).ready(function () {
-    // select your header or whatever element you wish
-    const header = document.querySelector("#header");
-    const headroom = new Headroom(header);
-    headroom.init();
-  });
-  $('.aplayer').attr('id','aplayeropen');
-</script>
+<div id="pjax-box">
+  <script>
+    $(document).ready(function () {
+      // select your header or whatever element you wish
+      const header = document.querySelector("#header");
+      const headroom = new Headroom(header);
+      headroom.init();
+    });
+    $('.aplayer').attr('id','aplayeropen');
+  </script>
+</div>
 <script>
   WIDGET = {
   "CONFIG": {
