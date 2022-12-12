@@ -566,7 +566,7 @@
           <i class="iconfont icon-text">
           </i>
           
-            <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/14.webp">
+            <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/21.jpg">
           
         </div>
       </a>
@@ -1803,8 +1803,76 @@
   <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"hexo","weight":1,"link":"hexo"},{"text":"sakura","weight":1,"link":"sakura"},{"text":"果糖","weight":1,"link":"果糖"},{"text":"记录","weight":1,"link":"记录"},{"text":"Lycoris","weight":1,"link":"Lycoris"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"Hexo","weight":2,"link":"Hexo"},{"text":"Github","weight":1,"link":"Github"},{"text":"博客","weight":1,"link":"博客"},{"text":"hexo","weight":1,"link":"hexo"},{"text":"sakura","weight":1,"link":"sakura"},{"text":"Lycoris","weight":1,"link":"Lycoris"},{"text":"果糖","weight":1,"link":"果糖"},{"text":"记录","weight":1,"link":"记录"}], {
         autoResize: true
+    });
+  </script>
+</div>
+<!-- 自适应浏览器 -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    var Poi = {"pjax":"1","movies":{"url": "none","name":"none","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  } else {
+    var Poi = {"pjax":"1","movies":{"url": "none","name":"none","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  }
+  /* ]]> */
+  
+</script>
+<div id="pjax-box">
+  <script>
+    $(document).ready(function () {
+      // select your header or whatever element you wish
+      const header = document.querySelector("#header");
+      const headroom = new Headroom(header);
+      headroom.init();
+    });
+    $('.aplayer').attr('id','aplayeropen');
+  </script>
+</div>
+<script>
+  WIDGET = {
+  "CONFIG": {
+      "modules": "01234",
+      "background": "1",
+      "tmpColor": "FFFFFF",
+      "tmpSize": "16",
+      "cityColor": "FFFFFF",
+      "citySize": "16",
+      "aqiColor": "FFFFFF",
+      "aqiSize": "16",
+      "weatherIconSize": "24",
+      "alertIconSize": "18",
+      "padding": "10px 10px 10px 10px",
+      "shadow": "1",
+      "language": "auto",
+      "borderRadius": "10",
+      "fixed": "false",
+      "vertical": "top",
+      "horizontal": "left",
+      "key": "6b74fb840911434ba83ca4ec653f9211"
+  }
+  }
+</script>
+</div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+  
+</body>
+<style>
+  #waifu-toggle {
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
+  }
+  .aplayer .aplayer-icon { 
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
+  }
+  .aplayer.aplayer-fixed .lrc-show{
+    background: rgb(255 255 255 / 0%);
+  }
+</style>
+  <script>
+    console.log("为什么老是会报错呢，哭哭")
+</script>
+utoResize: true
     });
   </script>
 </div>
