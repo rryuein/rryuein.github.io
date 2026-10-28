@@ -1912,6 +1912,7 @@ a:active {
     line-height: 75px;
     margin-left: -6px;
     margin-top: -8px;
+    width: 12%;
 }
 
 .site-title {
@@ -1960,13 +1961,13 @@ a:active {
 
 .site-top .lower-cantiner {
     position: relative;
-    /* left: 0%; */
+    left: -3%;
     /* border: 1px dashed #ccc; */
     /* display: table-cell; */
     vertical-align: middle;
     text-align: center;
     min-width: 16px;
-    pointer-events: none
+    pointer-events: none;
 }
 
 .site-top .lower {
