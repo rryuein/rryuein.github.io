@@ -603,7 +603,7 @@ $(document).ready(function() &#123;
 </code></pre>
 <p>　　最后只需要将整个fancybox代码包裹在<code>id=&quot;pjax-box&quot;</code>的<code>div</code>中就完成了。不过，页面的前进与后退仍然会导致其失效，原因还在寻找中<img src="https://cdn.jsdelivr.net/gh/rryuein/cdn/emoji/崩坏3/崩坏3-不可以看.png" alt="崩坏3-不可以看" style="zoom: 20%;box-shadow: 0px 0px 0px rgb(0 0 0 / 0%);margin-top: -36px;vertical-align: middle;"></p>
 <h2 id="1-2-标签云"><a href="#1-2-标签云" class="headerlink" title="1.2 标签云"></a>1.2 标签云</h2><p>　　若儿觉得sakura自带的标签云不够好看，所以在网上找到了<a target="_blank" rel="noopener" href="https://wallleap.cn/2020/03/08/theme-beautify/">另一款</a>，长这个样子</p>
-<p><img src="/2022/09/30/sakurazhutijinyibuxiugai/20221002092228.png" alt="20221002092228"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/rryuein/article-img/2022/0930/1.png" alt="标签云"></p>
 <p>但这一部分有一个明显的问题，在使用前进或者后退功能后，整个标签云就消失了，需要重新刷新才能加载。若儿就想着把它也加入pjax重载，需要重载的代码如下：</p>
 <pre><code class="html">  &lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%- theme.libs.js.jqcloud %&gt;&quot;&gt;&lt;/script&gt;
   &lt;script type=&quot;text/javascript&quot;&gt;
@@ -626,12 +626,12 @@ $(document).ready(function() &#123;
 <h2 id="2-1-leancloud域名问题"><a href="#2-1-leancloud域名问题" class="headerlink" title="2.1 leancloud域名问题"></a>2.1 leancloud域名问题</h2><p>　　由于自2022年8月以来，leancloud官方已经不再向大陆地区提供国际版共享域名了，所以即便是使用国际版leancloud的伙伴仍然需要和国内版一样在leancloud绑定域名和使用，即无论是在leancloud还是在waline，所有操作都要和国内版一样（只不过可以不用备案）：</p>
 <p><img src="https://waline.js.org/assets/leancloud-3.3ae5fb8d.png" alt="绑定域名"></p>
 <p>这里，绑定的域名需要在DNS 上完成 <code>CNAME</code> 解析，方法是在你解析域名的网站上添加下图中的第一行：</p>
-<p><img src="/2022/09/30/sakurazhutijinyibuxiugai/20221002151940.png" alt="操作"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/rryuein/article-img/2022/0930/2.png" alt="操作"></p>
 <p>第一列中的<code>leancloud</code>可以是任意的，第二列的格式为<code>你的leancloud的AppID前八位</code>+<code>.us-w1-cname.lncldglobal.com.</code>（最后这个  <strong>.</strong>  一定要加）</p>
 <h2 id="2-2-waline服务端登陆问题"><a href="#2-2-waline服务端登陆问题" class="headerlink" title="2.2 waline服务端登陆问题"></a>2.2 waline服务端登陆问题</h2><p>　　waline的后台服务端使用的是<code>Vercel</code>，但很不幸的是在大陆地区访问仍然会存在问题，所以也需要进行域名绑定，如图第二行：</p>
-<p><img src="/2022/09/30/sakurazhutijinyibuxiugai/20221002151940.png" alt="操作"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/rryuein/article-img/2022/0930/2.png" alt="操作"></p>
 <p>同样第一列中的<code>waline</code>可以是任意的，第二列的格式为<code>cname-china.vercel-dns.com.</code>。然后再<code>Vercel</code>中点击<code>settings → domans</code>在方框中加入你解析过的域名即可：</p>
-<p><img src="/2022/09/30/sakurazhutijinyibuxiugai/20221002154829.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/rryuein/article-img/2022/0930/3.png"></p>
 <p>　　记得在博客中引入的地方也加入<code>serverURL: &#39;&lt;%= theme.waline.serverurl %&gt;&#39;,</code>。</p>
 <p>　　这样，你就可以使用自己的域名登陆waline的服务端了。</p>
 <h1 id="3、-侧边栏"><a href="#3、-侧边栏" class="headerlink" title="3、 侧边栏"></a>3、 侧边栏</h1><p>　　这一部分还是比较简单的，只需要在每个页面对应的ejs中寻找<code>&lt;div id=&quot;content&quot; class=&quot;site-content&quot;&gt;</code>，添加一个同级的 <code>&lt;%- partial(&#39;_partial/sidebarpage&#39;) %&gt;</code>，并用一个大的<code>div</code>将二者包裹<code>&lt;div class=&quot;allparts&quot;&gt;</code>就行，其中需要在主题目录下<code>/layout/_partial</code>下添加sidebarpage.ejs，里面是你想加入的内容，例如若儿的：</p>
