@@ -168,21 +168,21 @@ function injectStyles (rule) {
 function imgError (ele, type) {
   switch (type) {
     case 1:
-      if (ele.src.includes('https://cn.gravatar.com/avatar')) {
-        ele.src = ele.src.replace('https://cn.gravatar.com/avatar/', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/gravatar.jpg')
+      if (ele.src.includes('https://gravatar.shino.cc/avatar')) {
+        ele.src = ele.src.replace('https://gravatar.shino.cc/avatar/', 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/gravatar.jpg')
       } else {
-        ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/default_avatar.jpg'
+        ele.src = 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/default_avatar.jpg'
       }
       break
     case 2:
-      ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/default_gavatar.jpg'
+      ele.src = 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/default_gavatar.png'
       break
     case 3:
 
-      ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
+      ele.src = 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/image-404.png'
       break
     default:
-      ele.src = 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png'
+      ele.src = 'https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/image-404.png'
   }
 }
 mashiro_global.post_list_show_animation = new function () {
@@ -688,10 +688,12 @@ var pjaxInit = function () {
   }
   $('.iconflat').css('width', '50px').css('height', '50px')
   $('.openNav').css('height', '50px')
-  $('#bg-next').click(function () {
+  // #bg-next / #bg-pre 在 #page 之外，换页不会重建；用命名空间先解绑再绑，
+  // 否则换页（含前进/后退）次数越多，点一次“换背景”就切越多张
+  $('#bg-next').off('click.sakuraBg').on('click.sakuraBg', function () {
     nextBG()
   })
-  $('#bg-pre').click(function () {
+  $('#bg-pre').off('click.sakuraBg').on('click.sakuraBg', function () {
     preBG()
   })
   smileBoxToggle()
@@ -1058,113 +1060,132 @@ var home = location.href,
         headroom.init();
       });    
     },
-    TOC: function () {
-      if ($('.toc').length > 0 && document.body.clientWidth > 1000) {
-        if ($(".pattern-center").length > 0) { //有图的情况
-          tocbot.init({
-              // Where to render the table of contents.
-              tocSelector: '.toc', // 放置目录的容器
-              // Where to grab the headings to build the table of contents.
-              contentSelector: '.entry-content', // 正文内容所在
-              // Which headings to grab inside of the contentSelector element.
-              scrollSmooth: true,
-              headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-              headingsOffset: -400,
-              scrollSmoothOffset: -85,
-          });
-        } else {
-          tocbot.init({
-              // Where to render the table of contents.
-              tocSelector: '.toc', // 放置目录的容器
-              // Where to grab the headings to build the table of contents.
-              contentSelector: '.entry-content', // 正文内容所在
-              // Which headings to grab inside of the contentSelector element.
-              scrollSmooth: true,
-              headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
-              headingsOffset: -85,
-              scrollSmoothOffset: -85,
-          });
-        }
-        var offsetTopz = $('.toc-article').offset().top + 5
-        window.onscroll = function () {
-          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-          var bottomjudge =document.body.scrollHeight;
-          if (scrollTop >= offsetTopz) {
-            $('.sidesticky').addClass('side-fixed');
-                if((bottomjudge-scrollTop)<=937){
-                    $('.sidesticky').addClass('side-re');
-                } else{
-                    $('.sidesticky').removeClass('side-re');
-                }
-            } else {
-            $('.sidesticky').removeClass('side-fixed');
-            }
-            if(document.querySelector(".is-active-li")!=undefined){            
-                var activeDiv = document.querySelector(".is-active-li").getBoundingClientRect().top;
-                var marked = document.querySelector('.toc-list-item').getBoundingClientRect().top;
-                setTimeout(() => {
-                    $('.toc-container').scrollTop(activeDiv-marked-40);
-                }, 100); 
-            }        
-        }
-        $.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
-      }
-    },
-    MCB: function(){
-      $(document).ready(function() {
-          $(window).on('scroll',function() {
-          if(document.querySelector(".sideimg")!=null){
-            if((window.innerHeight - 377)>=document.querySelector(".sideimg").getBoundingClientRect().top){
-                if(document.querySelector('.musicbaropen')==undefined){
-                    $('.aplayer-unfixed').css("position","")
-                    $('.aplayer-unfixed').css("top","")                
-                    return;
-                }
-                else{
-                    $('.aplayer-fixed').addClass('aplayer-unfixed');
-                    $('.aplayer-body').css("width","290px")
-                    $('.aplayer-fixed').removeClass('aplayer-narrow');            
-                    $('.aplayer-fixed').removeClass('aplayer-fixed');
-                }
-                if(document.querySelector(".sidesticky").getBoundingClientRect().top!=45){
-                    $('.aplayeropened').css("position","relative")
-                    $('.aplayeropened').css("top","-70px")
-                } else {
-                    $('.aplayeropened').css("position","sticky")
-                }
-            }
-            else{
-                $('.aplayer-unfixed').addClass('aplayer-fixed');
-                $('.aplayer-body').css("width","400px")
-                $('.musicbaropen').removeClass('musicbaropen');
-                $('.aplayer-listleft').removeClass('aplayer-listleft');
-                $('.aplayer-unfixed').css("position","")
-                $('.aplayer-unfixed').css("top","")                
-                $('.aplayer-unfixed').css("position","")
-                $('.aplayer-unfixed').css("top","")                
-                $('.aplayer-unfixed').addClass('aplayer-narrow');            
-                $('.aplayer-unfixed').removeClass('aplayer-unfixed');
-            }
-          }})
-      })
-        function addmusic(){
-            if(document.querySelector('.musicbaropen')==undefined){
-                $('.musicbar').addClass('musicbaropen');
-                $('.aplayer-list').addClass('aplayer-listleft');
-                $('.aplayer').addClass('aplayeropened');
-                $('#music').css("border-radius","inherit");
-                $('#candy').css("border-radius","inherit");
-                var bodyhight=window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-                $(document).scrollTop(bodyhight-1);
-            } else {
-                $('.musicbaropen').removeClass('musicbaropen');
-                $('.aplayer-listleft').removeClass('aplayer-listleft');
-                $('.aplayeropened').removeClass('aplayeropened');
-                $('#music').css("border-bottom-left-radius","20px");
-                $('#candy').css("border-bottom-right-radius","20px");        
-            }
-        }
-      },
+    // TOC: function () {
+    //   if ($('.toc').length > 0 && document.body.clientWidth > 1000) {
+    //     if ($(".pattern-center").length > 0) { //有图的情况
+    //       tocbot.init({
+    //           // Where to render the table of contents.
+    //           tocSelector: '.toc', // 放置目录的容器
+    //           // Where to grab the headings to build the table of contents.
+    //           contentSelector: '.entry-content', // 正文内容所在
+    //           // Which headings to grab inside of the contentSelector element.
+    //           scrollSmooth: true,
+    //           headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+    //           headingsOffset: -400,
+    //           scrollSmoothOffset: -85,
+    //       });
+    //     } else {
+    //       tocbot.init({
+    //           // Where to render the table of contents.
+    //           tocSelector: '.toc', // 放置目录的容器
+    //           // Where to grab the headings to build the table of contents.
+    //           contentSelector: '.entry-content', // 正文内容所在
+    //           // Which headings to grab inside of the contentSelector element.
+    //           scrollSmooth: true,
+    //           headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+    //           headingsOffset: -85,
+    //           scrollSmoothOffset: -85,
+    //       });
+    //     }
+    //     var offsetTopz = $('.toc-article').offset().top + 5
+    //     window.onscroll = function () {
+    //       var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+    //       var bottomjudge =document.body.scrollHeight;
+    //       if (scrollTop >= offsetTopz) {
+    //         $('.sidesticky').addClass('side-fixed');
+    //             if((bottomjudge-scrollTop)<=937){
+    //                 $('.sidesticky').addClass('side-re');
+    //             } else{
+    //                 $('.sidesticky').removeClass('side-re');
+    //             }
+    //         } else {
+    //         $('.sidesticky').removeClass('side-fixed');
+    //         }
+    //         if(document.querySelector(".is-active-li")!=undefined){            
+    //             var activeDiv = document.querySelector(".is-active-li").getBoundingClientRect().top;
+    //             var marked = document.querySelector('.toc-list-item').getBoundingClientRect().top;
+    //             setTimeout(() => {
+    //                 $('.toc-container').scrollTop(activeDiv-marked-40);
+    //             }, 100); 
+    //         }        
+    //     }
+    //     $.getScript('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js');
+    //   }
+    // },
+    // MCB: function(){
+    //     $(document).ready(function() {
+    //         $(window).on('scroll',function() {
+    //         if(document.querySelector(".sideimg")!=null){
+    //             if(document.querySelector(".sidesticky").getBoundingClientRect().top<=45){
+    //                 if(document.querySelector('.musicbaropen')==undefined){
+    //                     $('.aplayer-unfixed').css("position","")
+    //                     $('.aplayer-unfixed').css("top","")                
+    //                     return;
+    //                 }
+    //                 else{
+    //                     $('.aplayer-fixed').addClass('aplayer-unfixed');
+    //                     $('.aplayer-body').css("width","290px")
+    //                     $('.aplayer-list').css("max-height","270px");
+    //                     $('.aplayer-list ol').css("max-height","270px");
+    //                     $('.aplayer-fixed').removeClass('aplayer-narrow');            
+    //                     $('.aplayer-fixed').removeClass('aplayer-fixed');
+    //                 }
+    //                 if(document.querySelector(".sidesticky").getBoundingClientRect().top!=45){
+    //                     $('.aplayeropened').css("position","relative")
+    //                 } else {
+    //                     $('.aplayeropened').css("position","sticky")
+    //                 }
+    //             }
+    //             else{
+    //                 $('.aplayer-unfixed').addClass('aplayer-fixed');
+    //                 $('.aplayer-body').css("width","400px")
+    //                 $('.musicbaropen').removeClass('musicbaropen');
+    //                 $('.aplayer-listleft').removeClass('aplayer-listleft');
+    //                 $('.aplayer-unfixed').css("position","")
+    //                 $('.aplayer-unfixed').css("top","")                
+    //                 $('.aplayer-unfixed').css("position","")
+    //                 $('.aplayer-unfixed').css("top","")                
+    //                 $('.aplayer-unfixed').addClass('aplayer-narrow');            
+    //                 $('.aplayer-unfixed').removeClass('aplayer-unfixed');
+    //             }
+    //         }})
+    //     })
+    //     $(function(){
+    //         $('body').on('click', '.aplayer', function(){
+    //           if($('.aplayer-button').hasClass('aplayer-play')) {
+    //             $('.aplayer-lrc').removeClass('lrc-show');
+    //           } else {
+    //             $('.aplayer-lrc').addClass('lrc-show');
+    //           }
+    //         })
+    //     })
+    //     function addmusic(){
+    //         if(document.querySelector('.aplayer')==undefined){
+    //             var addmusicjs = document.createElement('script');
+    //             addmusicjs.src = "https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js";
+    //             document.head.appendChild(addmusicjs);
+    //             //require MetingJS
+    //             addmusicjs = document.createElement('script');
+    //             addmusicjs.src = "https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js";
+    //             document.head.appendChild(addmusicjs);
+    //         }
+    //         if(document.querySelector('.musicbaropen')==undefined){
+    //             $('.musicbar').addClass('musicbaropen');
+    //             $('.aplayer-list').addClass('aplayer-listleft');
+    //             $('.aplayer').addClass('aplayeropened');
+    //             $('#music').css("border-radius","inherit");
+    //             $('#mouse').css("border-radius","inherit");
+    //             var bodyhight=window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    //             $(document).scrollTop(bodyhight-1);
+    //         } else {
+    //             $('.musicbaropen').removeClass('musicbaropen');
+    //             $('.aplayer-listleft').removeClass('aplayer-listleft');
+    //             $('.aplayeropened').removeClass('aplayeropened');
+    //             $('#music').css("border-bottom-left-radius","20px");
+    //             $('#mouse').css("border-bottom-right-radius","20px");        
+    //         }
+    //     }
+    //   },
     AB: function () {
       if (window.location.pathname.indexOf('about') > -1) {
         $.getScript('/js/botui.js', function () {
@@ -1244,12 +1265,14 @@ var home = location.href,
       $('#banner_wave_2').removeClass('banner_wave_hide')
       s.pause()
     }, liveplay: function () {
+      if(!s) return;
       if (s.oncanplay != undefined && $('.haslive').length > 0) {
         if ($('.videolive').length > 0) {
           Siren.splay()
         }
       }
     }, livepause: function () {
+      if(!s) return;
       if (s.oncanplay != undefined && $('.haslive').length > 0) {
         Siren.spause()
         $('.video-stu').css({
@@ -1600,17 +1623,9 @@ var home = location.href,
     },
   }
 $(function () {
-  Siren.AH()
-  Siren.PE()
-  Siren.NH()
-  Siren.GT()
-  Siren.XLS()
-  Siren.XCS()
-  Siren.XCP()
-  Siren.CE()
-  Siren.MN()
-  Siren.IA()
-  Siren.LV()
+  ['AH','PE','NH','GT','XLS','XCS','XCP','CE','MN','IA','LV'].forEach(function (n) {
+    try { Siren[n]() } catch (e) { console.error('[Siren.' + n + '] 未使用，执行失败：', e) }
+  })//避免一人报错，直接中断
   if (window.is_app) injectStyles('#nprogress .bar { display: none; }')
   if (Poi.pjax) {
     $(document).pjax('a[target!=_top]', '#page', {
@@ -1621,15 +1636,10 @@ $(function () {
       if (mashiro_option.NProgressON) NProgress.start()
       Siren.MNH()
     }).on('pjax:complete', function () {
-      Siren.AH()
-      Siren.PE()
-      Siren.CE()
-//      Siren.VA()
-      Siren.MJ()
-      Siren.AB()
-      Siren.TOC()
-      Siren.BSZ()
-      Siren.MCB()
+      ['AH','PE','CE','VA','MJ','AB','TOC','BSZ','MCB'].forEach(function (n) {
+        try { Siren[n]() } catch (e) { console.error('[Siren.' + n + '] 未使用，执行失败：', e) }
+      })//避免一人报错，直接中断
+      if (window.musicBar) window.musicBar.restore()      //musicbar重建
       if (mashiro_option.NProgressON) NProgress.done()
       mashiro_global.ini.pjax()
       $('#loading').fadeOut(500)
@@ -1662,12 +1672,10 @@ $(function () {
         timeout: 8000
       })
     }
-    window.addEventListener('popstate', function (e) {
-      Siren.AH()
-      Siren.PE()
-      Siren.CE()
-      timeSeriesReload(true)
-    }, false)
+    /* 前进后退（popstate）不再在这里处理：
+       交给 /js/pjax-reload.js —— 它在 pjax:end 时补发 pjax:complete，
+       所以上面这个 pjax:complete 重载链在前进/后退时同样会执行；
+       内容没跟上地址栏的极端情况也由它补拉。 */
   }
   $.fn.postLike = function () {
     if ($(this).hasClass('done')) {

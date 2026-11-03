@@ -35,7 +35,7 @@
   height: 96px;
   line-height: 70px;
   color: #fff;
-  background: url(/images/donate/donate.png) no-repeat center 10px;
+  background: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/page/donate/donate.png) no-repeat center 10px;
   background-size: 140px;
   text-align: center;
   left: calc(50% - 121px);
@@ -63,7 +63,6 @@
   background-color: rgba(204, 217, 220,0.1);
   background-size: 45px;
   transition: all .3s;
-  cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
   overflow: hidden;
   line-height: 600px;
   height: 50px;
@@ -84,10 +83,10 @@
   display: block;
 }
 #donateBox #PayPal {
-  background-image: url(/images/donate/paypal.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/page/donate/paypal.svg);
 }
 #donateBox>#BTC {
-  background-image: url(/images/donate/bitcoin.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/page/donate/bitcoin.svg);
   line-height: 28px;
 }
 #donateBox>#BTC:hover {
@@ -98,10 +97,10 @@
   cursor: pointer;
 }
 #donateBox #bilibili {
-  background-image: url(/images/donate/bilibili.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/page/donate/bilibili.svg);
 }
 #donateBox #qq {
-  background-image: url(/images/donate/qq.svg);
+  background-image: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/page/donate/qq.svg);
 }
 #QRBox {
   position: relative;
@@ -113,7 +112,6 @@
     perspective: 400px;
 }
 #MainBox {
-  cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
   position: absolute;
   text-align: center;
   width: 200px;
@@ -146,7 +144,7 @@
   height: 24px;
   top: -12px;
   left: -10px;
-  background: no-repeat center center url(/images/donate/github.svg);
+  background: no-repeat center center url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/page/donate/github.svg);
   background-size: contain;
   opacity: 0.3;
   transform: rotatez(15deg );

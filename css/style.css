@@ -271,7 +271,6 @@
     background-size: cover;
     background-position: 50%;
     transition: all .3s ease;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     border-bottom-left-radius: 20px
 }
 
@@ -346,7 +345,6 @@
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/texto.cur), auto;
     padding-bottom: 2px
 }
 
@@ -367,7 +365,6 @@
 .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
     margin: 0 0 0 5px;
     padding: 4px 0;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     flex: 1
 }
 
@@ -457,7 +454,6 @@
     position: relative;
     display: inline-block;
     margin-left: 3px;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap:hover .aplayer-volume-bar-wrap {
@@ -611,7 +607,6 @@
     padding: 0 15px;
     font-size: 12px;
     border-top: 1px solid #e9e9e9;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     transition: all .2s ease;
     overflow: hidden;
     margin: 0
@@ -646,13 +641,11 @@
 .aplayer .aplayer-list ol li .aplayer-list-index {
     color: #666;
     margin-right: 12px;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .aplayer .aplayer-list ol li .aplayer-list-author {
     color: #666;
     float: right;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .aplayer .aplayer-notice {
@@ -779,10 +772,6 @@
     animation: header 1s
 }
 
-.site-branding {
-    animation: sitetop 1s
-}
-
 .searchbox,
 .site-top .lower,
 .header-user-avatar {
@@ -849,13 +838,17 @@ html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    overflow-x: hidden
+    overflow-x: hidden;
+    box-sizing: border-box
 }
 
 body {
     margin: 0;
     font: 300 17px;
-    text-shadow: 0 0 1px rgba(0, 0, 0, .1)
+    text-shadow: 0 0 1px rgba(0, 0, 0, .1);
+    background: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 body::after{
     content: "";
@@ -904,16 +897,6 @@ video {
     display: inline-block;
     vertical-align: baseline
 }
-canvas{
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/normal.cur), auto;
-}
-#al_expand_collapse{
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/vertical.cur), s-resize !important;
-}
-.the-feature.from_left_and_right .info p{
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer !important;
-
-}
 
 audio:not([controls]) {
     display: none;
@@ -923,10 +906,6 @@ audio:not([controls]) {
 [hidden],
 template {
     display: none
-}
-
-a {
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 a:link {
@@ -949,10 +928,6 @@ a:active,
 a:hover {
     text-decoration: none;
     outline: 0
-}
-
-a:active {
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/work.cur), alias
 }
 
 abbr[title] {
@@ -1046,14 +1021,6 @@ select {
     text-transform: none
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    -webkit-appearance: button;
-    cursor: pointer
-}
-
 button[disabled],
 html input[disabled] {
     cursor: default
@@ -1097,13 +1064,15 @@ legend {
 }
 
 textarea {
-    overflow: auto
+    overflow: auto;
+    padding-left: 3px;
+    width: 100%;
+    color: #a5a5a5
 }
 
 optgroup {
     font-weight: bold
 }
-
 
 td,
 th {
@@ -1140,7 +1109,6 @@ h6 {
 p {
     margin-bottom: 1.5em;
     font-size: 15px;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/texto.cur), auto;
 }
 
 dfn,
@@ -1169,28 +1137,6 @@ blockquote {
     box-shadow: 2px 2px 15px #ccc;
 }
 
-/* blockquote:before {
-    content: "\f10d" !important;
-    左双引号的Unicode编码
-
-    font-size: 1rem;
-    position: absolute;
-    top: -15px;
-    left: 12px;
-    color: orange;
-    font-family: FontAwesome
-}
-
-blockquote:after {
-    content: '\f10e' !important;
-    font-size: 1rem;
-    position: absolute;
-    bottom: -15px;
-    right: 5px;
-    color: orange;
-    font-family: FontAwesome
-}
-*/
 blockquote p {
     margin: 5px 0 5px 0px !important;
 }
@@ -1250,10 +1196,6 @@ big {
     font-size: 125%
 }
 
-html {
-    box-sizing: border-box
-}
-
 * {
     box-sizing: border-box
 }
@@ -1261,13 +1203,6 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
-}
-
-body {
-    background: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/normal.cur), auto;
 }
 
 q:before,
@@ -1372,7 +1307,6 @@ input[type="reset"],
 input[type="submit"] {
     border: 1px solid;
     border-color: #ccc #ccc #bbb;
-    border-radius: 3px;
     background: #e6e6e6;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 15px 17px rgba(255, 255, 255, .5), inset 0 -5px 12px rgba(0, 0, 0, .05);
     color: rgba(0, 0, 0, .8);
@@ -1382,25 +1316,6 @@ input[type="submit"] {
     padding: .6em 1em .4em
 }
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-    /*border-color:#ccc #bbb #aaa;*/
-    /*box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 15px 17px rgba(255,255,255,.8),inset 0 -5px 12px rgba(0,0,0,.02)*/
-}
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-    /*border-color:#aaa #bbb #bbb;*/
-    /*box-shadow:inset 0 -1px 0 rgba(255,255,255,.5),inset 0 2px 5px rgba(0,0,0,.15)*/
-}
 
 input[type="text"],
 input[type="email"],
@@ -1462,12 +1377,6 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
     padding: 3px
-}
-
-textarea {
-    padding-left: 3px;
-    width: 100%;
-    color: #a5a5a5
 }
 
 a {
@@ -1610,7 +1519,6 @@ a:active {
     height: 600px;
     width: 100%;
     overflow: hidden;
-    margin-bottom: 2rem;
     box-shadow: -7px 2px 20px 5px #545252bf;
 }
 
@@ -1674,10 +1582,6 @@ a:active {
     display: block
 }
 
-.single-center::after {
-    display: none
-}
-
 .pattern-center header.single-header {
     max-width: 900px;
     padding: 0 10px;
@@ -1687,35 +1591,6 @@ a:active {
     top: 400px;
     left: -140px;
     bottom: 20px
-}
-
-.single-center .single-header h1.entry-title {
-    margin: 0;
-    font-size: 32px;
-    width: 100%
-}
-
-.single-center .entry-census {
-    color: #fff;
-    font-size: 14px;
-    padding: 18px 0 0;
-    line-height: 39px
-}
-
-.single-center .entry-census .bull {
-    margin: 0 5px
-}
-
-.single-center .entry-census span img {
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    float: left;
-    margin-right: 12px
-}
-
-.single-center .entry-census a {
-    color: #fff
 }
 
 @media(max-width:860px) {
@@ -1742,11 +1617,6 @@ a:active {
     overflow: hidden;
     margin: 0 auto
 }
-
-/* .pattern-center-blank {
-    padding-top: 75px;
-    background-color: #fff
-} */
 
 @media(max-width:860px) {
     .pattern-center-sakura {
@@ -1906,13 +1776,13 @@ a:active {
 }
 
 .site-branding {
+    animation: sitetop 1s;
     float: left;
     position: relative;
     height: 75px;
     line-height: 75px;
     margin-left: -6px;
     margin-top: -8px;
-    width: 12%;
 }
 
 .site-title {
@@ -1941,10 +1811,6 @@ a:active {
     opacity: 1
 }
 
-/*site-description {
-    float: right
-}
-*/
 .header-focus {
     height: 250px;
     background: #f9f9f9;
@@ -1967,7 +1833,7 @@ a:active {
     vertical-align: middle;
     text-align: center;
     min-width: 16px;
-    pointer-events: none;
+    pointer-events: none
 }
 
 .site-top .lower {
@@ -1998,14 +1864,6 @@ a:active {
     transform: translateY(0%);
   }
 @media(max-width:1200px) {
-    /* .site-top .lower {
-        right: -26% 
-    }
-
-    .site-top .lower-cantiner {
-         left: 0 
-    }*/
-
     .site-top .lower nav.hide {
         display: none !important
     }
@@ -2100,7 +1958,6 @@ a:active {
     width: 30px;
     height: 33px;
     margin-top: 4.5px;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     z-index: 999
 }
 
@@ -2785,7 +2642,12 @@ i.iconfont.hotpost {
 .entry-content ul li {
     padding: 8px 0
 }
-
+.entry-content ul li {
+    color: #797979;
+    line-height: 33px;
+    text-align: justify;
+    margin: 0px 15px 0px 15px;
+}
 .entry-content {
     position: relative;
 }
@@ -2986,11 +2848,10 @@ h1.page-title.mb- {
     z-index: 99;
     width: 70px;
     height: 900px;
-    background: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/scroll.png) no-repeat center;
+    background: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/other/scroll.png) no-repeat center;
     background-size: contain;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/No_Disponible.cur), auto;
     opacity: 1
 }
 
@@ -3170,17 +3031,10 @@ h1.page-title.mb- {
     cursor: pointer;
     opacity: .6;
     float: right;
-    cursor:url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur),pointer;
     -moz-transition: opacity .1s ease-out;
     -o-transition: opacity .1s ease-out;
     -webkit-transition: opacity .1s ease-out;
     transition: opacity .1s ease-out
-}
-
-.post-share:hover .show-share,
-.post-share:hover .sharehidden {
-    opacity: 1;
-    display: inline-block
 }
 
 .post-squares {
@@ -3685,7 +3539,8 @@ h3#comments-list-title {
 .alignright {
     display: inline;
     float: right;
-    margin-left: 1.5em
+    margin-left: 1.5em;
+    width: auto !important
 }
 
 .aligncenter {
@@ -4190,7 +4045,8 @@ a.page-numbers {
     overflow: hidden;
     -webkit-transition: height 0s ease-out;
     -moz-transition: height 0s ease-out;
-    transition: height 0s ease-out
+    transition: height 0s ease-out;
+    display: block !important;
 }
 
 .comments ul.commentwrap {
@@ -5060,23 +4916,6 @@ li.feature-2 {
     box-shadow: inset 0 0 10px #000;
     padding: 5px;
     opacity: 1;
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transition: all ease 1s;
-    -webkit-transition: all ease 1s;
-    -moz-transition: all ease 1s;
-    -o-transition: all ease 1s
-}
-
-.focusinfo .header-tou img:hover {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg)
 }
 
 .bio-text {
@@ -5239,18 +5078,6 @@ li.feature-2 {
     background: none
 }
 
-.qqInner {
-    width: 121px;
-    height: 121px;
-    padding: 10px;
-    background: rgba(0, 0, 0, .4);
-    top: 40px;
-    left: -40px;
-    -webkit-transform: translate3d(0, 50px, 0);
-    transform: translate3d(0, 50px, 0);
-    opacity: 0
-}
-
 .qqInner:before {
     content: "";
     position: absolute;
@@ -5263,6 +5090,15 @@ li.feature-2 {
 }
 
 .qqInner {
+    width: 121px;
+    height: 121px;
+    padding: 10px;
+    background: rgba(0, 0, 0, .4);
+    top: 40px;
+    left: -40px;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+    opacity: 0;
     position: absolute;
     border-radius: 8px;
     transition: .7s all ease;
@@ -5300,7 +5136,6 @@ li.feature-2 {
 
 i.iconfont.js-toggle-search.iconsearch {
     color: #3f3f3f;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     font-size: 26px;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out
@@ -5799,7 +5634,9 @@ i.iconfont.down {
     -webkit-box-shadow: 0 0 4px rgba(255, 165, 0, .85);
     -moz-box-shadow: 0 0 4px rgba(255, 165, 0, .85);
     -o-box-shadow: 0 0 4px rgba(255, 165, 0, .85);
-    box-shadow: 0 0 4px rgba(255, 165, 0, .85)
+    box-shadow: 0 0 4px rgba(255, 165, 0, .85);
+    border: 1px solid orange;
+    color: orange
 }
 
 #pagination a {
@@ -5812,11 +5649,6 @@ i.iconfont.down {
 #pagination span {
     color: #989898;
     font-size: 15px
-}
-
-#pagination a:hover {
-    border: 1px solid orange;
-    color: orange
 }
 
 #pagination .loading {
@@ -6938,33 +6770,12 @@ i.iconfont.down {
     cursor: wait
 }
 
-.botui-container {
-    font-size: 14px;
-    background-color: rgba(255, 255, 255, 0)
-}
-
 .botui-messages-container {
     padding: 10px 20px
 }
 
 .botui-actions-container {
     padding: 10px 20px
-}
-
-.botui-message {
-    min-height: 30px
-}
-
-.botui-message-content {
-    padding: 7px 13px;
-    border-radius: 15px;
-    color: #595a5a;
-    background-color: #ebebeb
-}
-
-.botui-message-content.human {
-    color: #f7f8f8;
-    background-color: #919292
 }
 
 .botui-message-content.text {
@@ -6980,10 +6791,6 @@ i.iconfont.down {
 .botui-message-content.embed {
     padding: 5px;
     border-radius: 5px
-}
-
-.botui-message-content-link {
-    color: #919292
 }
 
 .botui-actions-text-input {
@@ -7011,7 +6818,6 @@ i.iconfont.down {
     border: 0;
     color: #fff;
     line-height: 1;
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/No_Disponible.cur), auto;
     font-size: 14px;
     font-weight: 500;
     padding: 7px 15px;
@@ -7169,11 +6975,6 @@ input.botui-actions-text-input::-moz-focus-inner {
     padding: 0
 }
 
-button.botui-actions-buttons-button {
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/No_Disponible.cur), auto;
-    -webkit-appearance: button
-}
-
 .botui-app-container {
     width: 100%;
     height: 100%;
@@ -7192,21 +6993,29 @@ button.botui-actions-buttons-button {
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    overflow-x: hidden
+    overflow-x: hidden;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0)
 }
 
 .botui-message {
     margin: 10px 0;
-    min-height: 20px
+    min-height: 20px;
 }
 
 .botui-message-content {
+    padding: 7px 13px;
+    border-radius: 15px;
+    color: #595a5a;
+    background-color: #ebebeb;
     width: auto;
     max-width: 85%;
     display: inline-block
 }
 
 .botui-message-content.human {
+    color: #f7f8f8;
+    background-color: #919292;
     float: right;
     margin-bottom: 12.2px
 }
@@ -7223,7 +7032,8 @@ button.botui-actions-buttons-button {
 }
 
 .botui-message-content-link {
-    text-decoration: underline
+    text-decoration: underline;
+    color: #919292
 }
 
 .botui-actions-buttons-button+.botui-actions-buttons-button {
@@ -7280,19 +7090,6 @@ button.botui-actions-buttons-button {
     background: #d34836;
     transform: rotateX(90deg) translate3d(0, 0, 30px);
     -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px)
-}
-
-.logolink a {
-    color: #464646;
-    float: left;
-    font-size: 20px;
-    font-weight: 800;
-    height: 56px;
-    line-height: 56px;
-    padding-left: 35px;
-    padding-right: 15px;
-    padding-top: 11px;
-    text-decoration-line: none
 }
 
 .logolink .sakurasono {
@@ -7363,24 +7160,6 @@ button.botui-actions-buttons-button {
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
     -webkit-transition: .05s border-color ease-in-out;
     transition: .05s border-color ease-in-out
-}
-
-.forgetmenot input[type=checkbox]:checked:before {
-    content: "✔";
-    margin: -3px 0 0 -4px;
-    color: #1e8cbe
-}
-
-.forgetmenot input[type=checkbox]:checked:before,
-input[type=radio]:checked:before {
-    float: left;
-    display: inline-block;
-    vertical-align: middle;
-    width: 16px;
-    font: 400 21px/1 dashicons;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
 }
 
 .forgetmenot input[type=checkbox]:checked:before {
@@ -7874,15 +7653,6 @@ input[type=radio]:checked:before {
     transition-duration: .3s, .3s
 }
 
-.changeSkin .keys {
-    position: relative;
-    z-index: 99
-}
-
-.changeSkin .keys span {
-    cursor: pointer
-}
-
 .changeSkin-gear {
     position: fixed;
     bottom: -999px;
@@ -7893,7 +7663,6 @@ input[type=radio]:checked:before {
     visibility: hidden;
     white-space: nowrap;
     padding: 10px 10px;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
     border-radius: 10px 10px 0 0
 }
 
@@ -7915,20 +7684,6 @@ input[type=radio]:checked:before {
 .keys-line-add {
     text-align: right;
     margin-right: 22px
-}
-
-@media(max-width:800px) {
-    .changeSkin-gear span::before {
-        content: ""
-    }
-
-    .changeSkin i {
-        font-size: 20px
-    }
-
-    .changeSkin-gear i {
-        font-size: 20px
-    }
 }
 
 @media(max-width:800px) {
@@ -8392,41 +8147,6 @@ li>ol {
     background: #0bf
 }
 
-
-/* .is-collapsible {
-    max-height: 1000px;
-    overflow: hidden;
-    transition: all 300ms ease-in-out
-}
-
-.is-collapsed {
-    max-height: 0
-}
-
-.is-position-fixed {
-    position: fixed !important;
-    top: 0
-}
-
-.is-active-link {
-    font-weight: 700
-}
-
-.toc-link::before {
-    background-color: #EEE;
-    content: ' ';
-    display: inline-block;
-    height: inherit;
-    left: 0;
-    margin-top: -1px;
-    position: absolute;
-    width: 2px
-}
-
-.is-active-link::before {
-    background-color: orange !important
-} */
-
 .flipx {
     -moz-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -8513,10 +8233,7 @@ li>ol {
     -webkit-animation: im-emotion-step 1.08s steps(27) infinite;
     animation: im-emotion-step 1.08s steps(27) infinite;
     animation-duration: 1.08s;
-    animation-timing-function: steps(27)
-}
-
-.emotion-item .img {
+    animation-timing-function: steps(27);
     width: 32px;
     height: 864px;
     max-width: 32px;
@@ -8652,13 +8369,6 @@ li>ol {
 .on-hover,
 .emotion-item,
 .emoji-item,
-.tieba-container span {
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/No_Disponible.cur), auto
-}
-
-.alignright {
-    width: auto !important
-}
 
 .no-select {
     -webkit-touch-callout: none;
@@ -8679,6 +8389,9 @@ li>ol {
     z-index: 99999
 }
 
+.footer-device{
+    margin-top: 20px;
+}
 #footer-sponsor {
     font-size: 9px
 }
@@ -9119,7 +8832,6 @@ li>ol {
     padding: 2px;
     text-shadow: none;
     border-radius: 0 0 5px 5px;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .highlight-wrap code[data-rel]:before {
@@ -9145,7 +8857,6 @@ li>ol {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/normal.cur), auto;
 }
 
 .hljs {
@@ -9226,10 +8937,6 @@ li>ol {
     text-decoration: underline
 }
 
-.hljs-ln {
-    margin: 6px 0 0 0 !important
-}
-
 .highlight td.numbers {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -9283,10 +8990,6 @@ li>ol {
     overflow: hidden
 }
 
-.chinese-font {
-    font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
-}
-
 .chinese-tranditional-font {
     font-family: Helvetica, Tahoma, Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif
 }
@@ -9306,10 +9009,10 @@ li>ol {
 .Ubuntu-font {
     font-family: 'Ubuntu', sans-serif
 }
-
+/* 
 .serif {
     font-family: 'cute','Source Han Serif SC', 'Source Han Serif', 'source-han-serif-sc', 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
-}
+} */
 
 @media(max-width:860px) {
     .serif {
@@ -9373,7 +9076,6 @@ li>ol {
     width: 36px;
     background-color: #f5f5f5;
     border-radius: 50%;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .menu-list li:hover {
@@ -9400,7 +9102,6 @@ li>ol {
     margin: 0 4px;
     box-shadow: none;
     background-color: #f5f5f5;
-    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cursor/ayuda.cur), pointer;
 }
 
 .font-family-controls button.selected {
@@ -9515,7 +9216,7 @@ img[src*="#in-center"] {
 #banner_wave_1 {
     width: auto;
     height: 65px;
-    background: url("https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/wave1.png") repeat-x;
+    background: url("https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/other/wave1.png") repeat-x;
     position: absolute;
     bottom: 0;
     width: 400%;
@@ -9529,7 +9230,7 @@ img[src*="#in-center"] {
 #banner_wave_2 {
     width: auto;
     height: 80px;
-    background: url("https://cdn.jsdelivr.net/gh/rryuein/cdn/img/other/wave2.png") repeat-x;
+    background: url("https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/other/wave2.png") repeat-x;
     position: absolute;
     bottom: 0;
     width: 400%;
@@ -10052,10 +9753,6 @@ i.iconfont.js-toggle-search.iconsearch:hover,
     color: #FE9600
 }
 
-.comments .comments-main {
-    display: block !important;
-}
-
 .comments .comments-hidden {
     display: none !important;
     background-position: center;
@@ -10063,8 +9760,8 @@ i.iconfont.js-toggle-search.iconsearch:hover,
 }
 
 .hljs-ln {
+    margin: 6px 0 0 0 !important;
     border-collapse: collapse;
-    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/texto.cur), auto
 }
 
 .hljs-ln td {
@@ -10084,4 +9781,415 @@ i.iconfont.js-toggle-search.iconsearch:hover,
     /* max-height: 384px; */
     /* transform: translate(-50%, -50%); */
     opacity: 0.8;
+}
+
+#RightDownBtn {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 0.1875rem;
+    transition: 0.3s ease all;
+    z-index: 1000;
+    align-items: flex-end;
+    flex-direction: row;
+    display: -moz-flex;
+    display: flex;
+    float: right;
+}
+
+#RightDownBtn>a,
+#RightDownBtn>label {
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0 5px;
+    transition: .2s cubic-bezier(.25, .46, .45, .94);
+}
+
+a {
+    color: #3273dc;
+    /* cursor: pointer !important; */
+    text-decoration: none;
+}
+/* font color */
+.DarkMode #page,
+.DarkMode #colophon,
+.DarkMode #vcomments .vbtn,
+.DarkMode .art-content #archives .al_mon_list .al_mon,
+.DarkMode .art-content #archives .al_mon_list span,
+.DarkMode body,
+.DarkMode .art-content #archives .al_mon_list .al_mon,
+.DarkMode .art-content #archives .al_mon_list span,
+.DarkMode button,
+.DarkMode .art .art-content #archives a,
+.DarkMode textarea,
+.DarkMode strong,
+.DarkMode a,
+.DarkMode p,
+.DarkMode .v *,
+.DarkMode .label ,
+.DarkMode label,
+.DarkMode .wl-card .wl-delete,
+.DarkMode .wl-card .wl-like, 
+.DarkMode .wl-card .wl-reply, 
+.DarkMode .wl-card .wl-edit,
+.DarkMode .wl-empty,
+.DarkMode .wl-header label,
+.DarkMode [data-waline] p,
+.DarkMode .highlight-wrap code[data-rel]:before,
+.DarkMode .hljs-ln-n:before,
+.DarkMode .entry-content ul,
+.DarkMode .entry-content ol,
+.DarkMode .aplayer .aplayer-info .aplayer-music .aplayer-author{
+    color: rgba(255, 255, 255, .6);
+}
+.DarkMode .wl-header input
+.DarkMode .wl-emoji-popup .wl-tabs::before{
+    color: #bababa;
+}
+.DarkMode .wl-emoji-popup, .DarkMode .wl-gif-popup{
+    background-color: #2c2c2c;
+    border: 1px solid #000;
+}
+.DarkMode .wl-editor:focus, .DarkMode .wl-input:focus{
+    background-color: #5c5b5b;
+}
+.DarkMode .wl-header{
+    border-bottom: 2px dashed #ffffff7d;
+}
+.DarkMode .entry-content a{
+    color: #e67474;
+}
+.DarkMode .entry-content a:hover {
+    color: orange;
+}
+.DarkMode .post-list{
+    background-color: rgb(0 0 0 / 34%);
+    box-shadow: -1px 1px 10px 0px rgb(179 179 179 / 50%);
+}
+.DarkMode .notice{
+    background: #77777740;
+    color: #ffffffb5;
+}
+.DarkMode #banner_wave_1{
+    background-image: url("https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/other/wave1_dark.png");
+}
+.DarkMode #banner_wave_2{
+    background-image: url("https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/other/wave2_dark.png");
+}
+/* .DarkMode #page, */
+.DarkMode body::after,
+.DarkMode #colophon,
+.DarkMode #contentss,
+.DarkMode #footer,
+.DarkMode .ann,
+.DarkMode .toc-article{
+    background-color: #0b0b10a3;
+}
+.DarkMode p.announcement{
+    color: rgba(255, 255, 255, .6);
+}
+.DarkMode .sideimg #midimg{
+    filter: brightness(.85);
+}
+.DarkMode .sideimg #topbar{
+    background-color: #2c2c2fe3;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.DarkMode .sideimg #bottombar #music,.DarkMode .sideimg #bottombar #mouse{
+    background-color: #2c2c2f;
+}
+.DarkMode .aplayer .aplayer-list ol{
+    background-color: #38353f;
+}
+.DarkMode .aplayer.aplayer-fixed .aplayer-body{
+    background: none;
+}
+.DarkMode .aplayer .aplayer-list ol li.aplayer-list-light,.DarkMode .aplayer .aplayer-list ol li:hover, .DarkMode .aplayer
+.DarkMode .wl-gif-popup input{
+    background-color: #000;
+}
+.DarkMode .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path{
+    fill: rgba(255, 255, 255, 0.651);
+}
+.DarkMode #content{
+    background-color: #1a1a1e87;
+}
+.DarkMode .post-list-thumb{
+    background-color: rgb(0 0 0 / 44%);
+}
+.DarkMode #centerbg::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+.DarkMode .site-header{
+    box-shadow: 0px 6px 20px 13px rgb(0 0 0 / 64%);
+    background: rgb(0 0 0 / 63%);
+}
+.DarkMode .lower li ul{
+    background: rgb(0 0 0 / 63%);
+}
+.DarkMode .pattern-center::after{
+    background: linear-gradient(to top, #0000008a, transparent);
+}
+/* .DarkMode .pattern-center-blank {
+    background-color: #0b0b10a3;
+} */
+.DarkMode #page > header:hover {
+    background-color: #000;
+}
+.DarkMode .site-top ul li a:hover {
+    color: orange
+}
+.DarkMode .site-top ul li a,.DarkMode i.iconfont.js-toggle-search.iconsearch,.DarkMode .logolink.logo a{
+    color: #c4c4c4;
+}
+.DarkMode #show-nav .line,.DarkMode .logolink .sakuraso{
+    background-color: #c4c4c4;
+}
+.DarkMode img,
+.DarkMode #page > div.pattern-center > div ,
+.DarkMode #artitalk_main .power a, 
+.DarkMode #artitalk_main svg, 
+.DarkMode #artitalk_main .at_button,
+.DarkMode #artitalk_main .shuoshuo_text,
+.DarkMode #donateBox,
+.DarkMode .sideimg #hamster{
+    filter: brightness(.75);
+}
+.DarkMode #maina > li > span.shuoshuo_author_img{
+    filter: brightness(1.15);
+}
+.DarkMode #artitalk_main img.atemoji{
+    filter: brightness(1);
+}
+.DarkMode #artitalk_main div#loading_txt{
+    color: #d3d3d3;
+}
+.DarkMode #artitalk_main .preloader{
+    filter: brightness(1.6);
+}
+.DarkMode #artitalk_main #lazy{
+    background: #9b9b9b;
+}
+.DarkMode #page .yya {
+    background-color: #11111dc2;
+}
+.DarkMode #page .yya:hover {
+    background-color: #0d0d16;
+}
+.DarkMode .v .vbtn {
+    background-color: #0d0d16cc;
+}
+.DarkMode span.vsys {
+    background-color: #3c3c419e;
+}
+.DarkMode button{
+    box-shadow: none;
+}
+.DarkMode .wl-card .wl-meta>span{
+    background: none;
+}
+/* test */
+.DarkMode button.vsubmit.vbtn {
+    box-shadow: inset 0px -1px 17px 6px rgb(0 0 0), 
+    inset 0px 0px 15px 15px rgb(255 255 255 / 36%), 
+    inset 0px 0px 0px 0px rgb(0 0 0 / 0%);
+}
+.DarkMode .v .vwrap .vheader .vinput {
+    color: #ffe2e2a3;
+}
+
+.DarkMode .skin-menu{
+    background-color:rgba(175, 175, 175, .6) ;
+}
+.DarkMode .menu-list li , 
+.font-family-controls button{
+    background-color: rgba(0, 0, 0, .33);
+}
+.DarkMode .font-family-controls button.selected{
+    background-color: #ffd8618a;
+}
+.DarkMode .highlight-wrap code[data-rel]:before{
+    background-color: #000000;
+}
+.DarkMode table tbody tr:nth-child(2n){
+    background-color: rgba(0, 0, 0, .3);
+}
+.DarkMode td.hljs-ln-numbers{
+    background-color: #00000078;
+}
+.DarkMode .highlight-wrap code{
+    color: #abb2bf;
+    background-color: #00000094; 
+}
+.DarkMode table{
+    border: 1px solid #000000;
+}
+.DarkMode .highlight-wrap{
+    box-shadow: -3px 4px 7px 0px rgb(151 151 151 / 40%);
+}
+.DarkMode .wl-btn{
+    background: rgb(0 0 0 / 32%);
+    color: rgb(153 153 153);
+    box-shadow: none;
+}
+.DarkMode .wl-btn:disabled{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+.DarkMode .wl-btn.primary{
+    background: rgb(39 174 96 / 28%);
+}
+.DarkMode .wl-btn.primary:hover{
+    background: rgb(79 188 125);
+    color:#fff;
+}
+.DarkMode .wl-content .vemoji, .DarkMode .wl-content .wl-emoji{
+    filter: brightness(.85);
+}
+.DarkMode #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel{
+    background-color: #515151a8 !important;
+}
+.DarkMode #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel::after{
+    border-right-color: #636363 !important;
+}
+.DarkMode .waves-area .parallax > use:first-child {
+    fill: rgb(29 32 42 / 63%);
+}
+.DarkMode .waves-area .parallax > use:nth-child(2) {
+    fill: rgb(34 39 50 / 52%);
+}
+.DarkMode .waves-area .parallax > use:nth-child(3) {
+    fill: rgb(24 30 44 / 25%);
+}
+.DarkMode .waves-area .parallax > use:nth-child(4) {
+    fill: #161b2757;
+}
+.DarkMode #post-calendar{
+    background-color: rgb(206 206 206 / 63%);
+}
+.DarkMode #post-calendar::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.29);
+    bottom: 0px;
+    border-radius: 12px;
+    z-index: 1;
+    pointer-events: none;
+}
+.DarkMode .wl-panel{
+    background: rgb(0 0 0 / 18%);
+    border: 2px solid #000;
+}
+/* sun and noon */
+.Cuteen_DarkSky,
+.Cuteen_DarkSky:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 88888888
+}
+
+.Cuteen_DarkSky {
+    background: linear-gradient(#feb8b0, #fef9db)
+}
+
+.Cuteen_DarkSky:before {
+    transition: 2s ease all;
+    opacity: 0;
+    background: linear-gradient(#4c3f6d, #6c62bb, #93b1ed)
+}
+
+.DarkMode .Cuteen_DarkSky:before {
+    opacity: 1
+}
+
+.Cuteen_DarkPlanet {
+    z-index: 99999999;
+    position: fixed;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    -webkit-animation: CuteenPlanetMove 2s cubic-bezier(.7, 0, 0, 1);
+    animation: CuteenPlanetMove 2s cubic-bezier(.7, 0, 0, 1);
+    transform-origin: center bottom
+}
+
+@-webkit-keyframes CuteenPlanetMove {
+    0% {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes CuteenPlanetMove {
+    0% {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.Cuteen_DarkPlanet:after {
+    position: absolute;
+    left: 35%;
+    top: 40%;
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 50%;
+    content: "";
+    background: linear-gradient(#fefefe, #fffbe8)
+}
+
+a ,.aplayer .aplayer-pic,.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap,
+.aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap,
+.aplayer .aplayer-list ol li, .aplayer .aplayer-list ol li.aplayer-list-index, 
+.aplayer .aplayer-list ol li .aplayer-list-author, #show-nav, .post-share .show-share,
+i.iconfont.js-toggle-search.iconsearch, .changeSkin-gear,
+.highlight-wrap code, .menu-list li,.font-family-controls button,.sideimg #bottombar #music,
+.sideimg #bottombar #mouse,.aplayer .aplayer-icon,#waifu-toggle,#artitalk_main .at_button,.headertop-down,
+#MainBox,#donateBox li,.wl-action,.wl-emoji-popup button,.wl-gif-popup img,
+.wl-card .wl-delete,.wl-card .wl-like,.wl-card .wl-reply,.wl-card .wl-edit,.wl-sort li,[data-waline] a,
+.wl-btn,.wl-close,.wl-logout-btn,button,html input[type="button"],input[type="reset"],input[type="submit"] {
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/cursor/ayuda.cur), pointer;
+}
+.the-feature.from_left_and_right .info p,#pubShuo,#switchUser,#uploadSource,#artitalk_main .power a,#artitalk_main svg{
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/cursor/ayuda.cur), pointer !important;
+}
+#al_expand_collapse{
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/cursor/vertical.cur), s-resize !important;
+}
+
+body,canvas, .highlight-wrap code[data-rel]:before,.wl-header label{
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/cursor/normal.cur), auto;
+}
+p ,.aplayer .aplayer-info .aplayer-music,.hljs-ln,#artitalk_main .shuoshuo_text,.wl-editor,.v .vwrap .vheader .vinput,
+.wl-header input,.wl-editor,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],
+input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],
+input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{
+    cursor: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/cursor/texto.cur), text;
+}
+a:active {
+    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/work.cur), alias
+}
+.tieba-container span ,.cd-top,.botui-actions-buttons-button,button.botui-actions-buttons-button{
+    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/No_Disponible.cur), auto
+}
+button.botui-actions-buttons-button {
+    -webkit-appearance: button
 }

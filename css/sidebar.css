@@ -3,7 +3,7 @@
     padding: 15px 12.78%;
     text-align: center;
     border-radius: 20px;
-    background:transparent url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/banner/about.jpg) center center no-repeat;
+    background:transparent url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/banner/about.webp) center center no-repeat;
     background-size: cover;
     z-index: 0;
 }
@@ -162,11 +162,11 @@
     }
 .allparts {
     --bs-gutter-x: -17rem;
-    --bs-gutter-y: 0;
+    --bs-gutter-y: 1rem;
     display: flex;
     flex: 1 0 100%;
     flex-wrap: nowrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-top: calc(var(--bs-gutter-y) * 1);
     margin-right: calc(var(--bs-gutter-x)/ -2);
     margin-left: calc(var(--bs-gutter-x)/ -2);
 }
@@ -212,6 +212,10 @@
     width: 290px;
     height: 65px;
     display: none;
+    background-image: url(https://cdn.jsdelivr.net/gh/cungudafa/cdn/img/loader/orange.progress-bar-stripe-loader.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 .musicbaropen{
     display: block;
@@ -220,27 +224,48 @@
 }
 .aplayer-unfixed{
     width: 290px;
-    float: right;
-    right: 0;
-    margin-right: 8.46rem;
+    /* float: right; */
     display: none;
-    bottom: 53px;
     position: sticky;
 }
 .aplayeropened{
     display: block;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    margin: 0;
+    z-index: 2;
 }
 .aplayer .aplayer-listleft{
     overflow: auto;
     transition: all .5s ease;
     will-change: height;
     display: none;
-    margin-top: -250px;
+    margin-top: -270px;
     overflow: hidden;
     float: left;
 }
+.aplayer .aplayer-lrc {
+    height: 35px;
+}
+.aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+}
+.aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+}
+.aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+}
+.aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+}
+
 .sideimg{
     background-color: rgb(238 238 238);
     box-shadow: 0px 0px 16px 7px #696868b3;
@@ -251,9 +276,9 @@
     min-height: 30px;
     z-index: 2;
 }
-.sideimg #midimg{
-    height: 200px;
-    background: url(https://cdn.jsdelivr.net/gh/rryuein/cdn/img/cover/23.webp);
+.sideimg #hamster{
+    height: 230px;
+    background: url(https://cdn.jsdelivr.net/gh/rryuein/pagecdn/img/cover/23.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -261,26 +286,23 @@
 .sideimg #bottombar{
     min-height: 30px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.sideimg #bottombar #music,.sideimg #bottombar #mouse{
+    box-shadow: none;
+    border: none;
+    width: 50%;
+    font-size: 15px;
+    background-color: #eeeeee;
+    z-index: 2;
 }
 .sideimg #bottombar #music{
-    box-shadow: none;
     border-bottom-left-radius: 20px;
-    border: none;
-    width: 50%;
-    font-size: 15px;
-    background-color: #eeeeee;
-    z-index: 2;
 }
-.sideimg #bottombar #candy{
+.sideimg #bottombar #mouse{
     border-bottom-right-radius: 20px;
-    border: none;
-    box-shadow: none;
-    width: 50%;
-    font-size: 15px;
-    background-color: #eeeeee;
-    z-index: 2;
 }
+
 .aplayer.aplayer-fixed .lrc-show, .aplayer.aplayer-unfixed .lrc-show{
     display: block;
 }
@@ -302,10 +324,9 @@
     box-shadow: 0px 0px 16px 7px #696868b3;
 }
 #hamster{
-    border-radius: 20px;
     overflow: hidden;
 }
-.mouse {
+.ann{
     /* float:left;  */
     min-width:290px;
     max-width: 290px;
@@ -322,7 +343,16 @@
     font-size: 1.8em;
 }
 .announcement_content{
-    font-size: 14px;
-    padding-bottom: 6px;
+    padding: 0 30px 10px 30px;
     text-align: center;
+}
+p.announcement {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #000000;
+}
+.sideimg #hamster #ifm{
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
 }
